@@ -1,17 +1,4 @@
-body {
-  margin: 0;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/hero.jpg);
-  background-position: center;
-  /* viewport height */
-  height: 100vh;
-}
-
-.main__header {
-  color: white;
-}
+@import './variables.css';
+@import './reset.css';
+@import './main-section.css';
+@import './buttons.css';

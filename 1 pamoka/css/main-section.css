@@ -1,0 +1,54 @@
+.main {
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/hero-xs.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.main__header {
+  font-size: 1.25rem;
+  color: var(--color-blac);
+  text-align: center;
+}
+
+.main__content {
+  margin-top: 26vh;
+  height: 45vh;
+  width: 200px;
+}
+
+.main__btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Nuo 1000px */
+@media screen and (min-width: 1000px) {
+  .main {
+    background-image: url(../img/hero-lg.jpg);
+  }
+
+  .main__header {
+    font-size: 2rem;
+    color: var(--color-white);
+  }
+
+  .main__content {
+    margin-top: 30vh;
+    height: 30vh;
+    width: 400px;
+  }
+}
+
+/* Nuo 1400px */
+@media screen and (min-width: 1400px) {
+  .main__content {
+    margin-top: 30vh;
+    height: calc(18vh + 10vw);
+    width: calc(300px + 10vw);
+  }
+}
