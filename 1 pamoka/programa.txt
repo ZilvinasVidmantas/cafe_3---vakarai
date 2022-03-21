@@ -1,0 +1,7 @@
+HTML ir CSS [32] - 2 sav
+JavaScript pagrindai [96] - 6 sav
+JavaScript DOM[48] - 3 sav
+React pagrindai[128] - 8 sav 
+Node pagrindai[48] - 3 sav
+Projektų kūrimas[116] - 6 sav ir 1 diena
+Egzaminai[8] - 2 dienos
