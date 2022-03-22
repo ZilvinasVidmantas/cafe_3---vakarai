@@ -1,0 +1,56 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/hero-xs.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.main__header {
+  font-size: 2rem;
+  color: var(--color-blac);
+  text-align: center;
+}
+
+.main__logo {
+  height: 80px;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 45vh;
+  width: 300px;
+}
+
+.main__btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Nuo 1000px */
+@media screen and (min-width: 1000px) {
+  .main {
+    background-image: url(../img/hero-lg.jpg);
+    align-items: flex-start;
+  }
+
+  .main__header {
+    font-size: 2rem;
+    color: var(--color-white);
+  }
+
+  .main__content {
+    margin-top: 30vh;
+    height: 30vh;
+    width: 400px;
+  }
+  .main__btn-container{
+    flex-direction: row;
+  }
+}
