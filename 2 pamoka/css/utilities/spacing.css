@@ -107,3 +107,24 @@
 .pl-3 { padding-left: var(--spacing-3); }
 .pl-4 { padding-left: var(--spacing-4); }
 .pl-5 { padding-left: var(--spacing-5); }
+
+.g-0 { gap: var(--spacing-0); }
+.g-1 { gap: var(--spacing-1); }
+.g-2 { gap: var(--spacing-2); }
+.g-3 { gap: var(--spacing-3); }
+.g-4 { gap: var(--spacing-4); }
+.g-5 { gap: var(--spacing-5); }
+
+.gy-0 { column-gap: var(--spacing-0); }
+.gy-1 { column-gap: var(--spacing-1); }
+.gy-2 { column-gap: var(--spacing-2); }
+.gy-3 { column-gap: var(--spacing-3); }
+.gy-4 { column-gap: var(--spacing-4); }
+.gy-5 { column-gap: var(--spacing-5); }
+
+.gx-0 { row-gap: var(--spacing-0); }
+.gx-1 { row-gap: var(--spacing-1); }
+.gx-2 { row-gap: var(--spacing-2); }
+.gx-3 { row-gap: var(--spacing-3); }
+.gx-4 { row-gap: var(--spacing-4); }
+.gx-5 { row-gap: var(--spacing-5); }

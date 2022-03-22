@@ -1,7 +1,7 @@
 // variables - nesikeičiantys
 const htmlElement = document.querySelector('html');
 const heroButtons = document.querySelectorAll('.main__btn-container>.btn');
-const lgBreakpoint = 1000;
+const mdBreakpoint = 800;
 
 // state variables - kintamieji kurie keičiasi
 let currentScreenSize;
@@ -13,7 +13,7 @@ const getScreenWidth = () => {
 
 const setCurrentScreenWidth = () => {
   const screenWidth = getScreenWidth();
-  if (screenWidth < lgBreakpoint) {
+  if (screenWidth < mdBreakpoint) {
     currentScreenSize = 'sm';
   } else {
     currentScreenSize = 'lg';
@@ -36,13 +36,13 @@ const handleScreenResize = () => {
   const screenWidth = getScreenWidth();
   if (currentScreenSize === 'sm') {
     // Ekrano dydis yra sm
-    if (screenWidth >= lgBreakpoint) {
+    if (screenWidth >= mdBreakpoint) {
       setButtonsWhite();
       setCurrentScreenWidth();
     }
   } else {
     // ekrano dydis yra lg
-    if (screenWidth < lgBreakpoint) {
+    if (screenWidth < mdBreakpoint) {
       setButtonsBlack();
       setCurrentScreenWidth();
     }

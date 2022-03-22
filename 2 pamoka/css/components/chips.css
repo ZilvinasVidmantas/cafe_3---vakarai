@@ -1,0 +1,10 @@
+.chip {
+  display: inline-block;
+  padding: var(--spacing-1);
+  border-radius: var(--border-radius);
+}
+
+.chip-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}

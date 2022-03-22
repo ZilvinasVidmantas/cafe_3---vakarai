@@ -65,9 +65,9 @@
 
 
 /* Nuo 1000px */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .main {
-    background-image: url(../img/hero-lg.jpg);
+    background-image: url(../../img/hero-lg.jpg);
     align-items: flex-start;
   }
 
