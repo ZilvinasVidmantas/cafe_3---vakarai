@@ -2,7 +2,13 @@
 @import './reset.css';
 @import './animations.css';
 
+/* Utilities */
+@import './utilities/spacing.css';
+
 /* Components */
-@import './buttons.css';
-@import './main-section.css';
-@import './courses-section.css';
+@import './components/buttons.css';
+@import './components/card.css';
+
+/* Sections */
+@import './sections/main-section.css';
+@import './sections/courses-section.css';

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/hero-xs.jpg);
+  background-image: url(../../img/hero-xs.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;

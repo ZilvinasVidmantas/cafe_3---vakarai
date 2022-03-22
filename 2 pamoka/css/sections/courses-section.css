@@ -1,5 +1,6 @@
 .courses-section {
   display: flex;
+  flex-direction: column;
   height: 150vh;
-  background-color: red;
+  padding: 0 1rem;
 }
