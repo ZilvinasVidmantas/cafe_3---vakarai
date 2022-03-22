@@ -1,4 +1,8 @@
 @import './variables.css';
 @import './reset.css';
-@import './main-section.css';
+@import './animations.css';
+
+/* Components */
 @import './buttons.css';
+@import './main-section.css';
+@import './courses-section.css';

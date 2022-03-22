@@ -1,4 +1,5 @@
 .main {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,6 +34,36 @@
   gap: 1rem;
 }
 
+.main__icon-down-container {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main__icon-down {
+  animation: pulse 1.73s linear infinite normal;
+  bottom: 30px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--color-black);
+}
+
+.main__icon-down:after {
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(35% 10%, 65% 10%, 65% 55%, 85% 55%, 50% 90%, 15% 55%, 35% 55%);
+  background: var(--color-black);
+}
+
+
+
 /* Nuo 1000px */
 @media screen and (min-width: 1000px) {
   .main {
@@ -50,7 +81,8 @@
     height: 30vh;
     width: 400px;
   }
-  .main__btn-container{
+
+  .main__btn-container {
     flex-direction: row;
   }
 }
