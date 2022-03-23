@@ -9,6 +9,10 @@
 @import './utilities/spacing.css';
 @import './utilities/flex.css';
 
+
+/* Partials */
+@import './partials/navbar.css';
+
 /* Components */
 @import './components/buttons.css';
 @import './components/cards.css';

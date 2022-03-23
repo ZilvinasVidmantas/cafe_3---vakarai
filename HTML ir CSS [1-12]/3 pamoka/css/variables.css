@@ -1,9 +1,11 @@
 :root {
   --color-white: #fff;
-  --color-black: #000;
-  --color-black-hover: #222;
   --color-white-hover: #ddd;
+  --color-black: #000;
+  --color-black-tranparent: #00000086;
+  --color-black-hover: #222;
   --color-primary: #009e5a;
+  --color-primary-light: #2bcc86;
   --color-primary-hover: #018b4f;
 
   --spacing-0: 0;
@@ -30,4 +32,6 @@
   --h4: 1.55rem;
   --h5: 1.3rem;
   --h6: 1rem;
+
+  --navbar-height: 56px;
 }
