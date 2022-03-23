@@ -38,7 +38,14 @@
     <div class="container py-4">
       <h1 class="h1 mb-2">CSS pagrindai</h1>
       <p>
-        CSS tai kompiuterinė kalba skirta stilizuoti HTML elementus pagal pasirinktą selektorių.
+        CSS tai kompiuterinė kalba skirta stilizuoti HTML elementus pagal pasirinktą selektorių. <br><br>
+
+        Selektoriai gali būti primityvūs ir kompleksiniai. Dažniausiai kompleksiniai selektoriai yra naudojami kuomet reikia padidinti
+        selektoriaus <strong>prioritetą</strong>. <br><br>
+
+        Aprašant CSS selektorius yra atvejų kuomet tą patį elementą pasirenka keli selektoriai. Beveik visada įvyksta stiliaus konfliktai -
+        skirtingi selektoriai nustato tas pačias savybes elementui. Tam yra skirti CSS prioritetai, kurie nusako kuris selektorius turės
+        didesnę įtaką konkuruojant su kitais CSS selektoriais.
       </p>
 
 
@@ -47,7 +54,7 @@
 
   <section class="mb-5 pb-5">
     <div class="container">
-      <h2 class="h2">Selektoriai</h2>
+      <h2 class="h2">Primityvūs selektoriai</h2>
       <p class="mt-3">
         CSS selektorius tai kriterijus pagal ką pasirinkti elementus kuriuos stilizuosime. <br><br>
         Populiariausi CSS selektoriai yra tokie:
@@ -144,8 +151,38 @@
             </div>
           </div>
         </div>
-
       </section>
+    </div>
+  </section>
+
+  <section class="mb-5 pb-5">
+    <div class="container">
+      <h2 class="h2 mb-3" id="test">CSS prioritetai</h2>
+
+      <p>
+        <strong>CSS prioritetai</strong> tai taisyklės, kurios nusako selektoriaus stiprumą lyginant su kitais selektoriais.
+        <br><br>
+        Prioritetai turi grupes:
+      </p>
+      <ul>
+        <li class="pl-3">
+          <div class="h5">1. primityvūs selektoriai</div>
+          <img src="../img/examples/css_specificity.png" alt="">
+        </li>
+        <li class="pl-3">2. selektoriaus tikslesnis apibūdinimas, hierarchijos nurodymas</li>
+        <li class="pl-3">3. selektoriaus eiliškumas</li>
+      </ul>
+      <p class="my-3">
+        Jeigu CSS selektorius turi aukštesnį <strong>1.</strong> grupės prioritą, tuomet antras nėra tikrinamas. Kitaip tariant,
+        <strong>2.</strong> grupės prioritetas tikrinamas tik tuomet, kuomet <strong>1.</strong> grupės prioritetai sutampa.
+        <br><br>
+        <strong>3.</strong> grupės prioritetas tikrinamas tik tuomet, jeigu <strong>1.</strong> ir <strong>2.</strong> grupių prioritai
+        sutampa (yra vienodi)
+      </p>
+
+
+
+
 
     </div>
   </section>
