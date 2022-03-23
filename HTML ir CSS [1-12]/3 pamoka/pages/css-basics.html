@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS pagrindai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container">
+      <nav>
+        <ul class="d-flex">
+          <li><a href="../index.html" class="navbar__link">Pagrindinis</a></li>
+          <li><a href="" class="navbar__link active">CSS pagrindai</a></li>
+          <li><a href="" class="navbar__link">Display tipai</a></li>
+          <li><a href="" class="navbar__link">Box model</a></li>
+          <li><a href="" class="navbar__link">Typography</a></li>
+          <li><a href="" class="navbar__link">Flex</a></li>
+          <li><a href="" class="navbar__link">Grid</a></li>
+          <li><a href="" class="navbar__link">Position</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-navbar">
+    <div class="container py-4">
+      <h1 class="h1 mb-2">CSS pagrindai</h1>
+      <p>
+        CSS tai kompiuterinė kalba skirta stilizuoti HTML elementus pagal pasirinktą selektorių.
+      </p>
+
+
+    </div>
+  </main>
+
+  <section class="mb-5 pb-5">
+    <div class="container">
+      <h2 class="h2">Selektoriai</h2>
+      <p class="mt-3">
+        CSS selektorius tai kriterijus pagal ką pasirinkti elementus kuriuos stilizuosime. <br><br>
+        Populiariausi CSS selektoriai yra tokie:
+      </p>
+      <ul class="d-flex flex-column g-2 mb-3">
+        <li class="pl-3">
+          <strong>pagal elemento tipą</strong>
+          <ul>
+            <li class="pl-3">html{...} - stilizuojami visi elementai kurių <em>tag name</em> yra <strong>html</strong></li>
+            <li class="pl-3">body{...} - stilizuojami visi elementai kurių <em>tag name</em> yra <strong>body</strong></li>
+            <li class="pl-3">div{...} - stilizuojami visi elementai kurių <em>tag name</em> yra <strong>div</strong></li>
+          </ul>
+        </li>
+        <li class="pl-3">
+          <strong>pagal klasę</strong>
+          <ul>
+            <li class="pl-3">.button{...} - stilizuojami visi elementai kurie turi attributą <em>class</em> ir jame yra įrašyta klasė
+              <strong>button</strong>
+            </li>
+            <li class="pl-3">.card{...} - stilizuojami visi elementai kurie turi attributą <em>class</em> ir jame yra įrašyta klasė
+              <strong>card</strong>
+            </li>
+            <li class="pl-3">.pt-3{...} - stilizuojami visi elementai kurie turi attributą <em>class</em> ir jame yra įrašyta klasė
+              <strong>pt-3</strong>
+            </li>
+          </ul>
+        </li>
+        <li class="pl-3">
+          <strong>pagal atributą</strong>
+          <ul>
+            <li class="pl-3">[href]{...} - stilizuojami visi elementai kurie turi attributą <strong>href</strong></li>
+            <li class="pl-3">[id]{...} - stilizuojami visi elementai kurie turi attributą <strong>id</strong></li>
+            <li class="pl-3">
+              [type=text]{...} - stilizuojami visi elementai kurie turi attributą <strong>type</strong> ir to atributo
+              reikšmė yra <strong>text</strong>
+            </li>
+          </ul>
+        </li>
+        <li class="pl-3">
+          <strong>pagal id</strong>
+          <ul>
+            <li class="pl-3">
+              #navbar{...} - stilizuojami visi elementai kurie turi attributą <strong>id</strong> ir jo reikšmė yra
+              <strong>navbar</strong>
+            </li>
+            <li class="pl-3">
+              #main-link{...} - stilizuojami visi elementai kurie turi attributą <strong>id</strong> ir jo reikšmė yra
+              <strong>main-link</strong>
+            </li>
+            <li class="pl-3">
+              #footer{...} - stilizuojami visi elementai kurie turi attributą <strong>id</strong> ir jo reikšmė yra
+              <strong>footer</strong>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <section>
+        <h3 class="mb-3">Pavyzdžiai</h3>
+        <div class="d-flex g-4 mb-3">
+          <img src="../img/examples/css-selector-by-class.jpg" alt="CSS selector by class iliustration" width="350">
+          <div>
+            <p class="pb-2">
+              Pasirenkami elementai kurie turi attributą <strong>class</strong> ir jame įrašytas klasės pavadinimas <strong>card</strong>,
+              pvz.:
+            </p>
+            <div class="pl-3">
+              &lt;div <strong>class</strong>="<strong>card</strong>"&gt;...&lt;/div&gt;
+            </div>
+            <div class="pl-3">
+              &lt;article <strong>class</strong>="<strong>card</strong>"&gt;...&lt;/article&gt;
+            </div>
+            <div class="pl-3">
+              &lt;article <strong>class</strong>="<strong>card</strong> d-flex"&gt;...&lt;/article&gt;
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex g-4">
+          <img src="../img/examples/css-selector-by-attribute.jpg" alt="CSS selector by attribute iliustration" width="350">
+          <div>
+            <p class="pb-2">
+              Pasirenkami elementai kurie turi attributą <strong>type</strong> ir jo reikšmė yra <strong>text</strong>,
+              pvz.:
+            </p>
+            <div class="pl-3">
+              &lt;input <strong>type</strong>="<strong>text</strong>" /&gt;
+            </div>
+            <div class="pl-3">
+              &lt;input <strong>type</strong>="<strong>text</strong>" class="form-control" /&gt;
+            </div>
+            <div class="pl-3">
+              &lt;input <strong>type</strong>="<strong>text</strong>" name="city" /&gt;
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </section>
+
+</body>
+
+</html>

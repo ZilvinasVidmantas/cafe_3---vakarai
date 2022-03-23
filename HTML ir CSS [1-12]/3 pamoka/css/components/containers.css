@@ -1,5 +1,6 @@
 .container {
-  padding: 0 var(--spacing-4);
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
 }
 
 @media screen and (min-width: 800px) {

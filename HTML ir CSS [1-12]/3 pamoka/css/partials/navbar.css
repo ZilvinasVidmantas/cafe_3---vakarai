@@ -29,3 +29,7 @@
 .navbar__link:hover {
   color: var(--color-primary-light);
 }
+
+.pt-navbar{
+  padding-top: var(--navbar-height);
+}
