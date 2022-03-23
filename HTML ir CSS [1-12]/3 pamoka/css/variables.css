@@ -7,11 +7,11 @@
   --color-primary-hover: #018b4f;
 
   --spacing-0: 0;
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 1rem;
-  --spacing-4: 1.5rem;
-  --spacing-5: 3rem;
+  --spacing-1: 0.25em;
+  --spacing-2: 0.5em;
+  --spacing-3: 1em;
+  --spacing-4: 1.5em;
+  --spacing-5: 3em;
 
   --breakpoint-sm: 580px;
   --breakpoint-md: 800px;
