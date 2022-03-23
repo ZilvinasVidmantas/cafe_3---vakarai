@@ -1,0 +1,22 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-black-hover: #222;
+  --color-white-hover: #ddd;
+  --color-primary: #009e5a;
+  --color-primary-hover: #018b4f;
+
+  --spacing-0: 0; 
+  --spacing-1: 0.25rem; 
+  --spacing-2: 0.5rem; 
+  --spacing-3: 1rem; 
+  --spacing-4: 1.5rem; 
+  --spacing-5: 3rem; 
+
+  --breakpoint-sm: 580px;
+  --breakpoint-md: 800px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1440px;
+
+  --border-radius: 4px;
+}
