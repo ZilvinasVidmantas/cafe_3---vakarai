@@ -1,9 +1,3 @@
-.courses-section {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem 3rem;
-}
-
 .courses-cards-container {
   display: grid;
   grid-template-columns: auto;

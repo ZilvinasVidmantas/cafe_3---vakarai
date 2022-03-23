@@ -6,12 +6,12 @@
   --color-primary: #009e5a;
   --color-primary-hover: #018b4f;
 
-  --spacing-0: 0; 
-  --spacing-1: 0.25rem; 
-  --spacing-2: 0.5rem; 
-  --spacing-3: 1rem; 
-  --spacing-4: 1.5rem; 
-  --spacing-5: 3rem; 
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 1rem;
+  --spacing-4: 1.5rem;
+  --spacing-5: 3rem;
 
   --breakpoint-sm: 580px;
   --breakpoint-md: 800px;
@@ -19,4 +19,15 @@
   --breakpoint-xl: 1440px;
 
   --border-radius: 4px;
+
+  --font-decoration: 'Bitter', serif;
+  --font-ui: 'Red Hat Mono', monospace;
+  --font-general: 'Source Sans Pro', sans-serif;
+
+  --h1: 3rem;
+  --h2: 2.5rem;
+  --h3: 1.8rem;
+  --h4: 1.55rem;
+  --h5: 1.3rem;
+  --h6: 1rem;
 }
