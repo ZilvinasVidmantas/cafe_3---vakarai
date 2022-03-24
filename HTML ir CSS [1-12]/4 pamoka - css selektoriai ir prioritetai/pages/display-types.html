@@ -55,7 +55,7 @@
         <strong>inline</strong>. Šis tipas pasako, kad elementas bus suvokiamas kaip tekstas. Elementai turintys šį tipą negali turėti
         aukščio ir pločios nustatymų. Jeigu nustatysite aukščio ar pločio nustatymus, jie paprasčiausiai neveiks.
         <br><br>
-        Taip pat šiems elementams nekorektiškai veikia ir box-model savybės. Paraščių(margin) savybės veikia tikį šonus, o kamšalo(padding)
+        Taip pat šiems elementams nekorektiškai veikia ir box-model savybės. Paraščių(margin) savybės veikia tik į šonus, o kamšalo(padding)
         saybės pritaikomos fonui, tačiau neturi įtakos elemnto kontūrų padidinimui.
         <br><br>
         Šį display tipą, turėtumėte naudoti tekstui, ikonoms arba nuotraukoms.
@@ -91,6 +91,39 @@
             <span class="bg-primary p-2">span elementas</span>
             <span class="bg-primary p-2">span elementas</span>
           </div>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-2">Inline-block</h2>
+      <p>
+        Tai display tipas, kuris atvaizduoja elementus rašymo tvarka: iš kairės į dešinę (taip pat kaip ir inline). Priešingai negu inline
+        tipas <strong>display: inline-block</strong> elementai gali turi dimensijų nustatymus, bei box-model savybes. Kadangi tai yra blokai
+        jie negali būti keliose eilutės, t.y. Jeigu elementas pilnai netelpa į tėvinio elemento plotį, jis perkeliamas į sekančią eilutę.
+        <br><br>
+        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong> <br>
+      </p>
+      <ul>
+        <li class="pl-3">&lt;input&gt;</li>
+        <li class="pl-3">&lt;select&gt;</li>
+        <li class="pl-3">&lt;button&gt;</li>
+        <li class="pl-3">&lt;text-area&gt;</li>
+      </ul>
+      <section class="my-3">
+        <h3 class="mb-3">Pavyzdžiai</h3>
+        <article>
+          <h4 class="mb-3">Iš kairės į dešinę atvaizduojami blokai, kurie nusikelia į kitą eilutę</h4>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
         </article>
       </section>
     </div>

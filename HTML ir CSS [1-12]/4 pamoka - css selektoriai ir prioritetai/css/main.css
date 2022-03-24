@@ -9,6 +9,8 @@
 @import './utilities/spacing.css';
 @import './utilities/flex.css';
 @import './utilities/backgrounds.css';
+@import './utilities/displays.css';
+@import './utilities/dimensions.css';
 
 /* Partials */
 @import './partials/navbar.css';
