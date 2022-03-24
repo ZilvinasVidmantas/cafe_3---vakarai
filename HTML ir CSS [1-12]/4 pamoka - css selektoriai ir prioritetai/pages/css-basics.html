@@ -5,15 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS pagrindai</title>
+  <!-- Šriftai, Ikonos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
+  <!-- Mūsų rašyti stiliai -->
   <link rel="stylesheet" href="../css/main.css">
+  <title>CSS pagrindai</title>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
         <ul class="d-flex">
           <li><a href="../index.html" class="navbar__link">Pagrindinis</a></li>
           <li><a href="" class="navbar__link active">CSS pagrindai</a></li>
-          <li><a href="" class="navbar__link">Display tipai</a></li>
+          <li><a href="./display-types.html" class="navbar__link">Display tipai</a></li>
           <li><a href="" class="navbar__link">Box model</a></li>
           <li><a href="" class="navbar__link">Typography</a></li>
           <li><a href="" class="navbar__link">Flex</a></li>
@@ -47,13 +48,12 @@
         skirtingi selektoriai nustato tas pačias savybes elementui. Tam yra skirti CSS prioritetai, kurie nusako kuris selektorius turės
         didesnę įtaką konkuruojant su kitais CSS selektoriais.
       </p>
-
-
     </div>
   </main>
 
   <section class="mb-5 pb-5">
     <div class="container">
+      <div class="square bg-blue bg-red"></div>
       <h2 class="h2">Primityvūs selektoriai</h2>
       <p class="mt-3">
         CSS selektorius tai kriterijus pagal ką pasirinkti elementus kuriuos stilizuosime. <br><br>
@@ -157,33 +157,60 @@
 
   <section class="mb-5 pb-5">
     <div class="container">
-      <h2 class="h2 mb-3" id="test">CSS prioritetai</h2>
-
+      <h2 class="h2 mb-3">CSS prioritetai</h2>
       <p>
         <strong>CSS prioritetai</strong> tai taisyklės, kurios nusako selektoriaus stiprumą lyginant su kitais selektoriais.
         <br><br>
-        Prioritetai turi grupes:
       </p>
-      <ul>
-        <li class="pl-3">
-          <div class="h5">1. primityvūs selektoriai</div>
-          <img src="../img/examples/css_specificity.png" alt="">
-        </li>
-        <li class="pl-3">2. selektoriaus tikslesnis apibūdinimas, hierarchijos nurodymas</li>
-        <li class="pl-3">3. selektoriaus eiliškumas</li>
-      </ul>
-      <p class="my-3">
-        Jeigu CSS selektorius turi aukštesnį <strong>1.</strong> grupės prioritą, tuomet antras nėra tikrinamas. Kitaip tariant,
-        <strong>2.</strong> grupės prioritetas tikrinamas tik tuomet, kuomet <strong>1.</strong> grupės prioritetai sutampa.
-        <br><br>
-        <strong>3.</strong> grupės prioritetas tikrinamas tik tuomet, jeigu <strong>1.</strong> ir <strong>2.</strong> grupių prioritai
-        sutampa (yra vienodi)
-      </p>
+      <section>
+        <h3 class="h3 mb-3">Prioritetų grupės</h3>
 
+        <p class="my-3">
+          Yra <strong>3</strong> prioritetų grupės.
 
+          Jeigu CSS selektorius turi aukštesnį <strong>1.</strong> grupės prioritą, tuomet antras nėra tikrinamas. Kitaip tariant,
+          <strong>2.</strong> grupės prioritetas tikrinamas tik tuomet, kuomet <strong>1.</strong> grupės prioritetai sutampa.
+          <br>
+          <strong>3.</strong> grupės prioritetas tikrinamas tik tuomet, jeigu <strong>1.</strong> ir <strong>2.</strong> grupių prioritetai
+          sutampa (yra vienodi).
+        </p>
 
+        <article class="my-4">
+          <h4 class="mb-3">1. Selektoriaus tipas</h4>
+          <img src="../img/examples/css-selector-strength.png" alt="">
+        </article>
 
+        <article class="my-4">
+          <h4 class="mb-3">2. Selektoriaus apibūdinimas</h4>
+          <div class="d-flex g-3">
+            <img src="../img/examples/css-specificity.gif" alt="">
+            <p>CSS selektoriaus apibūdinimas tai papildomų kriterijų aprašymas. Dažniausiai naudojamas tam, kad suteikti aukštesnį
+              prieoritetą perrašant stilius.
+              <br><br>
+              Selektorius <strong>div.square</strong> turės aukštesnį prioritetą nei <strong>.square</strong>. Todėl elemento su klase
+              <strong>.square</strong> išmatavimai bus 200x200.
+              <br><br>
+              Selektoriaus apibūdinimo(specificity) stiprumą ir grupes galite peržvelgti užvedus pelytę ant selektoriaus, taip kaip
+              iliustracijoje dešinėje.
+            </p>
+          </div>
+        </article>
 
+        <article class="my-4">
+          <h4 class="mb-3">3. Selektoriaus eiliškumas</h4>
+          <div class="d-flex g-3">
+            <img src="../img/examples/css-selector-order.jpg" alt="">
+            <p>
+              Kuomet selektorių <strong>1.</strong> ir <strong>2.</strong> grupių prioritetai sutampa, tuomet aukštesnį prioritetą turės tas
+              selektorius, todėl šiuo kuris aprašytas vėliau. Todėl šiuo atveju aprašyto elemento fono spalva bus mėlyna.
+              <br><br>
+              Svarbi paminėti, kad failų įtraukimo tvarka irgi turi įtaką. Vėliau įtraukiami failai, turi aukštesnį prioritetą. Būtent todėl
+              bibliotekų ir šriftų failus visuomet turite įtrauksi aukščiau nei savo kurtus failus. Įtraukiant failus tokia tvarka jūsų
+              failai įgaus aukštesnį prioritetą.
+            </p>
+          </div>
+        </article>
+      </section>
     </div>
   </section>
 
