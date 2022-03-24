@@ -68,57 +68,81 @@
       <p>
         Kuomet rašome margin ir padding savybes, galime jas aprašyti atskirai į kiekvieną pusę, arba naudojant trumpuosius užrašymus.
       </p>
-      <ul class="d-flex flex-column g-3 ml-3 my-3">
-        <li>
-          <strong>1 dydis - į visas puses</strong>
-          <div>margin: <strong>10px</strong>;</div>
-          <ul class="pl-3 my-1">
-            <li>margin-top: 10px</li>
-            <li>margin-right: 10px</li>
-            <li>margin-bottom: 10px</li>
-            <li>margin-left: 10px</li>
-          </ul>
-        </li>
-        <li>
-          <strong>2 dydžiai - viršus ir šonai</strong>
-          <div>margin: <strong>10px</strong> <strong>20px</strong>;</div>
-          <ul class="pl-3 my-1">
-            <li>margin-top: 10px</li>
-            <li>margin-right: 20px</li>
-            <li>margin-bottom: 10px</li>
-            <li>margin-left: 20px</li>
-          </ul>
-        </li>
-        <li>
-          <strong>3 dydžiai - viršus, šonai ir apačia</strong>
-          <div>margin: <strong>10px</strong> <strong>20px</strong> <strong>30px</strong>;</div>
-          <ul class="pl-3 my-1">
-            <li>margin-top: 10px</li>
-            <li>margin-right: 20px</li>
-            <li>margin-bottom: 30px</li>
-            <li>margin-left: 20px</li>
-          </ul>
-        </li>
-        <li>
-          <strong>4 dydžiai - viršus, dešinė, apačia ir kairė</strong>
-          <div>margin: <strong>10px</strong> <strong>20px</strong> <strong>30px</strong> <strong>40px</strong>;</div>
-          <ul class="pl-3">
-            <li>margin-top: 10px</li>
-            <li>margin-right: 20px</li>
-            <li>margin-bottom: 30px</li>
-            <li>margin-left: 40px</li>
-          </ul>
-        </li>
-      </ul>
+
       <section class="my-3">
         <h3 class="mb-3">Pavyzdžiai</h3>
-        <div class="d-flex flex-wrap g-3">
-          <img src="../img/examples/box-model-spacing-shorthand-1.jpg" alt="">
-          <img src="../img/examples/box-model-spacing-shorthand-2.jpg" alt="">
-          <img src="../img/examples/box-model-spacing-shorthand-3.jpg" alt="">
+
+        <div class="d-flex">
+          <div class="d-flex flex-column gap-3 align-items-start">
+            <img src="../img/examples/box-model-spacing-shorthand-1.jpg" alt="">
+            <img src="../img/examples/box-model-spacing-shorthand-2.jpg" alt="">
+            <img src="../img/examples/box-model-spacing-shorthand-3.jpg" alt="">
+          </div>
+          <ul class="d-flex flex-column g-3 ml-3 my-3">
+            <li>
+              <strong>1 dydis - į visas puses</strong>
+              <div>margin: <strong>10px</strong>;</div>
+              <ul class="pl-3 my-1">
+                <li>margin-top: 10px</li>
+                <li>margin-right: 10px</li>
+                <li>margin-bottom: 10px</li>
+                <li>margin-left: 10px</li>
+              </ul>
+            </li>
+            <li>
+              <strong>2 dydžiai - viršus ir šonai</strong>
+              <div>margin: <strong>10px</strong> <strong>20px</strong>;</div>
+              <ul class="pl-3 my-1">
+                <li>margin-top: 10px</li>
+                <li>margin-right: 20px</li>
+                <li>margin-bottom: 10px</li>
+                <li>margin-left: 20px</li>
+              </ul>
+            </li>
+            <li>
+              <strong>3 dydžiai - viršus, šonai ir apačia</strong>
+              <div>margin: <strong>10px</strong> <strong>20px</strong> <strong>30px</strong>;</div>
+              <ul class="pl-3 my-1">
+                <li>margin-top: 10px</li>
+                <li>margin-right: 20px</li>
+                <li>margin-bottom: 30px</li>
+                <li>margin-left: 20px</li>
+              </ul>
+            </li>
+            <li>
+              <strong>4 dydžiai - viršus, dešinė, apačia ir kairė</strong>
+              <div>margin: <strong>10px</strong> <strong>20px</strong> <strong>30px</strong> <strong>40px</strong>;</div>
+              <ul class="pl-3">
+                <li>margin-top: 10px</li>
+                <li>margin-right: 20px</li>
+                <li>margin-bottom: 30px</li>
+                <li>margin-left: 40px</li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
+
       </section>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-2">Box sizing</h2>
+      <img src="../img/examples/box-sizing.jpg" width="700" class="float-right ml-3">
+      <p>
+        Tai CSS savybė kuri pasako, pagal kokią box-model kontūrų dalį bus suvokiamas elementų eukštis ir plotis.
+
+        Standartinė savybė CSS savybės <strong>box-sizing</strong> reikšmė yra <strong>content-box</strong>. Kuomet nustatyta ši reikšmė
+        padding'as pridedas papildomai. Pavyzdžiui, jeigu elemento išmatavimai yra 40x40 ir papildomai pridedama padding'o, tuomet vizualūs
+        išmatavimai bus 60x60.
+        <br> <br>
+        Kuomet formuojame puslapio išdėstymą pagal parengtus dizainus, daug patogiau naudoti kitą šios savybęs reikšmę - <strong>box-sizing:
+          border-box</strong>.
+        Nustačius šią reikšmę, aukštis ir plotis suvokiamas pagal HTML elemento sienelę, o padding'as pridemas į elemento visų. Tokiu atveju
+        pridėjus padding'o vizualūs išmatavimai nesikeičia. Paddingas tiesiog mašina turinio dalį.
+      </p>
     </div>
   </section>
 
