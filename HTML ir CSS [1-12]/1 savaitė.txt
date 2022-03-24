@@ -1,0 +1,13 @@
+Šios savaitės kartojimas
+* HTML pagrindai - https://www.youtube.com/watch?v=UB1O30fR-EE&ab_channel=TraversyMedia
+* CSS pagrindai - https://www.youtube.com/watch?v=yfoY53QXEnI&ab_channel=TraversyMedia
+
+Pasiruošimas kitai savaitei
+* CSS position - https://www.youtube.com/watch?v=UO8ed-JB4So&ab_channel=FollowAndrew
+* Flex pagrindai - https://www.youtube.com/watch?v=3YW65K6LcIA
+* Grid pagrindai - https://www.youtube.com/watch?v=0xMQfnTU6oo&ab_channel=TraversyMedia
+
+!!!!! Atsargiai !!!!!
+Manijakams:
+  Pilnas SCSS puslapis su konfiguruotų bootstrap (pirmiausiai pažiūrėti paskutinį video)
+  https://www.youtube.com/watch?v=uoXFcsTGATg&list=PL4-IK0AVhVjO0fw0sUh8UCIU10TPlVB4J&ab_channel=KevinPowell

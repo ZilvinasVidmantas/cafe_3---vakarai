@@ -1,0 +1,19 @@
+Šiai savaitei:
+* CSS position - https://www.youtube.com/watch?v=UO8ed-JB4So&ab_channel=FollowAndrew
+* Flex pagrindai - https://www.youtube.com/watch?v=3YW65K6LcIA
+* Grid pagrindai - https://www.youtube.com/watch?v=0xMQfnTU6oo&ab_channel=TraversyMedia
+
+Padaryti Plain CSS/SCSS (bre framework'ų) projektą jūsų pasirinktą tema;
+
+  iki 04-04 18:00 atsiųsti tokiu formatu:
+    vardas-pavarde.zip
+  1. Bent 3 atskiri puslapiai arba didelės sekcijos
+  2. Navbar (sticky arba fixed)
+  3. Footer'is
+  4. Panaudotos ikonos
+  5. Panaudoti šriftai
+  6. Panaudoti kintamieji
+  7. Panaudotas Flex
+  8. CSS stiliai parašyti mažomis perpanaudojamomis klasės ARBA pagal BEM standartą
+  9. Panaudoti Grid
+  10. Responsive layout, bent 3 breakpontai
