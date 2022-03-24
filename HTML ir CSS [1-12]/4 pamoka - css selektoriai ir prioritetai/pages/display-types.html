@@ -38,8 +38,64 @@
   <main class="pt-navbar">
     <div class="container py-4">
       <h1 class="h1 mb-2">Display tipai</h1>
+      <p>
+        Display tipas tai CSS savybės reikšmė. Yra 3 primityvūs display tipai: <strong>block</strong>, <strong>inline</strong> ir
+        <strong>inline-block</strong>. CSS savybė <strong>display</strong> pasako kaip bus atvaizduojamas html elemntas.
+        <br><br>
+        Kai kuriems elementams naršyklė suteikia šiuos display tipus automatiškai.
+      </p>
     </div>
   </main>
+
+  <section class="my-4">
+    <div class="container">
+      <h2 class="h2 mb-2">Inline</h2>
+      <p>
+        Tai pagrindinis display tipas taikomas visiems vartotojo sukurtiems elementams. Jeigu sukuriame savo html elementą, jo tipas bus
+        <strong>inline</strong>. Šis tipas pasako, kad elementas bus suvokiamas kaip tekstas. Elementai turintys šį tipą negali turėti
+        aukščio ir pločios nustatymų. Jeigu nustatysite aukščio ar pločio nustatymus, jie paprasčiausiai neveiks.
+        <br><br>
+        Taip pat šiems elementams nekorektiškai veikia ir box-model savybės. Paraščių(margin) savybės veikia tikį šonus, o kamšalo(padding)
+        saybės pritaikomos fonui, tačiau neturi įtakos elemnto kontūrų padidinimui.
+        <br><br>
+        Šį display tipą, turėtumėte naudoti tekstui, ikonoms arba nuotraukoms.
+        <br><br>
+        Tai vienintelis display tipas, kuris nėra keturkampis. Šio tipo elementai(tekstas) gali nusikelti per dvi ar daugiau eilučių;
+        <br><br>
+        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong> <br>
+      </p>
+      <ul>
+        <li class="pl-3">&lt;span&gt;</li>
+        <li class="pl-3">&lt;a&gt;</li>
+        <li class="pl-3">&lt;strong&gt;</li>
+        <li class="pl-3">&lt;em&gt;</li>
+      </ul>
+      <section>
+        <h3 class="mb-3">Pavyzdžiai</h3>
+        <article>
+          <h4 class="mb-3">Nekorektiškas padding veikimas span elmentams</h4>
+          <div>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+          </div>
+        </article>
+      </section>
+    </div>
+  </section>
+
 </body>
 
 </html>
