@@ -11,6 +11,7 @@
 @import './utilities/backgrounds.css';
 @import './utilities/displays.css';
 @import './utilities/dimensions.css';
+@import './utilities/floats.css';
 
 /* Partials */
 @import './partials/navbar.css';
