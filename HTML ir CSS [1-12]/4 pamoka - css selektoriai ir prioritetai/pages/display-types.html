@@ -70,7 +70,7 @@
         <li class="pl-3">&lt;strong&gt;</li>
         <li class="pl-3">&lt;em&gt;</li>
       </ul>
-      <section>
+      <section class="my-3">
         <h3 class="mb-3">Pavyzdžiai</h3>
         <article>
           <h4 class="mb-3">Nekorektiškas padding veikimas span elmentams</h4>
@@ -124,6 +124,62 @@
           <span class="d-inline-block bg-primary h-100px w-200px"></span>
           <span class="d-inline-block bg-primary h-100px w-200px"></span>
           <span class="d-inline-block bg-primary h-100px w-200px"></span>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-2">Block</h2>
+      <p>
+        Tai atvaizdavimo tipas <strong>display: block</strong>, kuris užsirezervuoja visą <strong>tėvinio elemento plotį</strong>. To
+        pasekoje rašant <strong>display: block</strong> elementus vienas po kitos, jie atvaizduojami stulpeliu - lyg namo aukštai. Net jeigu
+        elementui nurodome, kad jis užims ne pilną tėvinio elemento plotį, kiti elementai nepateks į užrezervuotą vietą. Būtent todėl šie
+        elementai ir atsivaizduoja venas po kitu.
+        <br><br>
+        Šiems elementams galima nustatyti plotį(mažesnį nei tėvinio elemento) ir tuomet naudoti <strong>margin: auto</strong> savybę
+        atsistumti nuo kairės pusės, dešnės pusės arba abiejų pusių vienu metu. Kuomet nustatote atstūmimą (<em>margin: auto</em>) tiek iš
+        kairės, tiek iš dešinės pusės - elmentas atvaizduojamas per vidurį tėvinio elemento.
+        <br><br>
+        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong> <br>
+      </p>
+      <ul>
+        <li class="pl-3">&lt;div&gt;</li>
+        <li class="pl-3">&lt;header&gt;</li>
+        <li class="pl-3">&lt;nav&gt;</li>
+        <li class="pl-3">&lt;section&gt;</li>
+        <li class="pl-3">&lt;footer&gt;</li>
+        <li class="pl-3">&lt;main&gt;</li>
+        <li class="pl-3">&lt;article&gt;</li>
+        <li class="pl-3">&lt;h1&gt; - &lt;h6&gt;</li>
+      </ul>
+      <section class="my-3">
+        <h3 class="mb-3">Pavyzdžiai</h3>
+        <article class="my-4">
+          <h4 class="mb-3">Elementai vienas po kito</h4>
+          <div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+          </div>
+        </article>
+        <article class="my-4">
+          <h4 class="mb-3">Block elementas su margin-left: auto</h4>
+          <div>
+            <div class="bg-primary h-150px w-200px ml-auto"></div>
+          </div>
+        </article>
+        <article class="my-4">
+          <h4 class="mb-3">Block elementas su margin-left: auto ir margin-right: auto</h4>
+          <div>
+            <div class="bg-primary h-150px w-200px mx-auto"></div>
+          </div>
         </article>
       </section>
     </div>
