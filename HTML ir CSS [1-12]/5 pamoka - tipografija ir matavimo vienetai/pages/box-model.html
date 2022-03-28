@@ -25,7 +25,7 @@
           <li><a href="../index.html" class="navbar__link">Pagrindinis</a></li>
           <li><a href="./css-basics.html" class="navbar__link">CSS pagrindai</a></li>
           <li><a href="./display-types.html" class="navbar__link">Display tipai</a></li>
-          <li><a href="" class="navbar__link active">Box model</a></li>
+          <li><a href="./typography.html" class="navbar__link active">Box model</a></li>
           <li><a href="" class="navbar__link">Typography</a></li>
           <li><a href="" class="navbar__link">Flex</a></li>
           <li><a href="" class="navbar__link">Grid</a></li>
@@ -40,11 +40,15 @@
       <h1 class="h1 mb-2">Box Model</h1>
       <img src="../img/examples/box-model.jpg" width="500" class="float-right ml-3">
       <p>
-        Box model tai kiekvieno HTML elemento struktūrizavimas sekcijomis/stačiakampiais. Kiekvienas HTML elementas (išskyrus per kelias
-        eilutes persikeliantys <em>display: inline</em> elementai) turi 4 sekcijas: <strong>content</strong>, <strong>padding</strong>,
-        <strong>border</strong> ir <strong>margin</strong>. Margin, padding ir border sekcijos gali turėti atskirus nustatymus į visas
+        Box model tai kiekvieno HTML elemento struktūrizavimas sekcijomis/stačiakampiais. Kiekvienas HTML elementas
+        (išskyrus per kelias
+        eilutes persikeliantys <em>display: inline</em> elementai) turi 4 sekcijas: <strong>content</strong>,
+        <strong>padding</strong>,
+        <strong>border</strong> ir <strong>margin</strong>. Margin, padding ir border sekcijos gali turėti atskirus
+        nustatymus į visas
         (keturias) puses.
-        Content(turinio) išmatavimai standartiškai nustatomi naudojant width ir height savybes (jeigu box-sizing savybė nebuvo pakeista).
+        Content(turinio) išmatavimai standartiškai nustatomi naudojant width ir height savybes (jeigu box-sizing savybė
+        nebuvo pakeista).
         <br><br>
         Standartiškai height ir width savybės nustatomos content sekcijai. Tačiau tai galima pakeisti naudojant savybę
         <strong>box-sizing</strong>.
@@ -66,7 +70,8 @@
     <div class="container">
       <h2 class="mb-3">Padding ir margin CSS sayvybės rašymo trumpiniai</h2>
       <p>
-        Kuomet rašome margin ir padding savybes, galime jas aprašyti atskirai į kiekvieną pusę, arba naudojant trumpuosius užrašymus.
+        Kuomet rašome margin ir padding savybes, galime jas aprašyti atskirai į kiekvieną pusę, arba naudojant
+        trumpuosius užrašymus.
       </p>
 
       <section class="my-3">
@@ -111,7 +116,8 @@
             </li>
             <li>
               <strong>4 dydžiai - viršus, dešinė, apačia ir kairė</strong>
-              <div>margin: <strong>10px</strong> <strong>20px</strong> <strong>30px</strong> <strong>40px</strong>;</div>
+              <div>margin: <strong>10px</strong> <strong>20px</strong> <strong>30px</strong> <strong>40px</strong>;
+              </div>
               <ul class="pl-3">
                 <li>margin-top: 10px</li>
                 <li>margin-right: 20px</li>
@@ -134,13 +140,17 @@
       <p>
         Tai CSS savybė kuri pasako, pagal kokią box-model kontūrų dalį bus suvokiamas elementų eukštis ir plotis.
 
-        Standartinė savybė CSS savybės <strong>box-sizing</strong> reikšmė yra <strong>content-box</strong>. Kuomet nustatyta ši reikšmė
-        padding'as pridedas papildomai. Pavyzdžiui, jeigu elemento išmatavimai yra 40x40 ir papildomai pridedama padding'o, tuomet vizualūs
+        Standartinė savybė CSS savybės <strong>box-sizing</strong> reikšmė yra <strong>content-box</strong>. Kuomet
+        nustatyta ši reikšmė
+        padding'as pridedas papildomai. Pavyzdžiui, jeigu elemento išmatavimai yra 40x40 ir papildomai pridedama
+        padding'o, tuomet vizualūs
         išmatavimai bus 60x60.
         <br> <br>
-        Kuomet formuojame puslapio išdėstymą pagal parengtus dizainus, daug patogiau naudoti kitą šios savybęs reikšmę - <strong>box-sizing:
+        Kuomet formuojame puslapio išdėstymą pagal parengtus dizainus, daug patogiau naudoti kitą šios savybęs reikšmę -
+        <strong>box-sizing:
           border-box</strong>.
-        Nustačius šią reikšmę, aukštis ir plotis suvokiamas pagal HTML elemento sienelę, o padding'as pridemas į elemento visų. Tokiu atveju
+        Nustačius šią reikšmę, aukštis ir plotis suvokiamas pagal HTML elemento sienelę, o padding'as pridemas į
+        elemento visų. Tokiu atveju
         pridėjus padding'o vizualūs išmatavimai nesikeičia. Paddingas tiesiog mašina turinio dalį.
       </p>
     </div>

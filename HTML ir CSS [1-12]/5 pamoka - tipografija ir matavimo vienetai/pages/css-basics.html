@@ -26,7 +26,7 @@
           <li><a href="" class="navbar__link active">CSS pagrindai</a></li>
           <li><a href="./display-types.html" class="navbar__link">Display tipai</a></li>
           <li><a href="./box-model.html" class="navbar__link">Box model</a></li>
-          <li><a href="" class="navbar__link">Typography</a></li>
+          <li><a href="./typography.html" class="navbar__link">Typography</a></li>
           <li><a href="" class="navbar__link">Flex</a></li>
           <li><a href="" class="navbar__link">Grid</a></li>
           <li><a href="" class="navbar__link">Position</a></li>
@@ -41,11 +41,14 @@
       <p>
         CSS tai kompiuterinė kalba skirta stilizuoti HTML elementus pagal pasirinktą selektorių. <br><br>
 
-        Selektoriai gali būti primityvūs ir kompleksiniai. Dažniausiai kompleksiniai selektoriai yra naudojami kuomet reikia padidinti
+        Selektoriai gali būti primityvūs ir kompleksiniai. Dažniausiai kompleksiniai selektoriai yra naudojami kuomet
+        reikia padidinti
         selektoriaus <strong>prioritetą</strong>. <br><br>
 
-        Aprašant CSS selektorius yra atvejų kuomet tą patį elementą pasirenka keli selektoriai. Beveik visada įvyksta stiliaus konfliktai -
-        skirtingi selektoriai nustato tas pačias savybes elementui. Tam yra skirti CSS prioritetai, kurie nusako kuris selektorius turės
+        Aprašant CSS selektorius yra atvejų kuomet tą patį elementą pasirenka keli selektoriai. Beveik visada įvyksta
+        stiliaus konfliktai -
+        skirtingi selektoriai nustato tas pačias savybes elementui. Tam yra skirti CSS prioritetai, kurie nusako kuris
+        selektorius turės
         didesnę įtaką konkuruojant su kitais CSS selektoriais.
       </p>
     </div>
@@ -63,21 +66,27 @@
         <li class="pl-3">
           <strong>pagal elemento tipą</strong>
           <ul>
-            <li class="pl-3">html{...} - stilizuojami visi elementai kurių <em>tag name</em> yra <strong>html</strong></li>
-            <li class="pl-3">body{...} - stilizuojami visi elementai kurių <em>tag name</em> yra <strong>body</strong></li>
-            <li class="pl-3">div{...} - stilizuojami visi elementai kurių <em>tag name</em> yra <strong>div</strong></li>
+            <li class="pl-3">html{...} - stilizuojami visi elementai kurių <em>tag name</em> yra <strong>html</strong>
+            </li>
+            <li class="pl-3">body{...} - stilizuojami visi elementai kurių <em>tag name</em> yra <strong>body</strong>
+            </li>
+            <li class="pl-3">div{...} - stilizuojami visi elementai kurių <em>tag name</em> yra <strong>div</strong>
+            </li>
           </ul>
         </li>
         <li class="pl-3">
           <strong>pagal klasę</strong>
           <ul>
-            <li class="pl-3">.button{...} - stilizuojami visi elementai kurie turi attributą <em>class</em> ir jame yra įrašyta klasė
+            <li class="pl-3">.button{...} - stilizuojami visi elementai kurie turi attributą <em>class</em> ir jame yra
+              įrašyta klasė
               <strong>button</strong>
             </li>
-            <li class="pl-3">.card{...} - stilizuojami visi elementai kurie turi attributą <em>class</em> ir jame yra įrašyta klasė
+            <li class="pl-3">.card{...} - stilizuojami visi elementai kurie turi attributą <em>class</em> ir jame yra
+              įrašyta klasė
               <strong>card</strong>
             </li>
-            <li class="pl-3">.pt-3{...} - stilizuojami visi elementai kurie turi attributą <em>class</em> ir jame yra įrašyta klasė
+            <li class="pl-3">.pt-3{...} - stilizuojami visi elementai kurie turi attributą <em>class</em> ir jame yra
+              įrašyta klasė
               <strong>pt-3</strong>
             </li>
           </ul>
@@ -118,7 +127,8 @@
           <img src="../img/examples/css-selector-by-class.jpg" alt="CSS selector by class iliustration" width="350">
           <div>
             <p class="pb-2">
-              Pasirenkami elementai kurie turi attributą <strong>class</strong> ir jame įrašytas klasės pavadinimas <strong>card</strong>,
+              Pasirenkami elementai kurie turi attributą <strong>class</strong> ir jame įrašytas klasės pavadinimas
+              <strong>card</strong>,
               pvz.:
             </p>
             <div class="pl-3">
@@ -134,7 +144,8 @@
         </div>
 
         <div class="d-flex g-4">
-          <img src="../img/examples/css-selector-by-attribute.jpg" alt="CSS selector by attribute iliustration" width="350">
+          <img src="../img/examples/css-selector-by-attribute.jpg" alt="CSS selector by attribute iliustration"
+            width="350">
           <div>
             <p class="pb-2">
               Pasirenkami elementai kurie turi attributą <strong>type</strong> ir jo reikšmė yra <strong>text</strong>,
@@ -159,7 +170,8 @@
     <div class="container">
       <h2 class="h2 mb-3">CSS prioritetai</h2>
       <p>
-        <strong>CSS prioritetai</strong> tai taisyklės, kurios nusako selektoriaus stiprumą lyginant su kitais selektoriais.
+        <strong>CSS prioritetai</strong> tai taisyklės, kurios nusako selektoriaus stiprumą lyginant su kitais
+        selektoriais.
         <br><br>
       </p>
       <section>
@@ -168,10 +180,13 @@
         <p class="my-3">
           Yra <strong>3</strong> prioritetų grupės.
 
-          Jeigu CSS selektorius turi aukštesnį <strong>1.</strong> grupės prioritą, tuomet antras nėra tikrinamas. Kitaip tariant,
-          <strong>2.</strong> grupės prioritetas tikrinamas tik tuomet, kuomet <strong>1.</strong> grupės prioritetai sutampa.
+          Jeigu CSS selektorius turi aukštesnį <strong>1.</strong> grupės prioritą, tuomet antras nėra tikrinamas.
+          Kitaip tariant,
+          <strong>2.</strong> grupės prioritetas tikrinamas tik tuomet, kuomet <strong>1.</strong> grupės prioritetai
+          sutampa.
           <br>
-          <strong>3.</strong> grupės prioritetas tikrinamas tik tuomet, jeigu <strong>1.</strong> ir <strong>2.</strong> grupių prioritetai
+          <strong>3.</strong> grupės prioritetas tikrinamas tik tuomet, jeigu <strong>1.</strong> ir <strong>2.</strong>
+          grupių prioritetai
           sutampa (yra vienodi).
         </p>
 
@@ -184,13 +199,16 @@
           <h4 class="mb-3">2. Selektoriaus apibūdinimas</h4>
           <div class="d-flex g-3">
             <img src="../img/examples/css-specificity.gif" alt="">
-            <p>CSS selektoriaus apibūdinimas tai papildomų kriterijų aprašymas. Dažniausiai naudojamas tam, kad suteikti aukštesnį
+            <p>CSS selektoriaus apibūdinimas tai papildomų kriterijų aprašymas. Dažniausiai naudojamas tam, kad suteikti
+              aukštesnį
               prieoritetą perrašant stilius.
               <br><br>
-              Selektorius <strong>div.square</strong> turės aukštesnį prioritetą nei <strong>.square</strong>. Todėl elemento su klase
+              Selektorius <strong>div.square</strong> turės aukštesnį prioritetą nei <strong>.square</strong>. Todėl
+              elemento su klase
               <strong>.square</strong> išmatavimai bus 200x200.
               <br><br>
-              Selektoriaus apibūdinimo(specificity) stiprumą ir grupes galite peržvelgti užvedus pelytę ant selektoriaus, taip kaip
+              Selektoriaus apibūdinimo(specificity) stiprumą ir grupes galite peržvelgti užvedus pelytę ant
+              selektoriaus, taip kaip
               iliustracijoje dešinėje.
             </p>
           </div>
@@ -201,11 +219,15 @@
           <div class="d-flex g-3">
             <img src="../img/examples/css-selector-order.jpg" alt="">
             <p>
-              Kuomet selektorių <strong>1.</strong> ir <strong>2.</strong> grupių prioritetai sutampa, tuomet aukštesnį prioritetą turės tas
-              selektorius, todėl šiuo kuris aprašytas vėliau. Todėl šiuo atveju aprašyto elemento fono spalva bus mėlyna.
+              Kuomet selektorių <strong>1.</strong> ir <strong>2.</strong> grupių prioritetai sutampa, tuomet aukštesnį
+              prioritetą turės tas
+              selektorius, todėl šiuo kuris aprašytas vėliau. Todėl šiuo atveju aprašyto elemento fono spalva bus
+              mėlyna.
               <br><br>
-              Svarbi paminėti, kad failų įtraukimo tvarka irgi turi įtaką. Vėliau įtraukiami failai, turi aukštesnį prioritetą. Būtent todėl
-              bibliotekų ir šriftų failus visuomet turite įtrauksi aukščiau nei savo kurtus failus. Įtraukiant failus tokia tvarka jūsų
+              Svarbi paminėti, kad failų įtraukimo tvarka irgi turi įtaką. Vėliau įtraukiami failai, turi aukštesnį
+              prioritetą. Būtent todėl
+              bibliotekų ir šriftų failus visuomet turite įtrauksi aukščiau nei savo kurtus failus. Įtraukiant failus
+              tokia tvarka jūsų
               failai įgaus aukštesnį prioritetą.
             </p>
           </div>

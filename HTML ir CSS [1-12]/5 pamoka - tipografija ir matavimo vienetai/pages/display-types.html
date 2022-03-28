@@ -26,7 +26,7 @@
           <li><a href="./css-basics.html" class="navbar__link">CSS pagrindai</a></li>
           <li><a href="" class="navbar__link  active">Display tipai</a></li>
           <li><a href="./box-model.html" class="navbar__link">Box model</a></li>
-          <li><a href="" class="navbar__link">Typography</a></li>
+          <li><a href="./typography.html" class="navbar__link">Typography</a></li>
           <li><a href="" class="navbar__link">Flex</a></li>
           <li><a href="" class="navbar__link">Grid</a></li>
           <li><a href="" class="navbar__link">Position</a></li>
@@ -39,7 +39,8 @@
     <div class="container py-4">
       <h1 class="h1 mb-2">Display tipai</h1>
       <p>
-        Display tipas tai CSS savybės reikšmė. Yra 3 primityvūs display tipai: <strong>block</strong>, <strong>inline</strong> ir
+        Display tipas tai CSS savybės reikšmė. Yra 3 primityvūs display tipai: <strong>block</strong>,
+        <strong>inline</strong> ir
         <strong>inline-block</strong>. CSS savybė <strong>display</strong> pasako kaip bus atvaizduojamas html elemntas.
         <br><br>
         Kai kuriems elementams naršyklė suteikia šiuos display tipus automatiškai.
@@ -51,18 +52,23 @@
     <div class="container">
       <h2 class="h2 mb-2">Inline</h2>
       <p>
-        Tai pagrindinis display tipas taikomas visiems vartotojo sukurtiems elementams. Jeigu sukuriame savo html elementą, jo tipas bus
-        <strong>inline</strong>. Šis tipas pasako, kad elementas bus suvokiamas kaip tekstas. Elementai turintys šį tipą negali turėti
+        Tai pagrindinis display tipas taikomas visiems vartotojo sukurtiems elementams. Jeigu sukuriame savo html
+        elementą, jo tipas bus
+        <strong>inline</strong>. Šis tipas pasako, kad elementas bus suvokiamas kaip tekstas. Elementai turintys šį tipą
+        negali turėti
         aukščio ir pločios nustatymų. Jeigu nustatysite aukščio ar pločio nustatymus, jie paprasčiausiai neveiks.
         <br><br>
-        Taip pat šiems elementams nekorektiškai veikia ir box-model savybės. Paraščių(margin) savybės veikia tik į šonus, o kamšalo(padding)
+        Taip pat šiems elementams nekorektiškai veikia ir box-model savybės. Paraščių(margin) savybės veikia tik į
+        šonus, o kamšalo(padding)
         saybės pritaikomos fonui, tačiau neturi įtakos elemnto kontūrų padidinimui.
         <br><br>
         Šį display tipą, turėtumėte naudoti tekstui, ikonoms arba nuotraukoms.
         <br><br>
-        Tai vienintelis display tipas, kuris nėra keturkampis. Šio tipo elementai(tekstas) gali nusikelti per dvi ar daugiau eilučių;
+        Tai vienintelis display tipas, kuris nėra keturkampis. Šio tipo elementai(tekstas) gali nusikelti per dvi ar
+        daugiau eilučių;
         <br><br>
-        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong> <br>
+        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong>
+        <br>
       </p>
       <ul>
         <li class="pl-3">&lt;span&gt;</li>
@@ -100,11 +106,15 @@
     <div class="container">
       <h2 class="h2 mb-2">Inline-block</h2>
       <p>
-        Tai display tipas, kuris atvaizduoja elementus rašymo tvarka: iš kairės į dešinę (taip pat kaip ir inline). Priešingai negu inline
-        tipas <strong>display: inline-block</strong> elementai gali turi dimensijų nustatymus, bei box-model savybes. Kadangi tai yra blokai
-        jie negali būti keliose eilutės, t.y. Jeigu elementas pilnai netelpa į tėvinio elemento plotį, jis perkeliamas į sekančią eilutę.
+        Tai display tipas, kuris atvaizduoja elementus rašymo tvarka: iš kairės į dešinę (taip pat kaip ir inline).
+        Priešingai negu inline
+        tipas <strong>display: inline-block</strong> elementai gali turi dimensijų nustatymus, bei box-model savybes.
+        Kadangi tai yra blokai
+        jie negali būti keliose eilutės, t.y. Jeigu elementas pilnai netelpa į tėvinio elemento plotį, jis perkeliamas į
+        sekančią eilutę.
         <br><br>
-        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong> <br>
+        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong>
+        <br>
       </p>
       <ul>
         <li class="pl-3">&lt;input&gt;</li>
@@ -133,16 +143,22 @@
     <div class="container">
       <h2 class="h2 mb-2">Block</h2>
       <p>
-        Tai atvaizdavimo tipas <strong>display: block</strong>, kuris užsirezervuoja visą <strong>tėvinio elemento plotį</strong>. To
-        pasekoje rašant <strong>display: block</strong> elementus vienas po kitos, jie atvaizduojami stulpeliu - lyg namo aukštai. Net jeigu
-        elementui nurodome, kad jis užims ne pilną tėvinio elemento plotį, kiti elementai nepateks į užrezervuotą vietą. Būtent todėl šie
+        Tai atvaizdavimo tipas <strong>display: block</strong>, kuris užsirezervuoja visą <strong>tėvinio elemento
+          plotį</strong>. To
+        pasekoje rašant <strong>display: block</strong> elementus vienas po kitos, jie atvaizduojami stulpeliu - lyg
+        namo aukštai. Net jeigu
+        elementui nurodome, kad jis užims ne pilną tėvinio elemento plotį, kiti elementai nepateks į užrezervuotą vietą.
+        Būtent todėl šie
         elementai ir atsivaizduoja venas po kitu.
         <br><br>
-        Šiems elementams galima nustatyti plotį(mažesnį nei tėvinio elemento) ir tuomet naudoti <strong>margin: auto</strong> savybę
-        atsistumti nuo kairės pusės, dešnės pusės arba abiejų pusių vienu metu. Kuomet nustatote atstūmimą (<em>margin: auto</em>) tiek iš
+        Šiems elementams galima nustatyti plotį(mažesnį nei tėvinio elemento) ir tuomet naudoti <strong>margin:
+          auto</strong> savybę
+        atsistumti nuo kairės pusės, dešnės pusės arba abiejų pusių vienu metu. Kuomet nustatote atstūmimą (<em>margin:
+          auto</em>) tiek iš
         kairės, tiek iš dešinės pusės - elmentas atvaizduojamas per vidurį tėvinio elemento.
         <br><br>
-        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong> <br>
+        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong>
+        <br>
       </p>
       <ul>
         <li class="pl-3">&lt;div&gt;</li>
