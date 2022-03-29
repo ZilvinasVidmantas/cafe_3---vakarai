@@ -16,7 +16,7 @@
   height: var(--navbar-height);
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--color-white);
   transition: color 0.3s ease-in-out;
 }
