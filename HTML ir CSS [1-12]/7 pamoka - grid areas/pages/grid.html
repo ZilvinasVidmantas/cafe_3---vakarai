@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Šriftai, Ikonos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- Mūsų rašyti stiliai -->
+  <link rel="stylesheet" href="../css/main.css">
+  <title>CSS pagrindai</title>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container">
+      <nav>
+        <ul class="d-flex">
+          <li><a href="../index.html" class="navbar__link">Pagrindinis</a></li>
+          <li><a href="./css-basics.html" class="navbar__link">CSS pagrindai</a></li>
+          <li><a href="./display-types.html" class="navbar__link">Display tipai</a></li>
+          <li><a href="./box-model.html" class="navbar__link">Box model</a></li>
+          <li><a href="./typography.html" class="navbar__link">Typography</a></li>
+          <li><a href="./flex.html" class="navbar__link">Flex</a></li>
+          <li><a href="" class="navbar__link  active">Grid</a></li>
+          <li><a href="" class="navbar__link">Position</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-navbar">
+    <div class="container py-4">
+      <h1 class="h1 mb-2">Grid</h1>
+      <p class="my-3">
+        Tai atvaizdavimo "<strong>display</strong>" tipas, kuris kontroliuoja <strong>pirmo</strong> lygio vaikų išdėstymą dvejomis
+        kryptimis. Taip pat šis atvaizdavimo tipas, gali turėti plotų šablonus. Šie plotų šablonai gali būti įvardinami plotų pavadinimais,
+        arba aprašomi pagal <strong>grid</strong> linijų ribojamą plotą.
+        <br>
+        Apie atskiras Grid savybes galite paskaityti <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="blank">šiame
+          straipsnyje</a>.
+      </p>
+
+      <div class="h5 mb-3">Išbandykite patys</div>
+      <div class="d-flex flex-column g-2 pl-3">
+        <li><a href="https://grid.layoutit.com/" target="blank">Smėlio dėžė</a></li>
+        <li><a href="https://cssgridgarden.com/" target="blank">Grid sodas</a></li>
+        <li><a href="https://codingfantasy.com/games/css-grid-attack" target="blank">Grid žaidimas</a></li>
+      </div>
+      <div class="grid-video my-4">
+        <div class="d-flex flex-column">
+          <h2 class="h5 mb-2">1. Grid linijos</h2>
+          <iframe src="https://www.youtube.com/embed/J5GWyiWU2H8" title="YouTube video player" frameborder="0" class="flex-grow-1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="d-flex flex-column">
+          <h2 class="h5 mb-2">2. Grid įdėtas į Grid</h2>
+          <iframe src="https://www.youtube.com/embed/211A79O_jX8?list=PL4cUxeGkcC9itC4TxYMzFCfveyutyPOCY" title="YouTube video player"
+            frameborder="0" class="flex-grow-1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="d-flex flex-column">
+          <h2 class="h5 mb-2">3. Grid Plotai</h2>
+          <iframe src="https://www.youtube.com/embed/Vb9-8uuonAY" title="YouTube video player" frameborder="0" class="flex-grow-1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="d-flex flex-column">
+          <h2 class="h5 mb-2">4. Grid visiems ekrano dydžiams</h2>
+          <iframe src="https://www.youtube.com/embed/sKFW3wek21Q" title="YouTube video player" frameborder="0" class="flex-grow-1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-3">Uždaviniai</h2>
+      <div class="grid-tasks">
+        <div class="grid-task grid-task--1">
+          <div></div>
+          <div class="xs-2 xe-4"></div>
+          <div class="xs-1 xe-3"></div>
+          <div></div>
+          <div></div>
+          <div class="xs-2 xe-4"></div>
+        </div>
+
+        <div class="grid-task grid-task--2">
+          <div></div>
+          <div class="xs-2 ys-1 ye-3"></div>
+          <div></div>
+          <div class="ys-2 ye-4"></div>
+          <div></div>
+          <div class="ys-2 ye-4"></div>
+        </div>
+
+        <div class="grid-task grid-task--3"></div>
+        <div class="grid-task grid-task--4"></div>
+        <div class="grid-task grid-task--5"></div>
+        <div class="grid-task grid-task--6"></div>
+        <div class="grid-task grid-task--7"></div>
+        <div class="grid-task grid-task--8"></div>
+        <div class="grid-task grid-task--9"></div>
+        <div class="grid-task grid-task--10"></div>
+        <div class="grid-task grid-task--11"></div>
+        <div class="grid-task grid-task--12"></div>
+        <div class="grid-task grid-task--13"></div>
+
+        <div class="grid-task grid-task--14">
+          <div></div>
+          <div></div>
+          <div class="xs-3 ys-1 ye-4"></div>
+          <div></div>
+          <div class="xs-1 xe-3 ys-2 ye-4"></div>
+          <div></div>
+          <div></div>
+          <div class="ys-4 ye-7"></div>
+          <div></div>
+          <div class="xs-3 xe-5 ys-4 ye-7"></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="grid-task grid-task--15"></div>
+
+        <div class="grid-task grid-task--16"></div>
+        <div class="grid-task grid-task--17"></div>
+        <div class="grid-task grid-task--18"></div>
+        <div class="grid-task grid-task--19"></div>
+        <div class="grid-task grid-task--20"></div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
