@@ -9,7 +9,8 @@
   place-self: stretch;
 }
 
-.grid-tasks {
+/* Grid task 1 */
+.grid-task-1-container {
   display: grid;
   height: 871px;
   grid-template-columns: repeat(5, 1fr);
@@ -17,27 +18,35 @@
   gap: 15px;
 }
 
-.grid-task {
+.grid-task-1 {
   display: grid;
   gap: 2px;
   box-shadow: 0 2px 4px 2px var(--color-shadow);
 }
 
-.grid-task>* {
+.grid-task-1>* {
   background-image: linear-gradient(to left bottom, var(--color-black), var(--color-primary));
 }
 
-.grid-task--1 {
+.grid-task-1--1 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-.grid-task--2 {
+.grid-task-1--2 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-.grid-task--14 {
+.grid-task-1--14 {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
 }
+
+/* Grid task 2*/
+
+.grid-task-2{
+  
+}
+
+
