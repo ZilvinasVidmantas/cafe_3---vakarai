@@ -85,8 +85,8 @@
 /* Grid task 3 */
 .grid-task-3 {
   display: grid;
-  grid-template-columns: auto 50px 100px 50px auto;
-  grid-template-rows: auto 50px 100px 100px auto;
+  grid-template-columns: auto 75px 100px 75px auto;
+  grid-template-rows: auto 75px 100px 100px auto;
 }
 
 .area-1 {
@@ -114,14 +114,7 @@
 .grid-task-4 {
   display: grid;
   grid-template:
-    "header" 60px
-    "menu"   60px
-    "hero"   200px
-    "main"   200px
-    "banner" 120px 
-    "extra"  120px 
-    "image"  120px 
-    /auto
+    "header"60px "menu"60px "hero"200px "main"200px "banner"120px "extra"120px "image"120px /auto
 }
 
 .grid-task-4>* {
@@ -173,26 +166,218 @@
   background-color: hsl(183deg 43% 83%);
 }
 
-@media screen and (min-width: 800px){
-.grid-task-4 {
-  grid-template:
-    "header header header" 60px
-    "hero   hero   hero"   320px
-    "menu   main   main"   260px
-    "menu   banner banner" 120px
-    "menu   extra  image"  120px 
-    /1fr    2fr    1fr;
+@media screen and (min-width: 800px) {
+  .grid-task-4 {
+    grid-template:
+      "header header header"60px "hero   hero   hero"320px "menu   main   main"260px "menu   banner banner"120px "menu   extra  image"120px /1fr 2fr 1fr;
   }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
   .grid-task-4 {
     grid-template:
-      "header menu   menu   menu"   60px
-      "hero   hero   hero   hero"   400px
-      "main   main   .      image"  120px
-      "main   main   .      extra"  120px
-      "banner banner banner banner" 120px 
-      /1fr    1fr    1fr    1fr;
-    }
+      "header menu   menu   menu"60px "hero   hero   hero   hero"400px "main   main   .      image"120px "main   main   .      extra"120px "banner banner banner banner"120px /1fr 1fr 1fr 1fr;
   }
+}
+
+/* Grid task 6 */
+.grid-task-6 {
+  display: grid;
+  grid-template-columns: 
+  auto
+  [card-1-start card-3-start] 
+  75px 
+  [img-1-start img-3-start]
+  225px 
+  [card-1-end card-3-end]
+  75px 
+  [img-1-end img-3-end]
+  2px 
+  [img-2-start img-4-start]
+  75px
+  [card-2-start card-4-start]
+  225px
+  [img-2-end img-4-end]
+  75px 
+  [card-2-end card-4-end]
+  auto;
+  grid-template-rows: 
+  30px
+  [img-1-start img-2-start]
+  75px
+  [card-1-start card-2-start]
+  225px
+  [img-1-end img-2-end]
+  75px
+  [card-1-end card-2-end]
+  45px
+  [img-3-start img-4-start]
+  75px
+  [card-3-start card-4-start]
+  225px
+  [img-3-end img-4-end]
+  75px
+  [card-3-end card-4-end]
+  30px;
+  background-color: rgb(230, 230, 230);
+}
+
+.card--1 {
+  /* grid-area: card-1-start / card-1-start / card-1-end / card-1-end; */
+  grid-area: card-1;
+}
+
+.card--2 {
+  /* grid-area:card-2-start / card-2-start / card-2-end / card-2-end; */
+  grid-area: card-2;
+}
+
+.card--3 {
+  /* grid-area: card-3-start / card-3-start / card-3-end / card-3-end; */
+  grid-area: card-3;
+}
+
+.card--4 {
+  /* grid-area: card-4-start / card-4-start / card-4-end / card-4-end; */
+  grid-area: card-4;
+}
+
+.img-1{
+  /* grid-area: img-1-start / img-1-start / img-1-end / img-1-end; */
+  grid-area: img-1;
+}
+
+.img-2{
+  /* grid-area:img-2-start / img-2-start / img-2-end / img-2-end; */
+  grid-area: img-2;
+}
+
+.img-3 {
+  /* grid-area: img-3-start / img-3-start / img-3-end / img-3-end; */
+  grid-area: img-3;
+}
+
+.img-4 {
+  /* grid-area: img-4-start / img-4-start / img-4-end / img-4-end; */
+  grid-area: img-4;
+}
+
+.grid-task-6__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  background-color: #fffc;
+  padding: 1.25em;
+  font-size: 1.1rem;
+  order: 1;
+}
+
+.card__date {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.card__header {
+  text-transform: capitalize;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.card__decoration {
+  height: 6px;
+  width: 25%;
+  background-color: black;
+}
+
+.card__text {
+  font-size: 0.9em;
+}
+
+.card__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: grey;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+@media screen  and (max-width: 1200px){
+  .grid-task-6 {
+    grid-template-columns: 
+    auto
+    [card-1-start card-3-start] 
+    40px 
+    [img-1-start img-3-start]
+    220px 
+    [card-1-end card-3-end]
+    40px 
+    [img-1-end img-3-end]
+    2px 
+    [img-2-start img-4-start]
+    40px
+    [card-2-start card-4-start]
+    220px
+    [img-2-end img-4-end]
+    40px 
+    [card-2-end card-4-end]
+    auto;
+    grid-template-rows: 
+    30px
+    [img-1-start img-2-start]
+    40px
+    [card-1-start card-2-start]
+    220px
+    [img-1-end img-2-end]
+    40px
+    [card-1-end card-2-end]
+    45px
+    [img-3-start img-4-start]
+    40px
+    [card-3-start card-4-start]
+    220px
+    [img-3-end img-4-end]
+    40px
+    [card-3-end card-4-end]
+    30px;
+    background-color: rgb(230, 230, 230);
+  }
+
+  .card {
+    padding: 1.1em;
+    font-size: 1rem;
+  }
+}
+
+
+@media screen  and (max-width: 700px){
+  .grid-task-6 {
+    grid-template-columns: 
+    auto
+    [img-1-start img-2-start img-3-start img-4-start card-1-start card-2-start card-3-start card-4-start]
+    350px
+    [img-1-end img-2-end img-3-end img-4-end card-1-end card-2-end card-3-end card-4-end]
+    auto;
+    grid-template-rows: 
+    30px
+    [img-1-start card-1-start]
+    350px
+    [img-1-end card-1-end img-2-start card-2-start]
+    350px
+    [img-2-end card-2-end img-3-start card-3-start]
+    350px
+    [img-3-end card-3-end img-4-start card-4-start]
+    350px
+    [img-4-end card-4-end]
+    30px;
+    background-color: rgb(230, 230, 230);
+    gap: 20px;
+  }
+
+  .card {
+    padding: 1.5em;
+    font-size: 1.25rem;
+  }
+}
