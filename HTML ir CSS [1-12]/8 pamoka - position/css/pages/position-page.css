@@ -7,7 +7,6 @@
 .square {
   display: inline-grid;
   place-items: center;
-  background-color: yellow;
   height: 100px;
   width: 100px;
   margin: 0.25rem;
@@ -15,4 +14,16 @@
 
 .bg-red {
   background-color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-yellow{
+  background-color: yellow;
 }
