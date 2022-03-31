@@ -38,9 +38,128 @@
   <main class="pt-navbar">
     <div class="container py-4">
       <h1 class="h1 mb-2">Position</h1>
-      
+      <p>
+        Standarkiškai(default), jeigu nepasakome kitaip, visi elementai turi nustatytą CSS savybę <strong>position: static</strong>. Tai
+        reiškia kad elementai yra nekintačios tėkmės (static flow). <strong>Static flow</strong> - tai elementų pozicionavimas iš kairės į
+        dešinę, o kuomet elementai nebetelpa į tėvinio elemento plotį, perkeliami į sekančią eilutę.
+        <br><br>
+        Yra ir kitų posicionavimo tipų: <strong>relative</strong>, <strong>fixed</strong>, <strong>absolute</strong> ir
+        <strong>sticky</strong>. Šie pozicionavimo tipai gali atsispirti nuo kitų elementų arba nuo jų nekintančios (static) vietos. Tai
+        daroma naudojant savybes: <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> ir <strong>left</strong>.
+        <strong>Static</strong> yra vienintelis pozicionavimo tipas, kuriam neturi įtakos savybės <strong>top</strong>,
+        <strong>right</strong>, <strong>bottom</strong> ir <strong>left</strong>. Todėl jis ir yra vadinamis <strong>static</strong>.
+      </p>
     </div>
   </main>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h2 mb-2">Static</h2>
+      <p class="my-3">
+        <strong>Static</strong> elementai nepriklauso nuo saybių <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> ir
+        <strong>left</strong> ir yra atvaizduojami pagal nekintančią tėkmę(static flow).
+        <br><br>
+        <strong>Static flow</strong> - tai elementų pozicionavimas iš kairės į
+        dešinę, o kuomet elementai nebetelpa į tėvinio elemento plotį, perkeliami į sekančią eilutę.
+      </p>
+      <div class="example-container">
+        <div class="square">1</div>
+        <div class="square">2</div>
+        <div class="square">3</div>
+        <div class="square">4</div>
+        <div class="square">5</div>
+        <div class="square">6</div>
+        <div class="square">7</div>
+        <div class="square">8</div>
+        <div class="square">9</div>
+        <div class="square">10</div>
+        <div class="square">11</div>
+        <div class="square">12</div>
+        <div class="square">13</div>
+        <div class="square">14</div>
+        <div class="square">15</div>
+        <div class="square">16</div>
+        <div class="square">17</div>
+        <div class="square">18</div>
+        <div class="square">19</div>
+        <div class="square">20</div>
+        <div class="square">21</div>
+        <div class="square">22</div>
+        <div class="square">23</div>
+        <div class="square">24</div>
+        <div class="square">25</div>
+        <div class="square">26</div>
+        <div class="square">27</div>
+        <div class="square">28</div>
+        <div class="square">29</div>
+        <div class="square">30</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-2">Relative</h2>
+      <p class="my-3">
+        Tai toks elemento pozicionavimas, kuomet naudojant savybes <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> ir
+        <strong>left</strong> gali paslinti elementą nuo jo menamos <strong>static</strong> pozicijos.
+      </p>
+
+      <div class="example-container">
+        <div class="square">1</div>
+        <div class="square">2</div>
+        <div class="square">3</div>
+        <div class="square">4</div>
+        <div class="square">5</div>
+        <div class="square">6</div>
+        <div class="square">7</div>
+        <div class="square p-relative bg-red top-5 left-5">8</div>
+        <div class="square">9</div>
+        <div class="square">10</div>
+        <div class="square">11</div>
+        <div class="square p-relative bg-red bottom-3">12</div>
+        <div class="square">13</div>
+        <div class="square">14</div>
+        <div class="square">15</div>
+        <div class="square">16</div>
+        <div class="square">17</div>
+        <div class="square">18</div>
+        <div class="square">19</div>
+        <div class="square">20</div>
+        <div class="square">21</div>
+        <div class="square">22</div>
+        <div class="square">23</div>
+        <div class="square">24</div>
+        <div class="square">25</div>
+        <div class="square">26</div>
+        <div class="square">27</div>
+        <div class="square">28</div>
+        <div class="square">29</div>
+        <div class="square">30</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    1.
+    Sukurkite dar 3 dydžius variables.css
+      --spacing-6 - 5rem
+      --spacing-7 - 7rem
+      --spacing-8 - 10rem
+
+    2. Panaudoję šiuos kintamuosius:
+      * papildykite spacing.css failą naujomis klasėmis
+      * papildykite position.css failą naujomis klasėmis
+
+    3. Sukurkite papildomas fono spalcas faile position-page.css
+      * bg-blue
+      * bg-yellow
+      * bg-green
+
+    4. Position.html fail išbandykite elemntų paslinkimus naudojant:
+      * klases sukurtas [2.] position.css faile
+      * klases sukurtas [3.] position-page.css faile: bg-blue, bg-yellow, bg-green
+   -->
 
 </body>
 

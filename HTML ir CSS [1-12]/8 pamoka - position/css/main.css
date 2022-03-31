@@ -18,6 +18,7 @@
 @import './utilities/dimensions.css';
 @import './utilities/floats.css';
 @import './utilities/borders.css';
+@import './utilities/position.css';
 
 /* Partials */
 @import './partials/navbar.css';
@@ -34,3 +35,4 @@
 
 /* Pages */
 @import './pages/grid-page.css';
+@import './pages/position-page.css';
