@@ -16,64 +16,92 @@
 </head>
 
 <body>
-  <main class="container my-5">
-    <h1>Bootstrap grid sistema</h1>
-    <p>
-      Bootstrap grid sistema, tai <strong>display: flex</strong> principu veikianti sistema. Ją sudaro eilutės ir stulpeliai.
-      <br>
-      eilutėms turime taikyti klasę <strong>.row</strong> ir jose kuriame stulpesiu su klasėmis kurios prasideda <strong>.col-*</strong>
-      <br>
-      <br>
-      Standartiškai stulpeliai bando išsiplėsti per visą eilutės plotį. Jeigu stulpelių eilutėje yra daugiau, tuomet jie dalinasi laisvą
-      vietą lygiomis dalimis.Stulpeliams papildomai galime nurodyti plotį, pagal dvyliktainę sistemą:
-      <br>
-      <span class="d-inline-block p ps-4">
-        col-1 - 1/12 tėvinio elemento pločio <br>
-        col-2 - 2/12 tėvinio elemento pločio <br>
-        col-3 - 3/12 tėvinio elemento pločio <br>
-        col-4 - 4/12 tėvinio elemento pločio <br>
-        col-5 - 5/12 tėvinio elemento pločio <br>
-        col-6 - 6/12 tėvinio elemento pločio <br>
-        col-7 - 7/12 tėvinio elemento pločio <br>
-        col-8 - 8/12 tėvinio elemento pločio <br>
-        col-9 - 9/12 tėvinio elemento pločio <br>
-        col-10 - 10/12 tėvinio elemento pločio <br>
-        col-11 - 11/12 tėvinio elemento pločio <br>
-        col-12 - 12/12 tėvinio elemento pločio <br>
-      </span>
-      <br><br>
-      Jeigu fiksuoto pločio stulpeliai netelpa į vieną eilutę, jie yra perkeliami į sekančią eilutę.
-    </p>
-    <article>
-      <h3>4 vienodo dyžio stulpeliai eilutėje</h3>
-      <div class="row h-200px">
-        <div class="col bg-primary"></div>
-        <div class="col bg-info"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Bootstrap grid
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#main">Kas tai yra?</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#responsive">Lankstus dizainas</a></li>
+              <li><a class="dropdown-item" href="#nested">Grid'as grid'e</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </article>
+    </div>
+  </nav>
 
-    <article>
-      <h3> 1 stulpelis užima pusę pločio, likusią dalį dalinasi 2 stulpeliai po lygiai</h3>
-      <div class="row h-200px">
-        <div class="col-6 bg-primary"></div>
-        <div class="col-3 bg-secondary"></div>
-        <div class="col-3 bg-warning"></div>
-      </div>
-    </article>
+  <main id="main">
+    <div class="container py-4">
+      <h1>Bootstrap grid sistema</h1>
+      <p>
+        Bootstrap grid sistema, tai <strong>display: flex</strong> principu veikianti sistema. Ją sudaro eilutės ir stulpeliai.
+        <br>
+        eilutėms turime taikyti klasę <strong>.row</strong> ir jose kuriame stulpesiu su klasėmis kurios prasideda <strong>.col-*</strong>
+        <br>
+        <br>
+        Standartiškai stulpeliai bando išsiplėsti per visą eilutės plotį. Jeigu stulpelių eilutėje yra daugiau, tuomet jie dalinasi laisvą
+        vietą lygiomis dalimis.Stulpeliams papildomai galime nurodyti plotį, pagal dvyliktainę sistemą:
+        <br>
+        <span class="d-inline-block p ps-4">
+          col-1 - 1/12 tėvinio elemento pločio <br>
+          col-2 - 2/12 tėvinio elemento pločio <br>
+          col-3 - 3/12 tėvinio elemento pločio <br>
+          col-4 - 4/12 tėvinio elemento pločio <br>
+          col-5 - 5/12 tėvinio elemento pločio <br>
+          col-6 - 6/12 tėvinio elemento pločio <br>
+          col-7 - 7/12 tėvinio elemento pločio <br>
+          col-8 - 8/12 tėvinio elemento pločio <br>
+          col-9 - 9/12 tėvinio elemento pločio <br>
+          col-10 - 10/12 tėvinio elemento pločio <br>
+          col-11 - 11/12 tėvinio elemento pločio <br>
+          col-12 - 12/12 tėvinio elemento pločio <br>
+        </span>
+        <br><br>
+        Jeigu fiksuoto pločio stulpeliai netelpa į vieną eilutę, jie yra perkeliami į sekančią eilutę.
+      </p>
+      <article>
+        <h3>4 vienodo dyžio stulpeliai eilutėje</h3>
+        <div class="row h-200px">
+          <div class="col bg-primary"></div>
+          <div class="col bg-info"></div>
+        </div>
+      </article>
 
-    <article>
-      <h3>1 stulpeliai užima trečdalį, likusią dalį dalinasi 3 stulpeliai</h3>
-      <div class="row h-200px">
-        <div class="col-4 bg-primary"></div>
-        <div class="col-3 bg-secondary"></div>
-        <div class="col bg-warning"></div>
-        <div class="col bg-danger"></div>
-      </div>
-    </article>
+      <article>
+        <h3> 1 stulpelis užima pusę pločio, likusią dalį dalinasi 2 stulpeliai po lygiai</h3>
+        <div class="row h-200px">
+          <div class="col-6 bg-primary"></div>
+          <div class="col-3 bg-secondary"></div>
+          <div class="col-3 bg-warning"></div>
+        </div>
+      </article>
+
+      <article>
+        <h3>1 stulpeliai užima trečdalį, likusią dalį dalinasi 3 stulpeliai</h3>
+        <div class="row h-200px">
+          <div class="col-4 bg-primary"></div>
+          <div class="col-3 bg-secondary"></div>
+          <div class="col bg-warning"></div>
+          <div class="col bg-danger"></div>
+        </div>
+      </article>
+    </div>
   </main>
 
-  <section class="my-5">
-    <div class="container">
+  <section id="responsive">
+    <div class="container py-4">
       <h2>Grid responsive</h2>
       <p>
         Bootstrap karkase standartiškai galioja tokie ekrano dydžiai:
@@ -126,8 +154,8 @@
     </div>
   </section>
 
-  <section class="my-5">
-    <div class="container">
+  <section id="nested">
+    <div class="container py-4">
       <h2>Nested grid</h2>
       <p>
         Naudojant Bootstrap grid sistemą, kartais yra aktualu turėti dalijamą eilutę stulpelyje. Kadangi eilutėje(.row) esantys stulpeliai
@@ -169,6 +197,7 @@
         </div>
         <div class="col-3 bg-primary"></div>
       </div>
+    </div>
   </section>
 </body>
 

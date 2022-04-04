@@ -19,3 +19,26 @@
     height: 400px;
   }
 }
+
+
+/* Užlipančio ant sekcijų navbaro sprendimas */
+section[id] {
+  padding-top: 64px;
+  margin-top: -64px;
+}
+
+main {
+  padding-top: 64px;
+}
+
+/* lg - 992px */
+@media screen and (min-width: 992px) {
+  section[id] {
+    padding-top: 56px;
+    margin-top: -56px;
+  }
+
+  main {
+    padding-top: 56px;
+  }
+}
