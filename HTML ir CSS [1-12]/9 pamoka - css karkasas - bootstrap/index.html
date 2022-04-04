@@ -98,6 +98,7 @@
         <div class="col-12 col-md-6 col-xxl-3 bg-success"></div>
         <div class="col-12 col-md-6 col-xxl-3 bg-warning"></div>
       </div>
+
       <!-- 
         Atliekant užduotį, reikės sukurt papildomas klases main.css faile
           Klases kurkite naudojant tą pačią breakpoint stilistiką, pvz:
@@ -108,6 +109,20 @@
           * nuo md - elementai užimtų pusę pločio ir po 200px aukščio
           * nuo xl - elementai užimtų ketvirtį pločio ir po 400px aukščio
        -->
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-primary"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-secondary"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-success"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-warning"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-danger"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-info"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-primary"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-secondary"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-success"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-warning"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-danger"></div>
+        <div class="col-12 col-md-6 col-xl-3 h-100px h-md-200px h-xl-400px bg-info"></div>
+      </div>
     </div>
   </section>
 
@@ -115,7 +130,7 @@
     <div class="container">
       <h2>Nested grid</h2>
       <p>
-        Naudojant Bootstrap grid sistemą, kartais yra aktualu turėti dalijamą stulpelį eilutėje. Kadangi eilutėje(.row) esantys stulpeliai
+        Naudojant Bootstrap grid sistemą, kartais yra aktualu turėti dalijamą eilutę stulpelyje. Kadangi eilutėje(.row) esantys stulpeliai
         (.col-*) užima plotį pagal <strong>tėvinio elemento plotį</strong>, grid sistema gali būti perpanaudota stulpelyje.
       </p>
       <div class="row h-200px">
@@ -135,18 +150,26 @@
           * 1 - 75% pločio
             Papildomai šis elementas turi turėti stulpelius
             * 1 - 2/3 pločio
-              Papildomai šis elementas turi turėti stulpelius 2, vienodo pločio stulpelius
+              Papildomai šis elementas turi turėti  2, vienodo pločio stulpelius
             * 2, 3 - po lygiai - 1/6 pločio 
           * 2 - 25% pločio
-
-          10min pertrauka
-          20min užduočių atlikimas
-
-          tęsiame 20:30
        -->
+      <div class="row h-400px">
+        <div class="col-9">
+          <div class="row h-50">
+            <div class="col-8">
+              <div class="row h-50">
+                <div class="col-6 bg-warning"></div>
+                <div class="col-6 bg-danger"></div>
+              </div>
+            </div>
+            <div class="col-2 bg-secondary"></div>
+            <div class="col-2 bg-success"></div>
+          </div>
+        </div>
+        <div class="col-3 bg-primary"></div>
+      </div>
   </section>
-
-
 </body>
 
 </html>
