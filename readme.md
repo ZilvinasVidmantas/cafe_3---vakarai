@@ -12,6 +12,14 @@
   * Bootstrap
   * Sass
 
+### Git versijavimo kontrolė [16]
+  * repozitorijos kūrimas
+  * repozitorijos klonavimas
+  * pagrindinės komandos
+  * šakų kūrimas, atnaujinimas ir apjungimas
+  * darbų kuriant šakas metodologija nenutraukiamam darbui komandoje
+  * darbas grupelėmis
+
 ### JavaScript kalbos pagrindai [80]
   * variables and logging
   * data types
@@ -84,7 +92,7 @@
     * MongoDB Atlas
     * Duomenų ryšiai ir schemos
   
-### MERN stack aplikacijos kūrimas (Mongo + Express + React + Node) [88]
+### MERN stack aplikacijos kūrimas (Mongo + Express + React + Node) [74]
   * Autentifikacija ir autorizacija
 
 ### Pamokos skirtos atsiskaitymams [8]
@@ -92,12 +100,17 @@
   * Praktiniū darbū pristatymas 
 
 ## Atsiskaitymai
-  Atsiskaitymų datos gali keistis dėl dėstytojo susirgimų ar šventinių dienų
+  Atsiskaitymų datos gali keistis dėl dėstytojo susirgimų
 
   * HTML ir CSS (2%) [2022-04-04]
-  * JavaScript pagrindai (4%) [2022-05-16]
-  * JavaScript panaudojimas naršyklėje (3%) [2022-06-06]
-  * React (8%) [2022-08-15]
+  * JavaScript pagrindai (4%) [2022-05-23]
+  * JavaScript panaudojimas naršyklėje (3%) [2022-06-13]
+  * React (8%) [2022-08-23]
   * Expres + Mongo (3%) [2022-09-05]
   * Teorinis egzaminas (30%) [2022]
   * Praktinis darbas (50%) [2022]
+
+
+30sav.
+
+5 šventinės
