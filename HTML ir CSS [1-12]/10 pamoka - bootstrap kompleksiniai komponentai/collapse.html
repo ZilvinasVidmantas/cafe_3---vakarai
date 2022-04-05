@@ -123,7 +123,7 @@
       <h2>Užduotis</h2>
       <p>
         Sukurkite tris 3 suskleidžiamus paragrafus ir 7 mygtukus. 3 mygtukai turi būti skirti išsleisti/suskleisti individualius paragrafus:
-        <span class="d-inline-block-ps-3">
+        <span class="d-inline-block ps-3">
           pirmas mygtukas - atsakingas už pirmo paragrafo suskleidimą/išskleidimą <br>
           antras mygtukas - atsakingas už antro paragrafo suskleidimą/išskleidimą <br>
           trečias mygtukas - atsakingas už trečio paragrafo suskleidimą/išskleidimą <br>
@@ -133,6 +133,43 @@
           septinas mygtukas - atsakingas už visų paragrafų suskleidimą/išskleidimą <br>
         </span>
       </p>
+      <div class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#first">1</div>
+      <div class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#second">2</div>
+      <div class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#third">3</div>
+      <div class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".first-second">1 & 2</div>
+      <div class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".first-third">1 & 3</div>
+      <div class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".second-third">2 & 3</div>
+      <div class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".all">all</div>
+
+      <div class="row my-5">
+        <div class="col">
+          <div class="collapse first-second first-third all" id="first">
+            <div class="card card-body">
+              <h1>Pirmas</h1>
+              Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but
+              revealed when the user activates the relevant trigger.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse first-second second-third all" id="second">
+            <div class="card card-body">
+              <h1>Antras</h1>
+              Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but
+              revealed when the user activates the relevant trigger.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse first-third second-third all" id="third">
+            <div class="card card-body">
+              <h1>Trečias</h1>
+              Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but
+              revealed when the user activates the relevant trigger.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
