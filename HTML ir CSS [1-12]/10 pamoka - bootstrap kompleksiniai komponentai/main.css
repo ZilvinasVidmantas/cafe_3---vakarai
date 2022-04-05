@@ -46,3 +46,13 @@ main {
     padding-top: 56px;
   }
 }
+
+/* Carousel styles */
+
+#carousel-cookies img {
+  display: block;
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
