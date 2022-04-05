@@ -101,5 +101,3 @@
   * Expres + Mongo (3%) [2022-09-05]
   * Teorinis egzaminas (30%) [2022]
   * Praktinis darbas (50%) [2022]
-
-  
