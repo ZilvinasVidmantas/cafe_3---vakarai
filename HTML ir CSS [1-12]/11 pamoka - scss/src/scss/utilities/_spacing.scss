@@ -1,0 +1,122 @@
+$sides: (
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left",
+);
+
+$box-model-prefixes: (
+  "m": "margin",
+  "p": "padding",
+);
+
+@each $box-model-prefix, $box-model-prop in $box-model-prefixes {
+  $sizes-map: $spacings;
+  @if($box-model-prefix == "p"){
+    $box-model-props: map-remove($spacings, "auto");
+  }
+
+  @each $size, $amount in $sizes-map {
+    .#{$box-model-prefix}-#{$size} {
+      #{$box-model-prop}: $amount;
+    }
+    .#{$box-model-prefix}y-#{$size} {
+      #{$box-model-prop}-top: $amount;
+      #{$box-model-prop}-bottom: $amount;
+    }
+    .#{$box-model-prefix}x-#{$size} {
+      #{$box-model-prop}-left: $amount;
+      #{$box-model-prop}-right: $amount;
+    }
+
+    @each $side-prefix, $side in $sides {
+      .#{$box-model-prefix}#{$side-prefix}-#{$size} {
+        #{$box-model-prop}-#{$side}: $amount;
+      }
+    }
+  }
+}
+
+.g-0 {
+  gap: var(--spacing-0);
+}
+.g-1 {
+  gap: var(--spacing-1);
+}
+.g-2 {
+  gap: var(--spacing-2);
+}
+.g-3 {
+  gap: var(--spacing-3);
+}
+.g-4 {
+  gap: var(--spacing-4);
+}
+.g-5 {
+  gap: var(--spacing-5);
+}
+.g-6 {
+  gap: var(--spacing-6);
+}
+.g-7 {
+  gap: var(--spacing-7);
+}
+.g-8 {
+  gap: var(--spacing-8);
+}
+
+.gy-0 {
+  column-gap: var(--spacing-0);
+}
+.gy-1 {
+  column-gap: var(--spacing-1);
+}
+.gy-2 {
+  column-gap: var(--spacing-2);
+}
+.gy-3 {
+  column-gap: var(--spacing-3);
+}
+.gy-4 {
+  column-gap: var(--spacing-4);
+}
+.gy-5 {
+  column-gap: var(--spacing-5);
+}
+.gy-6 {
+  column-gap: var(--spacing-6);
+}
+.gy-7 {
+  column-gap: var(--spacing-7);
+}
+.gy-8 {
+  column-gap: var(--spacing-8);
+}
+
+.gx-0 {
+  row-gap: var(--spacing-0);
+}
+.gx-1 {
+  row-gap: var(--spacing-1);
+}
+.gx-2 {
+  row-gap: var(--spacing-2);
+}
+.gx-3 {
+  row-gap: var(--spacing-3);
+}
+.gx-4 {
+  row-gap: var(--spacing-4);
+}
+.gx-5 {
+  row-gap: var(--spacing-5);
+}
+.gx-6 {
+  row-gap: var(--spacing-6);
+}
+.gx-7 {
+  row-gap: var(--spacing-7);
+}
+.gx-8 {
+  row-gap: var(--spacing-8);
+}
