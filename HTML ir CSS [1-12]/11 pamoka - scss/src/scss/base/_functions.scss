@@ -1,0 +1,17 @@
+@function contrast-color($color) {
+  @if (lightness($color) > 40) {
+    @return $black;
+  }
+  @else {
+    @return $white;
+  }
+}
+
+@function hover-color($color) {
+  @if (lightness($color) > 40) {
+    @return darken($color, 6);
+  }
+  @else {
+    @return lighten($color, 6);
+  }
+}
