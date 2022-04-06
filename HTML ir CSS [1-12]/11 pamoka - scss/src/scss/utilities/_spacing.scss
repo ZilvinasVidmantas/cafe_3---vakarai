@@ -13,7 +13,7 @@ $box-model-prefixes: (
 @each $box-model-prefix, $box-model-prop in $box-model-prefixes {
   $sizes-map: $spacings;
   @if($box-model-prefix == "p"){
-    $box-model-props: map-remove($spacings, "auto");
+    $sizes-map: map-remove($spacings, "auto");
   }
 
   @each $size, $amount in $sizes-map {

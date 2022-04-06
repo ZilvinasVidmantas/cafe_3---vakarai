@@ -624,36 +624,6 @@
   padding-left: 160px;
 }
 
-.p-auto {
-  padding: auto;
-}
-
-.py-auto {
-  padding-top: auto;
-  padding-bottom: auto;
-}
-
-.px-auto {
-  padding-left: auto;
-  padding-right: auto;
-}
-
-.pt-auto {
-  padding-top: auto;
-}
-
-.pr-auto {
-  padding-right: auto;
-}
-
-.pb-auto {
-  padding-bottom: auto;
-}
-
-.pl-auto {
-  padding-left: auto;
-}
-
 /*
   Sugeneruokite apačioje esančias klases, naudojant 
     * kintamuosius:
