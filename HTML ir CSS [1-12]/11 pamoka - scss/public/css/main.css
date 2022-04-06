@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -653,6 +654,21 @@
   padding-left: auto;
 }
 
+/*
+  Sugeneruokite apačioje esančias klases, naudojant 
+    * kintamuosius:
+      * $spacings - aprašytas faile base/_variables.scss
+    * direktyvas:
+      * @each RAKTAS, REIKŠMĖ in MAP_STRUKTŪRA
+    * funkcijas
+      * map-remove(IŠ_KO_PAŠALINTI, KOKIĄ_SAVYBĘ_PAŠALINTI)
+
+    eiga:
+      * Sukurkite map struktūrą $gaps naudodami $spacings ir funkciją map-remove, kad pašalinti savybę "auto"
+      * Sukurkite tris ciklus @each kiekvienai .g-* grupei
+      !!!!!!!!! NEBŪTINA, BET VERTA !!!!!!!!!
+      *  Pabandykite susikurti papildomų struktūrų, kad tai atlinkti su ciklu cikle
+*/
 .g-0 {
   gap: var(--spacing-0);
 }
