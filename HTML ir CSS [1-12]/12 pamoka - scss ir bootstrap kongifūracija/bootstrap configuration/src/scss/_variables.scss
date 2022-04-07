@@ -1,0 +1,24 @@
+// Colors
+$primary: rgb(2, 2, 154);
+$warning: rgb(242, 175, 52);
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.5,
+  2: $spacer,
+  3: $spacer * 1.5,
+  4: $spacer * 3,
+  5: $spacer * 5,
+);
+
+// Shapes
+$border-radius: 0.1rem;
+$border-radius-sm: 0.05rem;
+$border-radius-lg: 0.15rem;
+
+// Typography
+
+$font-family-sans-serif: 'Merriweather', serif;
+$font-family-monospace: 'Work Sans', sans-serif;

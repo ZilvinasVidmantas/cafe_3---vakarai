@@ -1,2 +1,9 @@
-@import "./custom";
+// Init
+@import "./fonts";
+
+// Bootstrap
+@import "./variables";
 @import "./bootstrap";
+
+// Custom
+@import "./custom";
