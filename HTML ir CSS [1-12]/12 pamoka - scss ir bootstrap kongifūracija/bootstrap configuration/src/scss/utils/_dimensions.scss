@@ -1,25 +1,36 @@
-.h-100px {
-  height: 100px;
-}
-
-.h-400px {
-  height: 400px;
-}
-
-.w-300px {
-  width: 300px;
-}
-
-/* md - 768px */
-@media screen and (min-width: 768px) {
-  .h-md-200px {
-    height: 200px;
+@for $i from 1 through 4 {
+  $size: $i * 50px;
+  .w-#{$size} {
+    width: $size;
   }
-}
 
-/* xl - 1200px */
-@media screen and (min-width: 1200px) {
-  .h-xl-400px {
-    height: 400px;
+  @media (min-width: 576px) {
+    .w-sm-#{$size} {
+      width: $size;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .w-md-#{$size} {
+      width: $size;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .w-lg-#{$size} {
+      width: $size;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .w-xl-#{$size} {
+      width: $size;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .w-xxl-#{$size} {
+      width: $size;
+    }
   }
 }

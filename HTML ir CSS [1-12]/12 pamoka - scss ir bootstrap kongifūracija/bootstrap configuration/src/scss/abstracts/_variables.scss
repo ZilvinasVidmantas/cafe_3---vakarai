@@ -19,6 +19,17 @@ $border-radius-sm: 0.05rem;
 $border-radius-lg: 0.15rem;
 
 // Typography
+$font-family-sans-serif: "Merriweather", serif;
+$font-family-monospace: "Work Sans", sans-serif;
 
-$font-family-sans-serif: 'Merriweather', serif;
-$font-family-monospace: 'Work Sans', sans-serif;
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$grid-breakpoints: $breakpoints;
