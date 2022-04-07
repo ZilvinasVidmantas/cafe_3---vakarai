@@ -1,0 +1,15 @@
+Pasiruošimas savaitei [04-11 - 04-14]
+  GIT:
+    https://www.youtube.com/watch?v=SWYqp7iY_Tc&ab_channel=TraversyMedia
+    https://learngitbranching.js.org/
+    https://ohmygit.org/
+
+
+Pasiruošimas savaitei [04-19 - 04-21]
+  Esate visiškai žali:
+    https://www.youtube.com/watch?v=PkZNo7MFNFg&ab_channel=freeCodeCamp.org
+    https://www.youtube.com/watch?v=hdI2bqOjy3c&ab_channel=TraversyMedia
+
+  Jeigu esatę naudoję programavimo kalbą:
+    https://www.youtube.com/watch?v=hdI2bqOjy3c&ab_channel=TraversyMedia
+
