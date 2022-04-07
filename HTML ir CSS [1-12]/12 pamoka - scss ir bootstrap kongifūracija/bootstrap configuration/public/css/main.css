@@ -11235,6 +11235,13 @@ textarea.form-control-lg {
     width: 200px;
   }
 }
+/*
+  Panuadokite Map struktūrą $breakpoints, kad supaprastinti logiką viršuje esančiam kodui
+    Tam reikės panaudoti cilką @each
+
+  užduotis - iki 21:10
+  pertrauka - iki 21:20
+*/
 section[id] {
   padding-top: 64px;
   margin-top: -64px;
