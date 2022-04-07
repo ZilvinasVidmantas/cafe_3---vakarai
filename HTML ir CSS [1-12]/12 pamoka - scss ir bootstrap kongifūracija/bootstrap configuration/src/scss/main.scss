@@ -1,9 +1,18 @@
-// Init
-@import "./fonts";
+// Abstracts
+@import "./abstracts/variables";
 
-// Bootstrap
-@import "./variables";
-@import "./bootstrap";
+// Base
+@import "./base/fonts";
 
-// Custom
-@import "./custom";
+// Vendors
+@import "./vendors/bootstrap";
+
+// Utils
+@import "./utils/dimensions";
+
+// Components
+@import "./components/navbar";
+
+// Pages
+@import "./pages/carousel";
+@import "./pages/tasks";
