@@ -1,0 +1,17 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.75em 1em;
+  letter-spacing: 0.075em;
+}
+
+@each $color-name, $bg-color in $colors {
+  .btn-#{$color-name} {
+    background-color: $bg-color;
+    color: contrast-color($bg-color);
+
+    &:hover {
+      background-color: hover-color($bg-color);
+    }
+  }
+}
