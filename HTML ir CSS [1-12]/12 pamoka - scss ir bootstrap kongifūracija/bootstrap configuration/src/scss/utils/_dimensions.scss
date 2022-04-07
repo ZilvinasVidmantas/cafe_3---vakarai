@@ -1,44 +1,23 @@
-@for $i from 1 through 4 {
-  $size: $i * 50px;
-  .w-#{$size} {
-    width: $size;
-  }
+$beakpoints-from-sm: map-remove($breakpoints, "xs");
+$dimensions: (
+  "w": "width",
+  "h": "height",
+);
 
-  @media (min-width: 576px) {
-    .w-sm-#{$size} {
-      width: $size;
+@each $dimension-prefix, $dimension-css-property in $dimensions {
+  @for $i from 1 through 20 {
+    $size: $i * 50px;
+
+    .#{$dimension-prefix}-#{$size} {
+      #{$dimension-css-property}: $size;
     }
-  }
 
-  @media (min-width: 768px) {
-    .w-md-#{$size} {
-      width: $size;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .w-lg-#{$size} {
-      width: $size;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .w-xl-#{$size} {
-      width: $size;
-    }
-  }
-
-  @media (min-width: 1400px) {
-    .w-xxl-#{$size} {
-      width: $size;
+    @each $br-name, $br-value in $beakpoints-from-sm {
+      @media (min-width: $br-value) {
+        .#{$dimension-prefix}-#{$br-name}-#{$size} {
+          #{$dimension-css-property}: $size;
+        }
+      }
     }
   }
 }
-
-/*
-  Panuadokite Map struktūrą $breakpoints, kad supaprastinti logiką viršuje esančiam kodui
-    Tam reikės panaudoti cilką @each
-
-  užduotis - iki 21:10
-  pertrauka - iki 21:20
-*/
