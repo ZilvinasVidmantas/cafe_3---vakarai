@@ -1,0 +1,19 @@
+Atlikite darbus:
+  1. Visas komandas paryškinkite apgaubiant dvigubomis žvaigždutėmis **<komanda>**
+  2. Pagrindinių komandų sekciją aprašykite kaip sąrašą (list):
+  https://stackoverflow.com/questions/26960735/how-do-you-indent-a-bulleted-list-in-a-readme-file-using-github-flavored-markdow
+
+Kiekvieną darbą atlikite kaip atskirą 'commit'ą,  ir įvardinkite atliktus darbus tokius formatu:
+  "feat: atlikto darbo apibūdinimas"
+
+Darbo užfiksavimo eiga:
+  ... atliekate darbus
+
+  Paruošiame pakitusius failus patvirtinimui:
+    git add .
+
+  Užfiksuojate pakitimus:
+    git commit -m "<žinutė>"
+    
+  Paviešiname pakitimą
+    git push
