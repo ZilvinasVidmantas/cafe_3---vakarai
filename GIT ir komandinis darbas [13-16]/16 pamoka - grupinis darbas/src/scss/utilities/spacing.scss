@@ -1,0 +1,34 @@
+@each $box-model-prefix, $box-model-prop in $box-model-prefixes {
+  $sizes-map: $spacings;
+  @if ($box-model-prefix == "p") {
+    $sizes-map: map-remove($spacings, "auto");
+  }
+
+  @each $size, $amount in $sizes-map {
+    .#{$box-model-prefix}-#{$size} {
+      #{$box-model-prop}: $amount;
+    }
+    .#{$box-model-prefix}y-#{$size} {
+      #{$box-model-prop}-top: $amount;
+      #{$box-model-prop}-bottom: $amount;
+    }
+    .#{$box-model-prefix}x-#{$size} {
+      #{$box-model-prop}-left: $amount;
+      #{$box-model-prop}-right: $amount;
+    }
+
+    @each $side-prefix, $side in $sides {
+      .#{$box-model-prefix}#{$side-prefix}-#{$size} {
+        #{$box-model-prop}-#{$side}: $amount;
+      }
+    }
+  }
+}
+
+@each $size, $amount in $gaps {
+  @each $prefix, $css-prop in $gap-prefix-css-property-map {
+    .#{$prefix}-#{$size} {
+      #{$css-prop}: $amount;
+    }
+  }
+}

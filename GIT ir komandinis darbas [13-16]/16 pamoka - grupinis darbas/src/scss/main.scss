@@ -1,0 +1,13 @@
+// Base
+@import "./base/reset.scss";
+@import "./base/typography.scss";
+// Abstracts
+@import "./abstracts/variables.scss";
+// Pages 
+@import "./pages/contacts.scss";
+// Utilities
+@import "./utilities/spacing.scss";
+
+// Bootstrap
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

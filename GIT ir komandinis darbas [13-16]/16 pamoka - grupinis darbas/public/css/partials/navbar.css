@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  position: fixed;
+  height: 3rem;
+  line-height: 2rem;
+  width: 100%;
+  text-align: center;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+nav li {
+  display: inline-block;
+  height: 3rem;
+  width: 9em;
+  padding: 5px;
+  color: black;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+nav a {
+  text-decoration: none;
+}
+nav li:hover {
+  transition: 0.4s;
+}
+@media only screen and (max-width: 576px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+     background: rgba(0, 0, 0, 0.089);
+    }
+
+  main nav li {
+    height: 20%;
+    font-size: 1.25rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.089);
+    }
+  nav li {
+    height: 20%;
+    font-size: 1.25rem;
+    }
+}
