@@ -1,0 +1,16 @@
+
+ 1.                 | 2.                    | 3.                      | 4. 
+ Tatjana Sibik      | Vytautas Palubinskas  | Dovilė Brazinskė        | Titas Klikūnas
+--------------------------------------------------------------------------------------------
+ Laura Vidmantaitė  | Mažvydas Vaicekauskas | Radoslav Konski         | Agnė Manaikaitė    
+ Danielius Zavackas | Artūras Gečas         | Juozas Snieška          | Amanda Pakalniškytė    
+ Gediminas Kubilius | Ivona Skliutaitė      | Kristina Žalandauskaitė | Andrius Mikalauskas    
+ Žilvinas Dvareckas | Karolis Jonaitis      | Karolis Makselis        | Gytis Paulauskas    
+                               
+ 1. Home Page Team - Omicron
+
+ 2. Gallery Page Team - Lyga II
+
+ 3. Contacts Page Team - Contacts Squad
+
+ 4. SCSS Team - SCSS Nerdai
