@@ -1,0 +1,11 @@
+function-tasks-1.js
+object-tasks.js
+function-tasks-2.js
+function-tasks-array-iterative-1.js
+classes-tasks-1.js
+function-tasks-3.js
+function-tasks-array-iterative-2.js
+classes-tasks-2.js
+classes-tasks-3.js
+recursion-tasks.js
+curry pratybos'/
