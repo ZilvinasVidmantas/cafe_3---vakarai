@@ -45,3 +45,38 @@ console.group('Continue pvz:');
   console.log('suma:', sum);
 }
 console.groupEnd();
+
+
+/*
+  1. Parašykite ciklą, kuris atspausdintų (naudodami WHILE)
+    10
+    9
+    8
+    7
+    6
+    5
+    4
+    3
+    2
+    1
+
+  2. Parašykite ciklą, kuris atspausdintų (naudodami FOR)
+    10
+    9
+    8
+    7
+    6
+    5
+    4
+    3
+    2
+    1
+  
+  3. Peržiūrėkite 11-47 eilutės kodą, suformuokite klausimus, jeigu nėra aišku
+
+  Perskaitykite failą 'functions.js', jeigu neturit ką veikt. Arba ilsėkitės
+
+  Tęsiame: 19:40
+
+
+*/
