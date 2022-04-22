@@ -1,3 +1,5 @@
+arrays.js
+cycles.js
 function-tasks-1.js
 object-tasks.js
 function-tasks-2.js
