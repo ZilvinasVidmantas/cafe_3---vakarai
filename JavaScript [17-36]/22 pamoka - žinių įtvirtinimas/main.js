@@ -1,5 +1,5 @@
-function convertToBinary(decimal) {
-  return decimal.toString(2);
+function convertToBinary(dec) {
+  return dec.toString(2);
 }
 
 function equalizeBinaryLength(bin1, bin2) {
@@ -20,8 +20,8 @@ function equalizeBinaryLength(bin1, bin2) {
 function bitwiseAnd2(bin1, bin2) {
   let result = '';
   for (let i = bin1.length - 1; i >= 0; i--) {
-    const num1 = bin1[i] ?? '0';
-    const num2 = bin2[i] ?? '0';
+    const num1 = bin1[i];
+    const num2 = bin2[i];
     if (num1 === '1' && num2 === '1') {
       result = '1' + result;
     } else {
@@ -33,8 +33,7 @@ function bitwiseAnd2(bin1, bin2) {
 }
 
 function trimBinary(bin) {
-  let i = 0;
-  while (bin[i] === '0') {
+  while (bin[0] === '0') {
     bin = bin.slice(1);
   }
   return bin;
