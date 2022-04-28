@@ -1,0 +1,32 @@
+Visi failai yra aplanke 'https://github.com/ZilvinasVidmantas/cafe_3---vakarai/tree/master/JavaScript [17-36]/uzdaviniai/'
+iki 04-25: 
+  * cycles.js
+
+iki 05-02:
+  * arrays.js
+  * functions-tasks-1.js
+  * functions-tasks-2.js
+  * object-tasks.js
+  
+iki 05-09:
+  * functions-tasks-3.js [1-20]
+  * functions-tasks-2.js -> functions-tasks-2-array-methods.js, naudojant 
+    * Array.prototype.forEach
+    * Array.prototype.map
+    * Array.prototype.filter
+    * Array.prototype.reduce
+  * function-tasks-array-iterative-1.js
+
+iki 05-16:
+  * classes-tasks-1.js
+  * classes-tasks-2.js
+  * functions-tasks-3.js [20-32]
+
+iki 05-23:
+  * classes-tasks-3.js
+  * js-revision.txt
+  * js-exam-example.txt
+
+Papildomai:
+  * recursion tasks.js
+  * curry_pratybos
