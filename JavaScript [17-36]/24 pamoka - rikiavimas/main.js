@@ -2,13 +2,13 @@ const arr = [1, -5, 6, 1, 2, 5, 6, 9, -2, -17, 5];
 /*
   Palyginimo funkcija lygina 2 masyvo elementus.
 
-  Jie palyginimo funkcijai yra perduodami automatiškai, kuomet
-  kviečiame Array.prototype.sort metodą
+  Parametrai palyginimo funkcijai yra perduodami automatiškai, kuomet
+  kviečiame Array.prototype.sort metodą perduodant palyginimo funkciją
 
   Turite aprašyti funkciją taip:
-    * grąžinus teigiamą skaičių pasakote, kad pirmasis parametras yra aukštesnio priorito
-    * grąžinus neigiamą skaičių pasakote, kad antrasis parametras yra aukštesnio priorito
-    * grąžinus 0, pasakote kad elementų prioritetai yra lygūs
+    * grąžinus teigiamą skaičių pasakote, kad pirmasis parametras yra aukštesnio prioriteto
+    * grąžinus neigiamą skaičių pasakote, kad antrasis parametras yra aukštesnio prioriteto
+    * grąžinus 0 pasakote, kad elementų prioritetai yra lygūs
 */
 
 
