@@ -8,12 +8,12 @@ array-methods.js
 functions.js
 cycles.js
 sorting.js
-array-iterative-methods.js
-destructurization.js
-lamdba.js
-array-iterative-methods-2.js
 array-methods-methods-2.js
+array-iterative-methods.js
 annonymousFunctions.js
+lamdba.js
+destructurization.js
+array-iterative-methods-2.js
 higherOrderFunctions.js
 this.js
 classes.js
