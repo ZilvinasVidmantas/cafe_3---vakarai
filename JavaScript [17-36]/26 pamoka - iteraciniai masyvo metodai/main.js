@@ -23,43 +23,67 @@ const flats = [{
   price: 65000,
 }];
 
-// 1. Atspausdinkite <flats> masyvo kainas
-/*
-  50000
-  70000
-  90000
-  65000
-*/
-// 2. Atspausdinkite <flats> masyvo adresus ir kainas atskirtus kableliu ir tarpu
-/* Console:
-  Kunigų g. 7, 50000
-  Sargėnų vieta 5, 70000
-  Jūros pr. 12a 5, 90000
-  Fantazijo al. 77, 65000
-*/
-// 3. Atspausdinkite <flat> masyvo butų kambarius vienas po kitus
-/* Console:
-  20
-  16
-  14
-  20
-  16
-  14
-  20
-  50
-  40
-  15
-  12
-  13
-  15
-  14
-*/
+console.group('1. Atspausdinkite <flats> masyvo kainas');
+{
+  console.group('Naudojant iš anksto aprašytą funkciją');
+  {
+    const printPrice = function (flat) {
+      console.log(flat.price);
+    }
+    flats.forEach(printPrice);
+  }
+  console.groupEnd();
+  console.group('Naudojant anoniminę funkciją');
+  {
+    flats.forEach(function (flat) {
+      console.log(flat.price);
+    });
+  }
+  console.groupEnd();
+}
+console.groupEnd();
 
-/*
-  Kiekvieną užduotį atlikite naudodami forEach 2 būdais
-    * naudojant išoriškai aprašytą funkciją
-    * naudojant anoniminę funkciją
-    
-  Užduotys iki 19:00
-  pertrauka iki 19:10
-*/
+console.group('2. Atspausdinkite <flats> masyvo adresus ir kainas atskirtus kableliu ir tarpu');
+{
+  console.group('Naudojant iš anksto aprašytą funkciją');
+  {
+    const printAddressAndPrice = function (flat) {
+      console.log(`${flat.address}, ${flat.price}`);
+    }
+    flats.forEach(printAddressAndPrice);
+  }
+  console.groupEnd();
+  console.group('Naudojant anoniminę funkciją');
+  {
+    flats.forEach(function (flat) {
+      console.log(`${flat.address}, ${flat.price}`);
+    });
+  }
+  console.groupEnd();
+}
+console.groupEnd();
+
+console.group('3. Atspausdinkite <flat> masyvo butų kambarius vienas po kitus');
+{
+  console.group('Naudojant iš anksto aprašytą funkciją');
+  {
+    const printRoom = function (room) {
+      console.log(room);
+    }
+    const printFlatRoomsInColumns = function (flat) {
+      flat.rooms.forEach(printRoom);
+    }
+    flats.forEach(printFlatRoomsInColumns);
+  }
+  console.groupEnd();
+  console.group('Naudojant anoniminę funkciją');
+  {
+    flats.forEach(function (flat) {
+      flat.rooms.forEach(function (room) {
+        console.log(room);
+      });
+    });
+  }
+  console.groupEnd();
+}
+console.groupEnd();
