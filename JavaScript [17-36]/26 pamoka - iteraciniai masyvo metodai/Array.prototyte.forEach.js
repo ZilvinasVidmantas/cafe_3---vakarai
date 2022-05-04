@@ -1,3 +1,18 @@
+/*
+  forEach yra paprasčiausias 'Array' iteracinis metodas. Jo tikslas, tiesiog įvykdytį argumentu paduotą funkciją,
+  su kiekvienu masyvo elementu. Funkcija neturi nieko grąžinti, ji tiesiog įsivykdo. Kviečiant argumentu
+  perduotą funkciją su kiekvienu masyvo elementu, tai funkcijai yra siunčiami 3 argumentai, tokia tvarka:
+    1. einamasis masyvo elementas,
+    2. einamojo masyvo elemento indeksas
+    3. masyvas per kurį yra iteruojama
+  Priklausomai nuo vykdomos logikos, perduodamoji funkcija gali pasiimti atitinkamą siunčiamų parametrų kiekį. (1-3)
+  Parametrų pavadinimus galite rinktis laisvai, geriausia vadinti
+  juos taip, jog jie sufleruotų perduodamų argumentų prasmę. 
+  Svarbu pastebėti, jog siunčiamų argumentų eiliškumas niekada nesikeičia, ir jeigu, perduodamos funkcijos logikoje reikia
+  tik indekso (2.) reikšmės, vistiek turime priimti argumentu ir patį iteruojamą elementą (1.), nes indeksas visada bus
+  perduodamas antruoju argumentu.
+*/
+
 const flats = [{
   address: 'Kunigų g. 7',
   rooms: [20, 16, 14], // 50
