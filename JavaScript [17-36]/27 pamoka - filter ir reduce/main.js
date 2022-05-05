@@ -140,26 +140,38 @@ console.groupCollapsed('1. Atrinkite žmones, kurie yra vyresni nei 30 metų');
 }
 console.groupEnd();
 
-console.group('2. Atrinkite žmones, kurie yra susituokę');
+console.groupCollapsed('2. Atrinkite žmones, kurie yra susituokę');
 {
   console.group('Naudojant iš anksto aprašytą funkciją');
   {
+    const isMarried = function (person) {
+      return person.married;
+    }
 
+    const marriedPeople = people.filter(isMarried);
+    console.table(marriedPeople);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę funkciją');
   {
-
+    const marriedPeople = people.filter(function (person) {
+      return person.married;
+    });
+    console.table(marriedPeople);
   }
   console.groupEnd();
   console.group('Naudojant iš anksto aprašytą lambda išraišką');
   {
+    const isMarried = person => person.married;
 
+    const marriedPeople = people.filter(isMarried);
+    console.table(marriedPeople);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę lambda išraišką');
   {
-
+    const marriedPeople = people.filter(person => person.married);
+    console.table(marriedPeople);
   }
   console.groupEnd();
 }
@@ -169,22 +181,34 @@ console.groupCollapsed('3. Atrinkite žmones, kurie uždirba daugiau nei 1100');
 {
   console.group('Naudojant iš anksto aprašytą funkciją');
   {
+    const incomeLargerThan1100 = function (person) {
+      return person.income > 1100;
+    }
 
+    const peopleMiddleLowClass = people.filter(incomeLargerThan1100);
+    console.table(peopleMiddleLowClass);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę funkciją');
   {
-
+    const peopleMiddleLowClass = people.filter(function (person) {
+      return person.income > 1100;
+    });
+    console.table(peopleMiddleLowClass);
   }
   console.groupEnd();
   console.group('Naudojant iš anksto aprašytą lambda išraišką');
   {
+    const incomeLargerThan1100 = person => person.income > 1100;
 
+    const peopleMiddleLowClass = people.filter(incomeLargerThan1100);
+    console.table(peopleMiddleLowClass);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę lambda išraišką');
   {
-
+    const peopleMiddleLowClass = people.filter(person => person.income > 1100);
+    console.table(peopleMiddleLowClass);
   }
   console.groupEnd();
 }
