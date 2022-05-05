@@ -185,22 +185,34 @@ console.groupCollapsed('1. Suskaičiuokite visų butų bendrą kainą');
 {
   console.group('Naudojant iš anksto aprašytą funkciją');
   {
+    const flatPriceReducer = function (prevPrice, flat) {
+      return prevPrice + flat.price;
+    }
 
+    const priceOfFlats = flats.reduce(flatPriceReducer, 0);
+    console.log(priceOfFlats);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę funkciją');
   {
-
+    const priceOfFlats = flats.reduce(function (prevPrice, flat) {
+      return prevPrice + flat.price;
+    }, 0);
+    console.log(priceOfFlats);
   }
   console.groupEnd();
   console.group('Naudojant iš anksto aprašytą lambda išraišką');
   {
+    const flatPriceReducer = (prevPrice, flat) => prevPrice + flat.price;
 
+    const priceOfFlats = flats.reduce(flatPriceReducer, 0);
+    console.log(priceOfFlats);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę lambda išraišką');
   {
-
+    const priceOfFlats = flats.reduce((prevPrice, flat) => prevPrice + flat.price, 0);
+    console.log(priceOfFlats);
   }
   console.groupEnd();
 }
@@ -210,22 +222,44 @@ console.groupCollapsed('2. Suskaičiuokite visų butų bendrą plotą');
 {
   console.group('Naudojant iš anksto aprašytą funkciją');
   {
+    const roomAreaReducer = function (prevRoomArea, room) {
+      return prevRoomArea + room;
+    }
+    const flatAreaReducer = function (prevFlatArea, flat) {
+      const flatArea = flat.rooms.reduce(roomAreaReducer);
 
+      return prevFlatArea + flatArea;
+    }
+
+    const areaOfFlats = flats.reduce(flatAreaReducer, 0);
+    console.log(areaOfFlats);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę funkciją');
   {
-
+    const areaOfFlats = flats.reduce(function (prevFlatArea, flat) {
+      const flatArea = flat.rooms.reduce(function (prevRoomArea, room) {
+        return prevRoomArea + room;
+      });
+      return prevFlatArea + flatArea;
+    }, 0);
+    console.log(areaOfFlats);
   }
   console.groupEnd();
   console.group('Naudojant iš anksto aprašytą lambda išraišką');
   {
+    const roomAreaReducer = (prevRoomArea, room) => prevRoomArea + room;
+    const flatAreaReducer = (prevArea, flat) => prevArea + flat.rooms.reduce(roomAreaReducer);
 
+    const areaOfFlats = flats.reduce(flatAreaReducer, 0);
+    console.log(areaOfFlats);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę lambda išraišką');
   {
-
+    const areaOfFlats = flats.reduce((prevArea, flat) =>
+      prevArea + flat.rooms.reduce((prevRoomArea, room) => prevRoomArea + room), 0);
+    console.log(areaOfFlats);
   }
   console.groupEnd();
 }
@@ -235,47 +269,77 @@ console.groupCollapsed('3. Suskaičiuokite visų butų vidutinę kainą');
 {
   console.group('Naudojant iš anksto aprašytą funkciją');
   {
+    const flatAvgPriveReducer = function (prevAvg, flat) {
+      const avgPart = flat.price / flats.length;
 
+      return prevAvg + avgPart;
+    }
+
+    const flatsPriceAvg = flats.reduce(flatAvgPriveReducer, 0);
+    console.log(flatsPriceAvg);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę funkciją');
   {
+    const flatsPriceAvg = flats.reduce(function (prevAvg, flat) {
+      const avgPart = flat.price / flats.length;
+
+      return prevAvg + avgPart;
+    }, 0);
+    console.log(flatsPriceAvg);
 
   }
   console.groupEnd();
   console.group('Naudojant iš anksto aprašytą lambda išraišką');
   {
+    const flatAvgPriveReducer = (prevAvg, flat) => prevAvg + flat.price / flats.length;
 
+    const flatsPriceAvg = flats.reduce(flatAvgPriveReducer, 0);
+    console.log(flatsPriceAvg);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę lambda išraišką');
   {
-
+    const flatsPriceAvg = flats.reduce((prevAvg, flat) => prevAvg + flat.price / flats.length, 0);
+    console.log(flatsPriceAvg);
   }
   console.groupEnd();
 }
 console.groupEnd();
 
-console.groupCollapsed('4. Suskaičiuokite visų butų bendrą kambarių skaičių');
+console.group('4. Suskaičiuokite visų butų bendrą kambarių skaičių');
 {
   console.group('Naudojant iš anksto aprašytą funkciją');
   {
+    const flatRoomCountReducer = function (prevRoomCount, flat) {
+      return prevRoomCount + flat.rooms.length;
+    }
 
+    const flatsRoomCount = flats.reduce(flatRoomCountReducer, 0);
+    console.log(flatsRoomCount);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę funkciją');
   {
+    const flatsRoomCount = flats.reduce(function (prevRoomCount, flat) {
+      return prevRoomCount + flat.rooms.length;
+    }, 0);
 
+    console.log(flatsRoomCount);
   }
   console.groupEnd();
   console.group('Naudojant iš anksto aprašytą lambda išraišką');
   {
+    const flatRoomCountReducer = (prevRoomCount, flat) => prevRoomCount + flat.rooms.length;
 
+    const flatsRoomCount = flats.reduce(flatRoomCountReducer, 0);
+    console.log(flatsRoomCount);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę lambda išraišką');
   {
-
+    const flatsRoomCount = flats.reduce((rc, f) => rc + f.rooms.length, 0);
+    console.log(flatsRoomCount);
   }
   console.groupEnd();
 }
