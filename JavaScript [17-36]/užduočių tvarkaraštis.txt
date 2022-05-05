@@ -23,6 +23,7 @@ iki 05-16:
   * functions-tasks-3.js [20-32]
 
 iki 05-23:
+  * function-tasks-array-iterative-2.js
   * classes-tasks-3.js
   * js-revision.txt
   * js-exam-example.txt
