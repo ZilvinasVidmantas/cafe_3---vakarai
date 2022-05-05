@@ -43,8 +43,6 @@
   * static
   * oop encapsulation
   * oop composition
-  * promises
-  * ES6 async functions
 
 ### JavaScript kalbos panaudojimas naršyklėje [48]
   * Elementų pasirinkimas
@@ -54,8 +52,11 @@
   * Turinio redagavimas
   * Turinio trynimas
   * Užklausų siuntimas
+     * promises
+     * ES6 async functions
   * Dirbtinio serverio kūrimas
   * LocalStorage ir SessionStorage
+
 
 ### React [160]
   * Klasiniai komponentai
