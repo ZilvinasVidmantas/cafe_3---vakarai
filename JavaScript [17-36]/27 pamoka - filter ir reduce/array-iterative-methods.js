@@ -10,62 +10,55 @@
   reikalavimus, kurių dėka bus pasiekta iteracinio metodo esmė.
 */
 
-const people = [
-  {
-    name: 'Jonas',
-    surname: 'Jonaitis',
-    sex: 'male',
-    age: 26,
-    income: 1200,
-    married: false,
-    hasCar: false
-  },
-  {
-    name: 'Severija',
-    surname: 'Piktutytė',
-    sex: 'female',
-    age: 26,
-    income: 1300,
-    married: false,
-    hasCar: true
-  },
-  {
-    name: 'Valdas',
-    surname: 'Vilktorinas',
-    sex: 'male',
-    age: 16,
-    income: 0,
-    married: false,
-    hasCar: false
-  },
-  {
-    name: 'Virginijus',
-    surname: 'Uostauskas',
-    sex: 'male',
-    age: 32,
-    income: 2400,
-    married: true,
-    hasCar: true
-  },
-  {
-    name: 'Samanta',
-    surname: 'Uostauskienė',
-    sex: 'female',
-    age: 28,
-    income: 1200,
-    married: true,
-    hasCar: true
-  },
-  {
-    name: 'Janina',
-    surname: 'Stalautinskienė',
-    sex: 'female',
-    age: 72,
-    income: 364,
-    married: false,
-    hasCar: false
-  }
-];
+const people = [{
+  name: 'Jonas',
+  surname: 'Jonaitis',
+  sex: 'male',
+  age: 26,
+  income: 1200,
+  married: false,
+  hasCar: false
+}, {
+  name: 'Severija',
+  surname: 'Piktutytė',
+  sex: 'female',
+  age: 26,
+  income: 1300,
+  married: false,
+  hasCar: true
+}, {
+  name: 'Valdas',
+  surname: 'Vilktorinas',
+  sex: 'male',
+  age: 16,
+  income: 0,
+  married: false,
+  hasCar: false
+}, {
+  name: 'Virginijus',
+  surname: 'Uostauskas',
+  sex: 'male',
+  age: 32,
+  income: 2400,
+  married: true,
+  hasCar: true
+}, {
+  name: 'Samanta',
+  surname: 'Uostauskienė',
+  sex: 'female',
+  age: 28,
+  income: 1200,
+  married: true,
+  hasCar: true
+}, {
+  name: 'Janina',
+  surname: 'Stalautinskienė',
+  sex: 'female',
+  age: 72,
+  income: 364,
+  married: false,
+  hasCar: false
+}];
 const numbers = [1, 15, 9, -9, -8, -7, 2, 8, 51, 6, 5];
 
 console.groupCollapsed('Array.prototype.forEach');
@@ -280,7 +273,7 @@ console.groupCollapsed('Array.prototype.reduce');
     }
     const numbersAvg = avg;
   }
-  const numbersAvg = numbers.reduce((avg, el) =>avg + el / numbers.length, 0);
+  const numbersAvg = numbers.reduce((avg, el) => avg + el / numbers.length, 0);
   // reduce pavyzdys, kuomet kaupiame reikšmę priklausant nuo aplinkybių (šiuo atveju tikriname ar einamieji elementai teigiami||neigiami)
   const numbersSumPositive = numbers.reduce((sum, el) => el > 0 ? sum + el : sum, 0);
   const numbersSumNegative = numbers.reduce((sum, el) => el < 0 ? sum + el : sum, 0);
