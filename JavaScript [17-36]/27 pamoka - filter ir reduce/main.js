@@ -102,32 +102,45 @@ console.groupCollapsed('Veikimo pavyzdys - atrikti lyginius skaičius');
 }
 console.groupEnd();
 
-console.group('1. Atrinkite žmones, kurie yra vyresni nei 30 metų');
+console.groupCollapsed('1. Atrinkite žmones, kurie yra vyresni nei 30 metų');
 {
   console.group('Naudojant iš anksto aprašytą funkciją');
   {
+    const isOlderThan30 = function (person) {
+      return person.age > 30;
+    }
 
+    const peopleOlderThan30 = people.filter(isOlderThan30);
+    console.table(peopleOlderThan30);
   }
   console.groupEnd();
   console.group('Naudojant anoniminę funkciją');
   {
-
+    const peopleOlderThan30 = people.filter(function (person) {
+      return person.age > 30;
+    });
+    console.table(peopleOlderThan30);
   }
   console.groupEnd();
   console.group('Naudojant iš anksto aprašytą lambda išraišką');
   {
+    const isOlderThan30 = person => person.age > 30;
+
+    const peopleOlderThan30 = people.filter(isOlderThan30);
+    console.table(peopleOlderThan30);
 
   }
   console.groupEnd();
   console.group('Naudojant anoniminę lambda išraišką');
   {
-
+    const peopleOlderThan30 = people.filter(person => person.age > 30);
+    console.table(peopleOlderThan30);
   }
   console.groupEnd();
 }
 console.groupEnd();
 
-console.groupCollapsed('2. Atrinkite žmones, kurie yra susituokę');
+console.group('2. Atrinkite žmones, kurie yra susituokę');
 {
   console.group('Naudojant iš anksto aprašytą funkciją');
   {
