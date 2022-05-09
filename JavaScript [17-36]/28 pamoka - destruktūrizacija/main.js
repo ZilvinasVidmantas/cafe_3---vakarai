@@ -7,28 +7,41 @@
   {
     console.group('Be destruktūrizavimo');
     {
+      const printFullName = (person) => console.log(person.name);
 
+      users.forEach(printFullName);
     }
     console.groupEnd();
     console.group('Su destruktūrizavimu');
     {
-
+      users.forEach(({ name }) => console.log(name));
     }
     console.groupEnd();
 
   }
   console.groupEnd();
 
-  console.groupCollapsed('Perfomuokite vartotojus, kad būtų tik savybės: id, name, email, phone');
+  console.group('Perfomuokite vartotojus, kad būtų tik savybės: id, name, email, phone');
   {
     console.group('Be destruktūrizavimo');
     {
+      const userFormatted = users.map((person) => ({
+        id: person.id,
+        name: person.name,
+        email: person.email,
+        phone: person.phone,
+      }));
 
+      console.table(userFormatted);
     }
     console.groupEnd();
     console.group('Su destruktūrizavimu');
     {
+      const userFormatted = users.map(
+        ({ id, name, email, phone }) => ({ id, name, email, phone })
+      );
 
+      console.table(userFormatted);
     }
     console.groupEnd();
   }
@@ -49,7 +62,7 @@
   }
   console.groupEnd();
 
-  console.group('Sugrupuokite vartotojus, pagal jų puslapių pabaigas');
+  console.groupCollapsed('Sugrupuokite vartotojus, pagal jų puslapių pabaigas');
   /*
   {
     org: [
@@ -111,4 +124,4 @@
   console.groupEnd();
 })();
 
-// 20:20
+// 21:10

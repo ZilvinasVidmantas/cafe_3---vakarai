@@ -20,7 +20,7 @@
   * darbų kuriant šakas metodologija nenutraukiamam darbui komandoje
   * darbas grupelėmis
 
-### JavaScript kalbos pagrindai [80]
+### JavaScript kalbos pagrindai [112]
   * variables and logging
   * data types
   * operators
@@ -93,7 +93,7 @@
     * MongoDB Atlas
     * Duomenų ryšiai ir schemos
   
-### MERN stack aplikacijos kūrimas (Mongo + Express + React + Node) [74]
+### MERN stack aplikacijos kūrimas (Mongo + Express + React + Node) [42]
   * Autentifikacija ir autorizacija
 
 ### Pamokos skirtos atsiskaitymams [8]
@@ -104,10 +104,10 @@
   Atsiskaitymų datos gali keistis dėl dėstytojo susirgimų
 
   * HTML ir CSS (2%) [2022-04-04]
-  * JavaScript pagrindai (4%) [2022-05-23]
-  * JavaScript panaudojimas naršyklėje (3%) [2022-06-13]
-  * React (8%) [2022-08-23]
-  * Expres + Mongo (3%) [2022-09-05]
+  * JavaScript pagrindai (4%) [2022-06-06]
+  * JavaScript panaudojimas naršyklėje (3%) [2022-06-27]
+  * React (8%) [2022-09-]
+  * Expres + Mongo (3%) [2022-10-]
   * Teorinis egzaminas (30%) [2022]
   * Praktinis darbas (50%) [2022]
 

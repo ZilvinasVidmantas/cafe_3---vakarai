@@ -1,29 +1,30 @@
 Visi failai yra aplanke 'https://github.com/ZilvinasVidmantas/cafe_3---vakarai/tree/master/JavaScript [17-36]/uzdaviniai/'
-iki 04-25: 
+  
+iki 05-16: +2 balai prie kontrolinio
   * cycles.js
-
-iki 05-02:
   * arrays.js
   * functions-tasks-1.js
   * functions-tasks-2.js
   * object-tasks.js
-  
-iki 05-09:
-  * functions-tasks-3.js [1-20]
   * functions-tasks-2.js -> functions-tasks-2-array-methods.js, naudojant 
     * Array.prototype.forEach
     * Array.prototype.map
     * Array.prototype.filter
     * Array.prototype.reduce
   * function-tasks-array-iterative-1.js
+  * functions-tasks-3.js [1-10]
 
-iki 05-16:
+iki 05-23: +1 balas prie kontrolinio
+  * functions-tasks-3.js [11-20]
   * classes-tasks-1.js
   * classes-tasks-2.js
-  * functions-tasks-3.js [20-32]
 
-iki 05-23:
+iki 05-30: +1 balas prie kontrolinio
+  * functions-tasks-3.js [21-27]
   * function-tasks-array-iterative-2.js
+
+iki 06-06 +1 balas prie kontrolinio
+  * functions-tasks-3.js [28-32]
   * classes-tasks-3.js
   * js-revision.txt
   * js-exam-example.txt
