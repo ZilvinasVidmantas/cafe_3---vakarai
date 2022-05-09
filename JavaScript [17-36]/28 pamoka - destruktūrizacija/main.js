@@ -49,7 +49,7 @@
   }
   console.groupEnd();
 
-  console.groupCollapsed('Sugrupuokite vartotojus, pagal jų puslapių pabaigas');
+  console.group('Sugrupuokite vartotojus, pagal jų puslapių pabaigas');
   /*
   {
     org: [
@@ -78,14 +78,37 @@
   {
     console.group('Be destruktūrizavimo');
     {
+      const groupedByDomainExtension = users.reduce((prevGrouped, user) => {
+        const ext = user.website.slice(user.website.lastIndexOf('.') + 1)
+        if (!prevGrouped[ext]) {
+          prevGrouped[ext] = [];
+        }
+        prevGrouped[ext].push(user)
 
+        return prevGrouped;
+      }, {});
+
+      console.log(groupedByDomainExtension);
     }
     console.groupEnd();
     console.group('Su destruktūrizavimu');
     {
+      const groupedByDomainExtension = users.reduce((prevGrouped, user) => {
+        const { website } = user;
+        const ext = website.slice(website.lastIndexOf('.') + 1)
+        if (!prevGrouped[ext]) {
+          prevGrouped[ext] = [];
+        }
+        prevGrouped[ext].push(user)
 
+        return prevGrouped;
+      }, {});
+
+      console.log(groupedByDomainExtension);
     }
     console.groupEnd();
   }
   console.groupEnd();
 })();
+
+// 20:20
