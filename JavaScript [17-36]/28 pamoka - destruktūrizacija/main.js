@@ -21,7 +21,7 @@
   }
   console.groupEnd();
 
-  console.group('Perfomuokite vartotojus, kad būtų tik savybės: id, name, email, phone');
+  console.groupCollapsed('Perfomuokite vartotojus, kad būtų tik savybės: id, name, email, phone');
   {
     console.group('Be destruktūrizavimo');
     {
@@ -47,47 +47,29 @@
   }
   console.groupEnd();
 
-  console.groupCollapsed('Atrinkite vartotojus, kurių el paštas baigiasi ".biz"');
+  console.group('Atrinkite vartotojus, kurių el paštas baigiasi ".biz"');
   {
     console.group('Be destruktūrizavimo');
     {
+      const usersWithBizEmail = users.filter((user) => {
+        const ext = user.email.split('.').reverse()[0];
 
+        return ext === 'biz';
+      });
+
+      console.table(usersWithBizEmail);
     }
     console.groupEnd();
     console.group('Su destruktūrizavimu');
     {
-
+      const usersWithBizEmail = users.filter(({ email }) => email.split('.').reverse()[0] === 'biz');
+      console.table(usersWithBizEmail);
     }
     console.groupEnd();
   }
   console.groupEnd();
 
   console.groupCollapsed('Sugrupuokite vartotojus, pagal jų puslapių pabaigas');
-  /*
-  {
-    org: [
-      {...},
-      {...},
-      ...
-    ],
-    net: [
-      {...},
-      {...},
-      ...
-    ],
-    info: [
-      {...},
-      {...},
-      ...
-    ],
-    biz: [
-      {...},
-      {...},
-      ...
-    ],
-    ...
-  }
-  */
   {
     console.group('Be destruktūrizavimo');
     {
@@ -96,7 +78,7 @@
         if (!prevGrouped[ext]) {
           prevGrouped[ext] = [];
         }
-        prevGrouped[ext].push(user)
+        prevGrouped[ext].push(user);
 
         return prevGrouped;
       }, {});
@@ -123,5 +105,3 @@
   }
   console.groupEnd();
 })();
-
-// 21:10
