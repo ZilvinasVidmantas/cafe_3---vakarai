@@ -1,26 +1,21 @@
-console.group("27. Sukurkite funkciją, kuri pirmu parametru priima sakinį, ir kiekvieno žodžio pirmają raidę padaro didžiąja");
+console.group("17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) 'a' raidės vietą žodyje");
 {
-  // function capitalize(str) {
-  //   const words = str.split(' ');
-  //   const capitalizedWords = words.map(word => word[0].toUpperCase() + word.slice(1));
-  //   const capitalizedWordsStr = capitalizedWords.join(' ');
+  // const firstIndexOfLetterA = str => {
+  //   for (let i = 0; i < str.length; i++) {
+  //     if (str[i] === 'a') {
+  //       return i;
+  //     }
+  //   }
 
-  //   return capitalizedWordsStr;
+  //   return -1;
   // }
-
-  const capitalize = str => str
-    .split(' ')
-    .map(word => word[0].toUpperCase() + word.slice(1))
-    .join(' ');
-
+  const firstIndexOfLetterA = str => str.indexOf('a')
 
   console.log('---');
-  console.table({
-    'viens du trys': capitalize('viens du trys'),
-    'as tave myliu': capitalize('as tave myliu'),
-    'Bairis seniuk': capitalize('Bairis seniuk'),
+  console.log({
+    'labas': firstIndexOfLetterA('labas'),
+    'kempės': firstIndexOfLetterA('kempės'),
+    '123123': firstIndexOfLetterA('123123'),
   })
   console.log('---');
 }
-console.groupEnd();
-console.log();
