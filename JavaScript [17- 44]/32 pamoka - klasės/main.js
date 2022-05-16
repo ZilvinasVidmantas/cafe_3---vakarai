@@ -54,9 +54,57 @@ console.group('2. Sukurkite klasę Flat, kuri priimtų: miestą, gatvę, numerį
     * printAddress: atspausdinta adresą vienoje eilutėje
     * buildRoom: Prideda kambarį į this.rooms masyvą
     * getArea: Suskaičiuoja visų kambarių plotą
-    * getNumberCount: suskaičiuoja visų kambarių kiekį
+    * getRoomCount: suskaičiuoja visų kambarių kiekį
 */
 {
+  class Flat {
+    constructor(country, city, street, number) {
+      this.country = country;
+      this.city = city;
+      this.street = street;
+      this.number = number;
+      this.rooms = [];
+    }
+
+    printAddress() {
+      const { country, city, street, number } = this;
+      console.log(`${street} ${number}, ${city}. ${country}.`)
+    }
+
+    buildRoom(room) {
+      this.rooms.push(room);
+    }
+
+    getArea() {
+      return this.rooms.reduce((sum, x) => sum + x, 0);
+    }
+
+    getRoomCount() {
+      return this.rooms.length;
+    }
+  }
+
+  const flat = new Flat('USA', 'Kansas', 'Greendale st.', '17-a');
+  flat.printAddress();
+  console.table(flat);
+  let roomCount = flat.getRoomCount();
+  let area = flat.getArea();
+  console.log({
+    roomCount,
+    area,
+  });
+  console.log('Adding 4 rooms...')
+  flat.buildRoom(15);
+  flat.buildRoom(12);
+  flat.buildRoom(9);
+  flat.buildRoom(15);
+
+  roomCount = flat.getRoomCount();
+  area = flat.getArea();
+  console.log({
+    roomCount,
+    area,
+  });
 
 
 }
