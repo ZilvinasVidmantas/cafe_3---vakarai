@@ -14,9 +14,9 @@ annonymousFunctions.js
 lamdba.js
 destructurization.js
 array-iterative-methods-2.js
-higherOrderFunctions.js
-this.js
 classes.js
+this.js
 static.js
 oop-encapsulation.js
 oop-composition.js
+higherOrderFunctions.js
