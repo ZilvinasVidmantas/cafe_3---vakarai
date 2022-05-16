@@ -8,6 +8,40 @@ Sukurkite Person klasę, kuri priimtų vardą, pavardę, metus, mėnesį, dieną
   * Sukurkite metodą<getAge>, kurs apskaičiuotų dabartinį žmogaus amžių
 */
 {
+  class Person {
+    constructor(name, surname, year, month, day) {
+      this.name = name;
+      this.surname = surname;
+      this.birthDate = new Date(year, month - 1, day);
+    }
+
+    printName() {
+      console.log(this.name, this.surname);
+    }
+
+    getAge() {
+      const now = new Date();
+      const yearBasis = now.getFullYear() - this.birthDate.getFullYear() - 1;
+
+      const monthNow = now.getMonth() + 1;
+      const monthBirth = this.birthDate.getMonth() + 1;
+      if (monthNow > monthBirth) {
+        return yearBasis + 1;
+      }
+
+      const dayNow = now.getDate();
+      const dayBirth = this.birthDate.getDate();
+      if (monthNow === monthBirth && dayNow > dayBirth) {
+        return yearBasis + 1;
+      }
+
+      return yearBasis;
+    }
+  }
+
+  const person = new Person('Jubis', 'Dalbajovas', 2002, 5, 16);
+  person.printName();
+  console.log(person.getAge())
 
 }
 console.groupEnd();
