@@ -10,141 +10,141 @@ export const modules = [];
 const informaticsFaculty = new Faculty('Informatikos fakultetas');
 faculties.push(informaticsFaculty);
 
-const computerSystems = new StudyProgram('Programų sistemos', informaticsFaculty.id);
-studyPrograms.push(computerSystems);
+const softwareSystems = new StudyProgram('Programų sistemos', informaticsFaculty.id);
+studyPrograms.push(softwareSystems);
 
-const computerSystemsSemester1 = new StudyProgramSemester();
-const moduleInfo11 = new Module('Akademinė ir mokslinė anglų kalba C1 I/II d.', 5)
-const moduleInfo12 = new Module('Diskrečioji matematika', 5)
-const moduleInfo13 = new Module('IT ir komunikacijos įgūdžiai', 5)
-const moduleInfo14 = new Module('Kompiuterių architektūra', 5)
-const moduleInfo15 = new Module('Matematika programų sistemoms I/III d.', 5)
-const moduleInfo16 = new Module('Procedūrinis programavimas', 5)
-computerSystemsSemester1.addModule(moduleInfo11.id);
-computerSystemsSemester1.addModule(moduleInfo12.id);
-computerSystemsSemester1.addModule(moduleInfo13.id);
-computerSystemsSemester1.addModule(moduleInfo14.id);
-computerSystemsSemester1.addModule(moduleInfo15.id);
-computerSystemsSemester1.addModule(moduleInfo16.id);
+const softwareSystemsSemester1 = new StudyProgramSemester();
+const softwareSystemsSemester1module1 = new Module('Akademinė ir mokslinė anglų kalba C1 I/II d.', 5)
+const softwareSystemsSemester1module2 = new Module('Diskrečioji matematika', 5)
+const softwareSystemsSemester1module3 = new Module('IT ir komunikacijos įgūdžiai', 5)
+const softwareSystemsSemester1module4 = new Module('Kompiuterių architektūra', 5)
+const softwareSystemsSemester1module5 = new Module('Matematika programų sistemoms I/III d.', 5)
+const softwareSystemsSemester1module6 = new Module('Procedūrinis programavimas', 5)
+softwareSystemsSemester1.addModule(softwareSystemsSemester1module1.id);
+softwareSystemsSemester1.addModule(softwareSystemsSemester1module2.id);
+softwareSystemsSemester1.addModule(softwareSystemsSemester1module3.id);
+softwareSystemsSemester1.addModule(softwareSystemsSemester1module4.id);
+softwareSystemsSemester1.addModule(softwareSystemsSemester1module5.id);
+softwareSystemsSemester1.addModule(softwareSystemsSemester1module6.id);
 
-const computerSystemsSemester2 = new StudyProgramSemester();
-const moduleInfo21 = new Module('Akademinė ir mokslinė anglų kalba C1 II/II d.', 5)
-const moduleInfo22 = new Module('Algoritmai ir duomenų struktūros', 5)
-const moduleInfo23 = new Module('Algoritmų teorija', 10)
-const moduleInfo24 = new Module('Matematika programų sistemoms II/III d.', 5)
-const moduleInfo25 = new Module('Objektinis programavimas', 5)
-computerSystemsSemester2.addModule(moduleInfo21.id);
-computerSystemsSemester2.addModule(moduleInfo22.id);
-computerSystemsSemester2.addModule(moduleInfo23.id);
-computerSystemsSemester2.addModule(moduleInfo24.id);
-computerSystemsSemester2.addModule(moduleInfo25.id);
+const softwareSystemsSemester2 = new StudyProgramSemester();
+const softwareSystemsSemester2module1 = new Module('Akademinė ir mokslinė anglų kalba C1 II/II d.', 5)
+const softwareSystemsSemester2module2 = new Module('Algoritmai ir duomenų struktūros', 5)
+const softwareSystemsSemester2module3 = new Module('Algoritmų teorija', 10)
+const softwareSystemsSemester2module4 = new Module('Matematika programų sistemoms II/III d.', 5)
+const softwareSystemsSemester2module5 = new Module('Objektinis programavimas', 5)
+softwareSystemsSemester2.addModule(softwareSystemsSemester2module1.id);
+softwareSystemsSemester2.addModule(softwareSystemsSemester2module2.id);
+softwareSystemsSemester2.addModule(softwareSystemsSemester2module3.id);
+softwareSystemsSemester2.addModule(softwareSystemsSemester2module4.id);
+softwareSystemsSemester2.addModule(softwareSystemsSemester2module5.id);
 
-const computerSystemsSemester3 = new StudyProgramSemester();
-const moduleInfo31 = new Module('Duomenų bazių valdymo sistemos', 10)
-const moduleInfo32 = new Module('Funkcinis programavimas', 5)
-const moduleInfo33 = new Module('Matematinė logika', 5)
-const moduleInfo34 = new Module('Programų sistemų inžinerija I/II d.', 10)
-computerSystemsSemester3.addModule(moduleInfo31.id);
-computerSystemsSemester3.addModule(moduleInfo32.id);
-computerSystemsSemester3.addModule(moduleInfo33.id);
-computerSystemsSemester3.addModule(moduleInfo34.id);
+const softwareSystemsSemester3 = new StudyProgramSemester();
+const softwareSystemsSemester3module1 = new Module('Duomenų bazių valdymo sistemos', 10)
+const softwareSystemsSemester3module2 = new Module('Funkcinis programavimas', 5)
+const softwareSystemsSemester3module3 = new Module('Matematinė logika', 5)
+const softwareSystemsSemester3module4 = new Module('Programų sistemų inžinerija I/II d.', 10)
+softwareSystemsSemester3.addModule(softwareSystemsSemester3module1.id);
+softwareSystemsSemester3.addModule(softwareSystemsSemester3module2.id);
+softwareSystemsSemester3.addModule(softwareSystemsSemester3module3.id);
+softwareSystemsSemester3.addModule(softwareSystemsSemester3module4.id);
 
-const computerSystemsSemester4 = new StudyProgramSemester();
-const moduleInfo41 = new Module('Kompiuterių tinklai', 5)
-const moduleInfo42 = new Module('Matematika programų sistemoms III/III d.', 10)
-const moduleInfo43 = new Module('Programų sistemų inžinerija II/II d.', 5)
-const moduleInfo44 = new Module('Buhalterinė apskaita', 5)
-const moduleInfo45 = new Module('Fizika informatikams', 5)
-computerSystemsSemester4.addModule(moduleInfo41.id);
-computerSystemsSemester4.addModule(moduleInfo42.id);
-computerSystemsSemester4.addModule(moduleInfo43.id);
-computerSystemsSemester4.addModule(moduleInfo44.id);
-computerSystemsSemester4.addModule(moduleInfo45.id);
+const softwareSystemsSemester4 = new StudyProgramSemester();
+const softwareSystemsSemester4module1 = new Module('Kompiuterių tinklai', 5)
+const softwareSystemsSemester4module2 = new Module('Matematika programų sistemoms III/III d.', 10)
+const softwareSystemsSemester4module3 = new Module('Programų sistemų inžinerija II/II d.', 5)
+const softwareSystemsSemester4module4 = new Module('Buhalterinė apskaita', 5)
+const softwareSystemsSemester4module5 = new Module('Fizika informatikams', 5)
+softwareSystemsSemester4.addModule(softwareSystemsSemester4module1.id);
+softwareSystemsSemester4.addModule(softwareSystemsSemester4module2.id);
+softwareSystemsSemester4.addModule(softwareSystemsSemester4module3.id);
+softwareSystemsSemester4.addModule(softwareSystemsSemester4module4.id);
+softwareSystemsSemester4.addModule(softwareSystemsSemester4module5.id);
 
-const computerSystemsSemester5 = new StudyProgramSemester();
-const moduleInfo51 = new Module('Interneto technologijos', 10)
-const moduleInfo52 = new Module('Programų sistemų projektavimas', 10)
-const moduleInfo53 = new Module('Programų sistemų testavimas', 5)
-const moduleInfo54 = new Module('Žmogaus-kompiuterio sąveika', 5)
-computerSystemsSemester5.addModule(moduleInfo51.id);
-computerSystemsSemester5.addModule(moduleInfo52.id);
-computerSystemsSemester5.addModule(moduleInfo53.id);
-computerSystemsSemester5.addModule(moduleInfo54.id);
+const softwareSystemsSemester5 = new StudyProgramSemester();
+const softwareSystemsSemester5module1 = new Module('Interneto technologijos', 10)
+const softwareSystemsSemester5module2 = new Module('Programų sistemų projektavimas', 10)
+const softwareSystemsSemester5module3 = new Module('Programų sistemų testavimas', 5)
+const softwareSystemsSemester5module4 = new Module('Žmogaus-kompiuterio sąveika', 5)
+softwareSystemsSemester5.addModule(softwareSystemsSemester5module1.id);
+softwareSystemsSemester5.addModule(softwareSystemsSemester5module2.id);
+softwareSystemsSemester5.addModule(softwareSystemsSemester5module3.id);
+softwareSystemsSemester5.addModule(softwareSystemsSemester5module4.id);
 
-const computerSystemsSemester6 = new StudyProgramSemester();
-const moduleInfo61 = new Module('Giliojo mokymosi metodai', 5)
-const moduleInfo62 = new Module('Profesionalumas ir etika', 5)
-const moduleInfo63 = new Module('Programų sistemų kūrimas', 10)
-const moduleInfo64 = new Module('Statistinė duomenų analizė', 5)
-const moduleInfo65 = new Module('Lygiagretusis programavimas', 5)
-computerSystemsSemester6.addModule(moduleInfo61.id);
-computerSystemsSemester6.addModule(moduleInfo62.id);
-computerSystemsSemester6.addModule(moduleInfo63.id);
-computerSystemsSemester6.addModule(moduleInfo64.id);
-computerSystemsSemester6.addModule(moduleInfo65.id);
+const softwareSystemsSemester6 = new StudyProgramSemester();
+const softwareSystemsSemester6module1 = new Module('Giliojo mokymosi metodai', 5)
+const softwareSystemsSemester6module2 = new Module('Profesionalumas ir etika', 5)
+const softwareSystemsSemester6module3 = new Module('Programų sistemų kūrimas', 10)
+const softwareSystemsSemester6module4 = new Module('Statistinė duomenų analizė', 5)
+const softwareSystemsSemester6module5 = new Module('Lygiagretusis programavimas', 5)
+softwareSystemsSemester6.addModule(softwareSystemsSemester6module1.id);
+softwareSystemsSemester6.addModule(softwareSystemsSemester6module2.id);
+softwareSystemsSemester6.addModule(softwareSystemsSemester6module3.id);
+softwareSystemsSemester6.addModule(softwareSystemsSemester6module4.id);
+softwareSystemsSemester6.addModule(softwareSystemsSemester6module5.id);
 
-const computerSystemsSemester7 = new StudyProgramSemester();
-const moduleInfo71 = new Module('Kursinis darbas', 10)
-const moduleInfo72 = new Module('Programų kūrimo procesas', 5)
-const moduleInfo73 = new Module('Programų sistemų projektų ir kokybės valdymas', 5)
-const moduleInfo74 = new Module('Dirbtinis intelektas', 5)
-const moduleInfo75 = new Module('Skaitmeninis intelektas ir sprendimų priėmimas', 5)
-computerSystemsSemester7.addModule(moduleInfo71.id);
-computerSystemsSemester7.addModule(moduleInfo72.id);
-computerSystemsSemester7.addModule(moduleInfo73.id);
-computerSystemsSemester7.addModule(moduleInfo74.id);
-computerSystemsSemester7.addModule(moduleInfo75.id);
+const softwareSystemsSemester7 = new StudyProgramSemester();
+const softwareSystemsSemester7module1 = new Module('Kursinis darbas', 10)
+const softwareSystemsSemester7module2 = new Module('Programų kūrimo procesas', 5)
+const softwareSystemsSemester7module3 = new Module('Programų sistemų projektų ir kokybės valdymas', 5)
+const softwareSystemsSemester7module4 = new Module('Dirbtinis intelektas', 5)
+const softwareSystemsSemester7module5 = new Module('Skaitmeninis intelektas ir sprendimų priėmimas', 5)
+softwareSystemsSemester7.addModule(softwareSystemsSemester7module1.id);
+softwareSystemsSemester7.addModule(softwareSystemsSemester7module2.id);
+softwareSystemsSemester7.addModule(softwareSystemsSemester7module3.id);
+softwareSystemsSemester7.addModule(softwareSystemsSemester7module4.id);
+softwareSystemsSemester7.addModule(softwareSystemsSemester7module5.id);
 
-const computerSystemsSemester8 = new StudyProgramSemester();
-const moduleInfo81 = new Module('Bakalauro baigiamasis darbas', 15)
-const moduleInfo82 = new Module('Profesinė praktika', 15)
-computerSystemsSemester8.addModule(moduleInfo81.id);
-computerSystemsSemester8.addModule(moduleInfo82.id);
+const softwareSystemsSemester8 = new StudyProgramSemester();
+const softwareSystemsSemester8module1 = new Module('Bakalauro baigiamasis darbas', 15)
+const softwareSystemsSemester8module2 = new Module('Profesinė praktika', 15)
+softwareSystemsSemester8.addModule(softwareSystemsSemester8module1.id);
+softwareSystemsSemester8.addModule(softwareSystemsSemester8module2.id);
 
-computerSystems.addSemester(1, computerSystemsSemester1);
-computerSystems.addSemester(2, computerSystemsSemester2);
-computerSystems.addSemester(3, computerSystemsSemester3);
-computerSystems.addSemester(4, computerSystemsSemester4);
-computerSystems.addSemester(5, computerSystemsSemester5);
-computerSystems.addSemester(6, computerSystemsSemester6);
-computerSystems.addSemester(7, computerSystemsSemester7);
-computerSystems.addSemester(8, computerSystemsSemester8);
+softwareSystems.addSemester(1, softwareSystemsSemester1);
+softwareSystems.addSemester(2, softwareSystemsSemester2);
+softwareSystems.addSemester(3, softwareSystemsSemester3);
+softwareSystems.addSemester(4, softwareSystemsSemester4);
+softwareSystems.addSemester(5, softwareSystemsSemester5);
+softwareSystems.addSemester(6, softwareSystemsSemester6);
+softwareSystems.addSemester(7, softwareSystemsSemester7);
+softwareSystems.addSemester(8, softwareSystemsSemester8);
 
 modules.push(
-  moduleInfo11,
-  moduleInfo12,
-  moduleInfo13,
-  moduleInfo14,
-  moduleInfo15,
-  moduleInfo16,
-  moduleInfo21,
-  moduleInfo22,
-  moduleInfo23,
-  moduleInfo24,
-  moduleInfo25,
-  moduleInfo31,
-  moduleInfo32,
-  moduleInfo33,
-  moduleInfo34,
-  moduleInfo41,
-  moduleInfo42,
-  moduleInfo43,
-  moduleInfo44,
-  moduleInfo45,
-  moduleInfo51,
-  moduleInfo52,
-  moduleInfo53,
-  moduleInfo54,
-  moduleInfo61,
-  moduleInfo62,
-  moduleInfo63,
-  moduleInfo64,
-  moduleInfo65,
-  moduleInfo71,
-  moduleInfo72,
-  moduleInfo73,
-  moduleInfo74,
-  moduleInfo75,
-  moduleInfo81,
-  moduleInfo82,
+  softwareSystemsSemester1module1,
+  softwareSystemsSemester1module2,
+  softwareSystemsSemester1module3,
+  softwareSystemsSemester1module4,
+  softwareSystemsSemester1module5,
+  softwareSystemsSemester1module6,
+  softwareSystemsSemester2module1,
+  softwareSystemsSemester2module2,
+  softwareSystemsSemester2module3,
+  softwareSystemsSemester2module4,
+  softwareSystemsSemester2module5,
+  softwareSystemsSemester3module1,
+  softwareSystemsSemester3module2,
+  softwareSystemsSemester3module3,
+  softwareSystemsSemester3module4,
+  softwareSystemsSemester4module1,
+  softwareSystemsSemester4module2,
+  softwareSystemsSemester4module3,
+  softwareSystemsSemester4module4,
+  softwareSystemsSemester4module5,
+  softwareSystemsSemester5module1,
+  softwareSystemsSemester5module2,
+  softwareSystemsSemester5module3,
+  softwareSystemsSemester5module4,
+  softwareSystemsSemester6module1,
+  softwareSystemsSemester6module2,
+  softwareSystemsSemester6module3,
+  softwareSystemsSemester6module4,
+  softwareSystemsSemester6module5,
+  softwareSystemsSemester7module1,
+  softwareSystemsSemester7module2,
+  softwareSystemsSemester7module3,
+  softwareSystemsSemester7module4,
+  softwareSystemsSemester7module5,
+  softwareSystemsSemester8module1,
+  softwareSystemsSemester8module2,
 );
