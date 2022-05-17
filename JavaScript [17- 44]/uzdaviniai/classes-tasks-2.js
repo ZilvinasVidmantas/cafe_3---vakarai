@@ -12,7 +12,18 @@ console.groupEnd();
 
 console.groupCollapsed('3. - https://edabit.com/challenge/kGLhgwGaLJsCMS7wS');
 {
-  // ... code
+
+  const capitalize = (str) => str[0].toUpperCase() + str.slice(1).toLowerCase()
+
+
+  class Employee {
+    constructor(name, surname) {
+      this.firstname = capitalize(name);
+      this.lastname = capitalize(surname);
+      this.fullname = this.firstname + ' ' + this.lastname;
+      this.email = `${name}.${surname}@company.com`.toLowerCase();
+    }
+  }
 }
 console.groupEnd();
 
