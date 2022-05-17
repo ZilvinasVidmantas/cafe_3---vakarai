@@ -10,5 +10,8 @@ class StudyProgramSemester {
   }
 
   addModule(moduleId) {
+    this.modules.push(moduleId);
   }
 }
+
+export default StudyProgramSemester;

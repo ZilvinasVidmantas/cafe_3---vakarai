@@ -6,8 +6,10 @@ class StudentModule {
   marks;
 
   constructor(moduleId) {
-    this.id = `act_mod_${++Faculty.count}`;
+    this.id = `act_mod_${++StudentModule.count}`;
     this.moduleId = moduleId;
     this.marks = [];
   }
 }
+
+export default StudentModule;
