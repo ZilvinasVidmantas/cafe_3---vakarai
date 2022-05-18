@@ -22,25 +22,16 @@ class Student {
   }
 
   assingStudyProgram() {
-    console.group(`${this.name} ${this.surname}`);
     const studyProgram = studyPrograms.find(x => x.id === this.studyProgramId);
-    // 10min, pertraukia
-    // tęskite užduotį
     studyProgram.semesters.forEach(semester => {
-      console.log(semester);
       const studentSemester = {
-        studentModules: []
+        modules: []
       }
       semester.modules.forEach(moduleId => {
-        // naudojant moduleId, sukurti <StudentModule> ir įdėti į studentSemester.studnetModules
-        console.log(moduleId);
+        studentSemester.modules.push(new StudentModule(moduleId));
       })
-
-
       this.semesters.push(studentSemester);
-
     })
-    console.groupEnd();
   }
 }
 

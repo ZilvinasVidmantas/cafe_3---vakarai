@@ -16,6 +16,6 @@ const studentsInfoSoftwareSystems = [
     * studento savybėje Student.semesters atsirastų visi semestrai išvardinti studijų programoje, perdarant kiekvieną semestro StudyProgramSemester.modules savybę kaip StudentModule klasės objektą. Kiekvienam kuriamam StudentModule objektui perduokite atitinkamą modulio ID raktą 
 
   Atlike darbus, atspausdinkite rezultatus taip, kad matytūsi teisingai atlikta užduotis.
-
-
 */
+
+console.log(studentsInfoSoftwareSystems);
