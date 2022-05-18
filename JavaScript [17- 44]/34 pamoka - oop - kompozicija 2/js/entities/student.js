@@ -1,4 +1,6 @@
-import softwareSystems from '../data/info/software-systems.js'
+import studyPrograms from '../data/study-programs.js';
+import StudentModule from '../entities/student-module.js';
+
 class Student {
   static count = 0;
 
@@ -20,16 +22,25 @@ class Student {
   }
 
   assingStudyProgram() {
-    softwareSystems.semesters.forEach(semester => {
+    console.group(`${this.name} ${this.surname}`);
+    const studyProgram = studyPrograms.find(x => x.id === this.studyProgramId);
+    // 10min, pertraukia
+    // tęskite užduotį
+    studyProgram.semesters.forEach(semester => {
+      console.log(semester);
       const studentSemester = {
         studentModules: []
       }
-      // Parašyti logiką, jog su kiekviena <semester> reikšme būtų sukurtas <StudentModule> objektas
+      semester.modules.forEach(moduleId => {
+        // naudojant moduleId, sukurti <StudentModule> ir įdėti į studentSemester.studnetModules
+        console.log(moduleId);
+      })
+
 
       this.semesters.push(studentSemester);
 
     })
-    // Pagal studijų programas suformuokite semestrus su ActiveModule objektais
+    console.groupEnd();
   }
 }
 

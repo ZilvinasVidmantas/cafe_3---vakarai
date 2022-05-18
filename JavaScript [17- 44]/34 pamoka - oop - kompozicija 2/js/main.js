@@ -1,15 +1,13 @@
 import softwareSystems from './data/info/software-systems.js';
 import Student from './entities/student.js';
 
-const studentsInfoSoftwareSystesm = [
+const studentsInfoSoftwareSystems = [
   new Student('Apsas', 'Rekvestenis', softwareSystems.id),
   new Student('Skaitiklis', 'Pliusauskas', softwareSystems.id),
   new Student('Bekas', 'Serversaidas', softwareSystems.id),
   new Student('Frontas', 'Klijentauskas', softwareSystems.id),
   new Student('Kompiuterė', 'Komplailerytė', softwareSystems.id),
 ];
-
-console.table(studentsInfoSoftwareSystesm);
 
 /*
   1. Sukurkite 5 studentus priskiriant jiems studijų programą
