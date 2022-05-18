@@ -10,12 +10,15 @@ const studentsInfoSoftwareSystems = [
 ];
 
 /*
-  1. Sukurkite 5 studentus priskiriant jiems studijų programą
+  aplanke 'data/' sukurkite failą 'modules.js'
+    * šiame faile importuokite <softwareSystemsModules> iš failo 'data/info/software-systems.js'
+    * sukurkite masyvą <modules>
+    * į masyvą <modules> įdėkite <softwareSystemsModules>
+    * eksportuokite masyvą <modules>
+    
+  'main.js' (šiame) faile
+    * importuokite <modules> iš failo 'modules.js'
+    * atspausdinkite naudodami <console.table>
 
-  2. Student klasėje aprašykite metodą <assingStudyProgram>, kad:
-    * studento savybėje Student.semesters atsirastų visi semestrai išvardinti studijų programoje, perdarant kiekvieną semestro StudyProgramSemester.modules savybę kaip StudentModule klasės objektą. Kiekvienam kuriamam StudentModule objektui perduokite atitinkamą modulio ID raktą 
-
-  Atlike darbus, atspausdinkite rezultatus taip, kad matytūsi teisingai atlikta užduotis.
 */
 
-console.log(studentsInfoSoftwareSystems);
