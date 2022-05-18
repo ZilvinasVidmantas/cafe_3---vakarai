@@ -8,17 +8,17 @@ class Student {
   studyProgramId;
   semesters;
 
-  constructor(name, surname, course, studyProgramId) {
+  constructor(name, surname, studyProgramId) {
     this.id = `stud_${++Student.count}`;
     this.name = name;
     this.surname = surname;
-    this.course = course;
+    this.course = 1;
     this.studyProgramId = studyProgramId;
     this.semesters = [];
-    this.assignSemesters();
+    this.assingStudyProgram();
   }
 
-  assignSemesters() {
+  assingStudyProgram() {
     // Pagal studijų programas suformuokite semestrus su ActiveModule objektais
   }
 }
