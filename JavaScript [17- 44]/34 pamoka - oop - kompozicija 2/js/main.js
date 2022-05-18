@@ -1,4 +1,5 @@
 import softwareSystems from './data/info/software-systems.js';
+import modules from './data/modules.js'
 import Student from './entities/student.js';
 
 const studentsInfoSoftwareSystems = [
@@ -19,6 +20,7 @@ const studentsInfoSoftwareSystems = [
   'main.js' (šiame) faile
     * importuokite <modules> iš failo 'modules.js'
     * atspausdinkite naudodami <console.table>
-
 */
+
+console.table(modules);
 
