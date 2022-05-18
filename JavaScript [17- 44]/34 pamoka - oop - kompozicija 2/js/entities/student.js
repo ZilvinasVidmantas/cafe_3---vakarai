@@ -1,3 +1,4 @@
+import softwareSystems from '../data/info/software-systems.js'
 class Student {
   static count = 0;
 
@@ -19,6 +20,15 @@ class Student {
   }
 
   assingStudyProgram() {
+    softwareSystems.semesters.forEach(semester => {
+      const studentSemester = {
+        studentModules: []
+      }
+      // Parašyti logiką, jog su kiekviena <semester> reikšme būtų sukurtas <StudentModule> objektas
+
+      this.semesters.push(studentSemester);
+
+    })
     // Pagal studijų programas suformuokite semestrus su ActiveModule objektais
   }
 }
