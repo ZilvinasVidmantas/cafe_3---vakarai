@@ -1,0 +1,24 @@
+Atlikus kiekvieną numeriu pažymėta užduotį, padaryti commit'ą
+
+1. Faile 'js/data/faculties.js' sukurkite(jei nėra) jūsų studijų programai reikalingą fakultetą
+  * sukurtą fakultetą eksportuokite kaip vieną iš daugelio
+  * pridėkite fakultetą prie <faculties> masyvo
+
+2. Pagal jums paskirtą VU  fakultetą sukurkite studijų programos failą, pvz:
+  ekonomikos fakultetas - vadyba -> 'js/data/eco/management.js'
+  informatikos ir matematikos fakultetas - programų sistemos -> 'js/data/info-math/software-systems.js'
+
+3. Sukurtame faile aprašykite studijų programą, pagal pavyzdį 'js/data/info-math/software-systems.js'
+  * Sukurkite studijų programos objektą
+  * Sukurkite reikiamą kiekį semestrų
+    * Kiekvienam semestrui sukurkite modulius
+    * Modulius pridėkite į kiekvieną semestrą
+  * Studijų programai, pridėkite visus semestrus
+  * Sukurkite studijų programos modulių masyvą ir jame išsaugokite visus studijų programoje naudojamus modulius ir išeksportuokite šį kintamajį kaip vieną iš daugelio
+  * studijų programą išeksportuokite kaip pagrindinį/numatytajį failo eksprotą
+
+4. Faile 'js/data/modules.js' importuokite jūsų sukurtos studijų programos modulius ir jais papildykite <modules> kintamajį
+
+5. Faile 'js/data/study-programs.js' importuokite jūsų sukurtą studijų programą ir pridėkite ją prie masyvo <studyPrograms>
+
+6. Faile 'js/main.js' Sukurkite 5 savo studijų programos studentus
