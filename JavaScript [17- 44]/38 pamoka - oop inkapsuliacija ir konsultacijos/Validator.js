@@ -40,7 +40,7 @@ class Validator {
   }
 
   hasNoNumbers(errMsg) {
-    if (/\n/.test(this.#value)) {
+    if (/\d/.test(this.#value)) {
       this.#errors.push(errMsg);
     }
 

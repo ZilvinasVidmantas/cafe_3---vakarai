@@ -37,7 +37,7 @@ class Person {
       throw new Error('Asmens pavardė negali būti tuščia');
     }
 
-    this.#name = value;
+    this.#surname = value;
   }
   set marks(value) {
     // Jei value nėra masyvas, mesti klaidą
@@ -76,6 +76,23 @@ class Person {
   }
 }
 
-const person1 = new Person('a6', 'Bordiūras', [7, 4, 8]);
+const person1 = new Person('as', 'Bordiūras', [7, 4, 8]);
 
 console.log(person1.name);
+
+/*
+  1. Pagal Person.name pavyzdį, sukurkite validaciją pavardei
+  2. Validator klasėje aprašykite validaciją, kuri patikrintų, ar pirmoji raidėji didžioji
+    * pritaikykite šį patikrinimą Person.name ir Person.surname savybėms
+  3. Validator klasėje sukurkite skaičiams skirtų validacijų
+    * isNumber(errMsg) 
+    * inWhole(errMsg) 
+    * minValue(min, errMsg) 
+    * maxValue(max, errMsg) 
+  4. Validator klasėje sukurkite masyvams skirtų validacijų
+    * isArray(errMsg)
+    * isOfType(type, errMsg) 
+  5. Panaudokite sukurtus validatorius (3-4), kad validuoti Person.marks savybę
+    
+
+*/
