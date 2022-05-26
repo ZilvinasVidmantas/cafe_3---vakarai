@@ -15,7 +15,6 @@ class Person {
   // išsikviečia, kuomet rašote this.name = 'Vargas';
   // value -> 'Vargas'
   set name(value) {
-
     if (typeof value !== 'string') {
       throw new Error('Asmens vardas turi būti simbolių darinys');
     }
@@ -28,7 +27,6 @@ class Person {
   }
 
   set surname(value) {
-
     if (typeof value !== 'string') {
       throw new Error('Asmens vardas turi būti simbolių darinys');
     }
@@ -38,6 +36,18 @@ class Person {
     }
 
     this.#name = value;
+  }
+
+  set marks(value) {
+    // Jei value nėra masyvas, mesti klaidą
+
+    // Jei nors viena masyvo reikšmė nėra skaičius nuo 1-10, mesti klaidą
+
+    // Priskirti reikšmę, padarant kopiją į privačią savybe
+  }
+
+  get marks() {
+    // grąžinti privačios reikšmės seklią kopiją
   }
 
   get name() {
