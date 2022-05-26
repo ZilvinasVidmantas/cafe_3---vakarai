@@ -1,3 +1,4 @@
+import Validator from './Validator.js';
 class Person {
   #name;
   #surname;
@@ -10,23 +11,30 @@ class Person {
   }
 
   set name(value) {
-    if (typeof value !== 'string') {
-      throw new Error('Asmens vardas turi būti simbolių darinys');
-    }
+    // Method Chaining
+    // Builder Design Pattern
+    const nameValidator = new Validator(value)
+      .isString('Asmens vardas turi būti simbolių darinys')
+      .minLength(2, 'Asmens vardas turi būti nors iš 2 simbolių')
+      .maxLength(16, 'Asmens vardas turi turėti ne daugiau kaip 16 simbolių')
+      .hasNoNumbers('Asmens vardas negali turėti skaičių')
+      .hasNoSpecialSymbols('Asmens vardas negali turėti specialių simbolių')
+      .isEmpty('Asmens vardas negali būti tuščias');
 
-    if (value === '') {
-      throw new Error('Asmens vardas negali būti tuščias');
+    if (nameValidator.hasErrors) {
+      throw new Error(nameValidator.errorsString);
     }
 
     this.#name = value;
   }
+
   set surname(value) {
     if (typeof value !== 'string') {
-      throw new Error('Asmens vardas turi būti simbolių darinys');
+      throw new Error('Asmens pavardė turi būti simbolių darinys');
     }
 
     if (value === '') {
-      throw new Error('Asmens vardas negali būti tuščias');
+      throw new Error('Asmens pavardė negali būti tuščia');
     }
 
     this.#name = value;
@@ -68,4 +76,6 @@ class Person {
   }
 }
 
-const person1 = new Person('Serbentautas', 'Bordiūras', [7, 4, 8]);
+const person1 = new Person('a6', 'Bordiūras', [7, 4, 8]);
+
+console.log(person1.name);
