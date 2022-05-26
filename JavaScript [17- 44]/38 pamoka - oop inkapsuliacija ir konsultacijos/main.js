@@ -1,5 +1,5 @@
 import Validator from './Validator.js';
-class Person {
+class Student {
   #name;
   #surname;
   #marks;
@@ -11,8 +11,6 @@ class Person {
   }
 
   set name(value) {
-    // Method Chaining
-    // Builder Design Pattern
     const nameValidator = new Validator(value)
       .isString('Asmens vardas turi būti simbolių darinys')
       .minLength(2, 'Asmens vardas turi būti nors iš 2 simbolių')
@@ -29,27 +27,40 @@ class Person {
   }
 
   set surname(value) {
-    if (typeof value !== 'string') {
-      throw new Error('Asmens pavardė turi būti simbolių darinys');
-    }
+    const surnameValidator = new Validator(value)
+      .isString('Asmens pavardė turi būti simbolių darinys')
+      .minLength(2, 'Asmens pavardė turi būti nors iš 2 simbolių')
+      .maxLength(16, 'Asmens pavardė turi turėti ne daugiau kaip 16 simbolių')
+      .hasNoNumbers('Asmens pavardė negali turėti skaičių')
+      .hasNoSpecialSymbols('Asmens pavardė negali turėti specialių simbolių')
+      .isEmpty('Asmens pavardė negali būti tuščia');
 
-    if (value === '') {
-      throw new Error('Asmens pavardė negali būti tuščia');
+    if (surnameValidator.hasErrors) {
+      throw new Error(surnameValidator.errorsString);
     }
 
     this.#surname = value;
   }
+
   set marks(value) {
-    // Jei value nėra masyvas, mesti klaidą
-    const isArray = value instanceof Array;
-    if (!isArray) {
-      throw new Error('Pažymiai turi būti masyvas');
+    const marksValidator = new Validator(value)
+      .isArray('Pažymiai turi būti masyvas.')
+      .consistsOf('number', 'Pažymių masyvas turi būti sudarytas iš skaičių');
+
+    if (marksValidator.hasErrors) {
+      throw new Error(marksValidator.errorsString);
     }
 
-    // Jei nors viena masyvo reikšmė nėra skaičius nuo 1-10, mesti klaidą
-    const marksAreValid = value.every((mark) => typeof mark === 'number' && mark >= 1 && mark <= 10);
-    if (!marksAreValid) {
-      throw new Error('Masyvo elementai turi būti skaičiai tarp 1 ir 10.');
+    const marksErrors = value
+      .map(mark => new Validator(mark)
+        .isWhole(`Pažymys ${mark} turi būti sveikas skaičius`)
+        .minValue(1, `Pažymys ${mark} negali būti mažesnis už 1`)
+        .maxValue(10, `Pažymys ${mark} negali būti didenis už 10`)
+        .errors)
+      .flat();
+
+    if (marksErrors.length > 0) {
+      throw new Error(marksErrors.join('\n'))
     }
 
     this.#marks = [...value];
@@ -58,41 +69,21 @@ class Person {
   get name() {
     return this.#name;
   }
+
   get surname() {
     return this.#surname;
   }
+
   get marks() {
     return [...this.#marks];
   }
 
-  print() {
-    console.log('-------------------------');
-    console.log(this.#name, this.#surname);
-    console.log('-------------------------');
-  }
-
-  calcAvg() {
+  get avg() {
     return this.#marks.reduce((sum, x) => sum + x) / this.#marks.length;
   }
 }
 
-const person1 = new Person('as', 'Bordiūras', [7, 4, 8]);
+const stud1 = new Student('as', 'Bordiūras', [7, 10, 2]);
 
-console.log(person1.name);
+console.log(stud1.avg);
 
-/*
-  1. Pagal Person.name pavyzdį, sukurkite validaciją pavardei
-  2. Validator klasėje aprašykite validaciją, kuri patikrintų, ar pirmoji raidėji didžioji
-    * pritaikykite šį patikrinimą Person.name ir Person.surname savybėms
-  3. Validator klasėje sukurkite skaičiams skirtų validacijų
-    * isNumber(errMsg) 
-    * inWhole(errMsg) 
-    * minValue(min, errMsg) 
-    * maxValue(max, errMsg) 
-  4. Validator klasėje sukurkite masyvams skirtų validacijų
-    * isArray(errMsg)
-    * isOfType(type, errMsg) 
-  5. Panaudokite sukurtus validatorius (3-4), kad validuoti Person.marks savybę
-    
-
-*/

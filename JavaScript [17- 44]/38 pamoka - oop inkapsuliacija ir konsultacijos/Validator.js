@@ -73,6 +73,57 @@ class Validator {
 
     return this;
   }
+
+  isNumber(errMsg) {
+    if (typeof this.#value !== 'number') {
+      this.#errors.push(errMsg);
+    }
+
+    return this;
+  }
+
+  isWhole(errMsg) {
+    if (this.#value % 1 !== 0) {
+      this.#errors.push(errMsg);
+    }
+
+    return this;
+  }
+
+  minValue(min, errMsg) {
+    if (this.#value < min) {
+      this.#errors.push(errMsg);
+    }
+
+    return this;
+  }
+
+  maxValue(max, errMsg) {
+    if (this.#value > max) {
+      this.#errors.push(errMsg);
+    }
+
+    return this;
+  }
+
+  isArray(errMsg) {
+    if (!(this.#value instanceof Array)) {
+
+      this.#errors.push(errMsg);
+    }
+
+    return this;
+  }
+
+  consistsOf(type, errMsg) {
+    const elementsAreOfType = this.#value.every(x => typeof x === type);
+
+    if (!elementsAreOfType) {
+      this.#errors.push(errMsg);
+    }
+
+    return this;
+  }
 }
 
 export default Validator;
