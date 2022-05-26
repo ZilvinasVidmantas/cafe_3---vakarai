@@ -1,19 +1,14 @@
 class Person {
-  // Private
   #name;
   #surname;
-  // Public
-  marks;
+  #marks;
 
   constructor(name, surname, marks) {
-    this.#name = name;
-    this.#surname = surname;
+    this.name = name;
+    this.surname = surname;
     this.marks = marks;
   }
 
-  // išsikviečia, kuomet rašote student1.name = 'Vargas';
-  // išsikviečia, kuomet rašote this.name = 'Vargas';
-  // value -> 'Vargas'
   set name(value) {
     if (typeof value !== 'string') {
       throw new Error('Asmens vardas turi būti simbolių darinys');
@@ -25,7 +20,6 @@ class Person {
 
     this.#name = value;
   }
-
   set surname(value) {
     if (typeof value !== 'string') {
       throw new Error('Asmens vardas turi būti simbolių darinys');
@@ -37,25 +31,30 @@ class Person {
 
     this.#name = value;
   }
-
   set marks(value) {
     // Jei value nėra masyvas, mesti klaidą
+    const isArray = value instanceof Array;
+    if (!isArray) {
+      throw new Error('Pažymiai turi būti masyvas');
+    }
 
     // Jei nors viena masyvo reikšmė nėra skaičius nuo 1-10, mesti klaidą
+    const marksAreValid = value.every((mark) => typeof mark === 'number' && mark >= 1 && mark <= 10);
+    if (!marksAreValid) {
+      throw new Error('Masyvo elementai turi būti skaičiai tarp 1 ir 10.');
+    }
 
-    // Priskirti reikšmę, padarant kopiją į privačią savybe
-  }
-
-  get marks() {
-    // grąžinti privačios reikšmės seklią kopiją
+    this.#marks = [...value];
   }
 
   get name() {
     return this.#name;
   }
-
   get surname() {
     return this.#surname;
+  }
+  get marks() {
+    return [...this.#marks];
   }
 
   print() {
@@ -65,24 +64,8 @@ class Person {
   }
 
   calcAvg() {
-    return this.marks.reduce((sum, x) => sum + x) / this.marks.length;
+    return this.#marks.reduce((sum, x) => sum + x) / this.#marks.length;
   }
 }
 
-
-/*
-  1. Sukurkite apsaugą surname savybei, tokią pat kaip name
-  2. Sukurkite apsaugą marks saybei, (marks savybė privalo būti masyvas sudarytas iš skaičių nuo 1 iki 10)
-*/
-
-const person1 = new Person('Serbentautas', 'Bordiūras', ['5', 10, 8]);
-
-
-console.log(person1.name)
-console.log(person1.name)
-console.log(person1.name)
-console.log(person1.name)
-console.log(person1.calcAvg());
-
-
-
+const person1 = new Person('Serbentautas', 'Bordiūras', [7, 4, 8]);
