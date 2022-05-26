@@ -6,7 +6,7 @@ class Person {
   marks;
 
   constructor(name, surname, marks) {
-    this.name = name;
+    this.#name = name;
     this.#surname = surname;
     this.marks = marks;
   }
@@ -27,8 +27,25 @@ class Person {
     this.#name = value;
   }
 
+  set surname(value) {
+
+    if (typeof value !== 'string') {
+      throw new Error('Asmens vardas turi būti simbolių darinys');
+    }
+
+    if (value === '') {
+      throw new Error('Asmens vardas negali būti tuščias');
+    }
+
+    this.#name = value;
+  }
+
   get name() {
     return this.#name;
+  }
+
+  get surname() {
+    return this.#surname;
   }
 
   print() {
