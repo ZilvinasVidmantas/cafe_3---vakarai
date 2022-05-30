@@ -33,6 +33,7 @@ business.singContract(person4, 'BL', {
 
 
 const emp = new Employee('35248795684', 'Valiuras', 'Santjaga', 2100, new Date('2022-02-07'));
+emp.setDayOff(2022, 2, 19);
 emp.setDayOff(2022, 3, 9);
 emp.setDayOff(2022, 4, 4);
 emp.setDayOff(2022, 4, 5);

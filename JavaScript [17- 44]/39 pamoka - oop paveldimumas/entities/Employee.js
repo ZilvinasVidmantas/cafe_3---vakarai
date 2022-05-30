@@ -20,13 +20,24 @@ class Employee extends Person {
     const lastDayOfMonth = new Date(year, month, 0);
 
     if (lastDayOfMonth > this.startDate) {
-      // Jeigu buvo pradėta dirbti nuo vidurio mėnesio?
       let dayOffsCount = 0;
       this.daysOff.forEach((dayOff) => {
         if (dayOff.year === year && dayOff.month === month) {
           dayOffsCount++;
         }
       });
+      if (this.startDate.getFullYear() === year && this.startDate.getMonth() + 1 === month) {
+        console.log('Skaičiuojamas mėnesis, kurį buvo pradėta dirbti');
+        const monthDayStarted = this.startDate.getDate();
+
+        for (let monthDay = monthDayStarted - 1; monthDay >= 1; monthDay--) {
+          const monthDayDate = new Date(year, month - 1, monthDay);
+          if ([1, 2, 3, 4, 5].includes(monthDayDate.getDay())) {
+            dayOffsCount++;
+          }
+        }
+      }
+
       if (dayOffsCount === 0) {
         return this.salary;
       }
