@@ -2,6 +2,7 @@ import Person from './Person.js';
 
 class Employee extends Person {
   salary;
+  startDate;
   daysOff;
 
   constructor(identityCode, name, surname, salary, startDate) {
@@ -11,16 +12,31 @@ class Employee extends Person {
     this.daysOff = [];
   }
 
-  setDayOff(yaer, month, day) {
-    // Sukurkite Date objektą, ir įdėkite jį į this.daysOff masyvą
-
+  setDayOff(year, month, day) {
+    this.daysOff.push({ year, month, day });
   }
 
   calcPay(year, month) {
-    // Parašykite logiką, kad apskaičiuoti Mėnesio atlyginimą
-    // Sukaičiuoti laisvas dienas pagal mėnesį
-    // Iš atlyginimo atimti praleistų dienų skaičių padauginta iš 1/21 atlyginimo.
-    // grąžinti sumą
+    const lastDayOfMonth = new Date(year, month, 0);
+
+    if (lastDayOfMonth > this.startDate) {
+      // Jeigu buvo pradėta dirbti nuo vidurio mėnesio?
+      let dayOffsCount = 0;
+      this.daysOff.forEach((dayOff) => {
+        if (dayOff.year === year && dayOff.month === month) {
+          dayOffsCount++;
+        }
+      });
+      if (dayOffsCount === 0) {
+        return this.salary;
+      }
+      const dayOffLoss = this.salary / 21;
+      return this.salary - dayOffsCount * dayOffLoss;
+
+    } else {
+      return 0;
+    }
+
   }
 }
 

@@ -1,5 +1,6 @@
 import Buisiness from './entities/Business.js';
 import Person from './entities/Person.js';
+import Employee from './entities/Employee.js';
 
 const person1 = new Person('35248795684', 'Valiuras', 'Santjaga');
 const person2 = new Person('35248795683', 'Formanas', 'Kėglis');
@@ -30,16 +31,17 @@ business.singContract(person4, 'BL', {
   ]
 });
 
-/*
-  Sukurkite Employee,
-  Apskaičiuokite atlyginimą be laisvadienių
 
-  Darbuotojui nustatykite 2 lasivas dienas mėnesyje ir apskaičiuokite atlyginimą tą mėnesį.
+const emp = new Employee('35248795684', 'Valiuras', 'Santjaga', 2100, new Date('2022-02-07'));
+emp.setDayOff(2022, 3, 9);
+emp.setDayOff(2022, 4, 4);
+emp.setDayOff(2022, 4, 5);
 
-  Palyginkite atlyginimus, ar jie skiriasi?
+console.log(emp);
 
-  21:13
-
-  
-
-*/
+console.table({
+  'emp.calcPay(2022, 2)': emp.calcPay(2022, 2),
+  'emp.calcPay(2022, 3)': emp.calcPay(2022, 3),
+  'emp.calcPay(2022, 4)': emp.calcPay(2022, 4),
+  'emp.calcPay(2022, 5)': emp.calcPay(2022, 5),
+})
