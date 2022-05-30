@@ -33,7 +33,7 @@ console.log(zvc);
 console.log(person4);
 
 /*
-  Aprašyti skirtingą kontraktų logiką:
+  Aprašyti skirtingą kontraktų sukūrimo logiką ir  pagal tai implementuoti Business.singContract metodą:
     EmploymentContract
       savybės:
         salary: mėnesinis atlyginimas
@@ -42,15 +42,8 @@ console.log(person4);
       savybės:
         hourPay: valandinis atlyginimas
 
-    BusinessLicenseContract
+    BusinessLicenseContract - DONE
       savybės:
-        jobs: darbas už kurį sumokama
+        jobs: darbas už kuriuos bus sumokama
 
-  Bendrą logiką Kontraktams aprašykite Contract klasėje, konstruktorių parametrus
-  gali keisti ir pervadinti, taip kaip jums tinka.
-
-  1. Sukurkite 4 Asmenis
-  2. Sukurkite Verslą
-  3. Parašykite po kiekvieno tipo Sutartį tarp verslo ir asmnes
-    * Pasirašant sutartį, turi būti išsaugota sutarties kopija, tiek verslui, tiek asmeniui
 */
