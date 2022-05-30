@@ -86,4 +86,3 @@ class Student {
 const stud1 = new Student('as', 'Bordiūras', [7, 10, 2]);
 
 console.log(stud1.avg);
-
