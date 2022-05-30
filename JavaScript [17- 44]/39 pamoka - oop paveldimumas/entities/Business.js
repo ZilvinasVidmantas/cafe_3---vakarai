@@ -30,11 +30,10 @@ class Buisiness {
         contract = new BusinessLicenseContract(person, this, props.title, props.jobs);
         break;
       case 'IA':
-        contract = new IndividualActivityContract(person, this, props.title, props.hourPay);
+        contract = new IndividualActivityContract(person, this, props.position, props.hourPay);
         break;
-
       case 'EC':
-        contract = new EmploymentContract(person, this, props.title, props.salary);
+        contract = new EmploymentContract(person, this, props.position, props.salary);
         break;
     }
     // Sukūrus kontraktą išsaugoti jį įmonės klasėje
