@@ -1,4 +1,6 @@
 import BusinessLicenseContract from './BusinessLicenseContract.js';
+import IndividualActivityContract from './IndividualActivityContract.js';
+import EmploymentContract from './EmploymentContract.js';
 
 class Buisiness {
   static count = 0;
@@ -27,8 +29,12 @@ class Buisiness {
         // Perduoti kuriamam kontraktui reikiamas savybes
         contract = new BusinessLicenseContract(person, this, props.title, props.jobs);
         break;
+      case 'IA':
+        contract = new IndividualActivityContract(person, this, props.title, props.hourPay);
+        break;
 
-      default:
+      case 'EC':
+        contract = new EmploymentContract(person, this, props.title, props.salary);
         break;
     }
     // Sukūrus kontraktą išsaugoti jį įmonės klasėje
