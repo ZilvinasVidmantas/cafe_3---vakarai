@@ -16,6 +16,7 @@ business.singContract(person2, 'IA', {
 business.singContract(person3, 'EC', {
   position: 'Manager',
   salary: 1200,
+  startDate: new Date('2022-02-07'),
 });
 
 business.singContract(person4, 'BL', {
@@ -29,7 +30,16 @@ business.singContract(person4, 'BL', {
   ]
 });
 
-console.log(business)
-console.log(person2);
-console.log(person3);
-console.log(person4);
+/*
+  Sukurkite Employee,
+  Apskaičiuokite atlyginimą be laisvadienių
+
+  Darbuotojui nustatykite 2 lasivas dienas mėnesyje ir apskaičiuokite atlyginimą tą mėnesį.
+
+  Palyginkite atlyginimus, ar jie skiriasi?
+
+  21:13
+
+  
+
+*/
