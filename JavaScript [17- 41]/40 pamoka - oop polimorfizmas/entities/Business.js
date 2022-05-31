@@ -1,7 +1,7 @@
 import BusinessLicenseContract from './BusinessLicenseContract.js';
 import IndividualActivityContract from './IndividualActivityContract.js';
 import EmploymentContract from './EmploymentContract.js';
-import Employee from './Employee.js';
+import EmployeeEC from './EmployeeEC.js';
 import EmployeeIA from './EmployeeIA.js';
 import EmployeeBL from './EmployeeBL.js';
 
@@ -41,7 +41,7 @@ class Buisiness {
         break;
       case 'EC':
         contract = new EmploymentContract(person, this, props.position, props.salary, props.startDate);
-        employee = new Employee(
+        employee = new EmployeeEC(
           person.identityCode,
           person.name,
           person.surname,

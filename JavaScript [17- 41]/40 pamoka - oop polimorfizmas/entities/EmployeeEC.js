@@ -1,6 +1,6 @@
 import Person from './Person.js';
 
-class Employee extends Person {
+class EmployeeEC extends Person {
   salary;
   startDate;
   daysOff;
@@ -51,5 +51,5 @@ class Employee extends Person {
   }
 }
 
-export default Employee;
+export default EmployeeEC;
 

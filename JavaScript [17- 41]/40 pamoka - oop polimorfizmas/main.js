@@ -1,11 +1,14 @@
 import Buisiness from './entities/Business.js';
 import Person from './entities/Person.js';
-import Employee from './entities/Employee.js';
+
+const EMPLOYEE_EC_ID = '35248795682';
+const EMPLOYEE_IA_ID = '35248795683';
+const EMPLOYEE_BL_ID = '35248795681';
 
 const person1 = new Person('35248795684', 'Valiuras', 'Santjaga');
-const person2 = new Person('35248795683', 'Formanas', 'Kėglis');
-const person3 = new Person('35248795682', 'Šiupija', 'Šluotaitė');
-const person4 = new Person('35248795681', 'Vangardas', 'Levijosas');
+const person2 = new Person(EMPLOYEE_IA_ID, 'Formanas', 'Kėglis');
+const person3 = new Person(EMPLOYEE_EC_ID, 'Šiupija', 'Šluotaitė');
+const person4 = new Person(EMPLOYEE_BL_ID, 'Vangardas', 'Levijosas');
 
 const business = new Buisiness('Žiaurių varkių centras', person1, 10000);
 
@@ -31,18 +34,18 @@ business.singContract(person4, 'BL', {
   ]
 });
 
+// Pildo adimintratorius/buhalteris arba patys darbuotojai per Turinio valdymo sistemą
+const employeeEC = business.employees.find(x => x.identityCode === EMPLOYEE_EC_ID);
+const employeeIA = business.employees.find(x => x.identityCode === EMPLOYEE_IA_ID);
+const employeeBL = business.employees.find(x => x.identityCode === EMPLOYEE_BL_ID);
 
-const emp = new Employee('35248795684', 'Valiuras', 'Santjaga', 2100, new Date('2022-02-07'));
-emp.setDayOff(2022, 2, 19);
-emp.setDayOff(2022, 3, 9);
-emp.setDayOff(2022, 4, 4);
-emp.setDayOff(2022, 4, 5);
+// Pildo adimintratorius/buhalteris arba patys darbuotojai per Turinio valdymo sistemą
+employeeEC.setDayOff(2022, 5, 5);
+employeeEC.setDayOff(2022, 5, 13);
 
-console.log(emp);
+employeeIA.addHours(124);
 
-console.table({
-  'emp.calcPay(2022, 2)': emp.calcPay(2022, 2),
-  'emp.calcPay(2022, 3)': emp.calcPay(2022, 3),
-  'emp.calcPay(2022, 4)': emp.calcPay(2022, 4),
-  'emp.calcPay(2022, 5)': emp.calcPay(2022, 5),
-})
+employeeBL.doJob('job_2');
+employeeBL.doJob('job_5');
+
+console.log(business);
