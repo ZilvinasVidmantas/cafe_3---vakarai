@@ -40,6 +40,7 @@ const employeeIA = business.employees.find(x => x.identityCode === EMPLOYEE_IA_I
 const employeeBL = business.employees.find(x => x.identityCode === EMPLOYEE_BL_ID);
 
 // Pildo adimintratorius/buhalteris arba patys darbuotojai per Turinio valdymo sistemą
+// May - Gegužė
 employeeEC.setDayOff(2022, 5, 5);
 employeeEC.setDayOff(2022, 5, 13);
 
@@ -47,5 +48,15 @@ employeeIA.addHours(124);
 
 employeeBL.doJob('job_2');
 employeeBL.doJob('job_5');
+
+// June - Birželis
+employeeEC.setDayOff(2022, 6, 1);
+
+employeeIA.addHours(155);
+
+employeeBL.doJob('job_1');
+employeeBL.doJob('job_4');
+
+// 20:00
 
 console.log(business);
