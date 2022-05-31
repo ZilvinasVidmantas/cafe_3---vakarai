@@ -56,6 +56,16 @@ class Buisiness {
     // Sukurtą kontraktą priskirti žmogui
     person.signContract(contract);
   }
+
+  makePayments(year, month) {
+    this.employees.forEach(employee => {
+      //             Polimorfizmu
+      const pay = employee.calcPay(year, month);
+      this.money -= pay;
+      console.log(employee.fullname, pay);
+    });
+    console.log('Liko pinigų', this.money);
+  }
 }
 
 export default Buisiness;

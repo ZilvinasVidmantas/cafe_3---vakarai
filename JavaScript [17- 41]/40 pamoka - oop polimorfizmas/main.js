@@ -19,7 +19,7 @@ business.singContract(person2, 'IA', {
 
 business.singContract(person3, 'EC', {
   position: 'Manager',
-  salary: 1200,
+  salary: 2100,
   startDate: new Date('2022-02-07'),
 });
 
@@ -48,6 +48,9 @@ employeeIA.addHours(124);
 
 employeeBL.doJob('job_2');
 employeeBL.doJob('job_5');
+console.group('Gegužė');
+business.makePayments(2022, 5);
+console.groupEnd()
 
 // June - Birželis
 employeeEC.setDayOff(2022, 6, 1);
@@ -56,7 +59,7 @@ employeeIA.addHours(155);
 
 employeeBL.doJob('job_1');
 employeeBL.doJob('job_4');
+console.group('Birželis');
+business.makePayments(2022, 6);
+console.groupEnd()
 
-// 20:00
-
-console.log(business);

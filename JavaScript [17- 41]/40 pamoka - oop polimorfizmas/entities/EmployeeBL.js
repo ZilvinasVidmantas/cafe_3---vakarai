@@ -18,7 +18,7 @@ class EmployeeBL extends Person {
 
   calcPay() {
     const doneJobs = this.jobs.filter(x => x.done && !x.payed);
-    const pay = this.doneJobs.reduce((sum, { pay }) => sum + pay, 0);
+    const pay = doneJobs.reduce((sum, { pay }) => sum + pay, 0);
     doneJobs.forEach(job => job.payed = true);
 
     return pay;

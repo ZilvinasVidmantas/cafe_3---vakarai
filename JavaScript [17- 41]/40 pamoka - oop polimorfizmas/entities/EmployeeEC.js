@@ -27,7 +27,6 @@ class EmployeeEC extends Person {
         }
       });
       if (this.startDate.getFullYear() === year && this.startDate.getMonth() + 1 === month) {
-        console.log('Skaičiuojamas mėnesis, kurį buvo pradėta dirbti');
         const monthDayStarted = this.startDate.getDate();
 
         for (let monthDay = monthDayStarted - 1; monthDay >= 1; monthDay--) {

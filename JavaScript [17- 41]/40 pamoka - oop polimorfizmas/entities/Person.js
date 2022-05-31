@@ -11,6 +11,10 @@ class Person {
     this.contracts = [];
   }
 
+  get fullname() {
+    return this.name + ' ' + this.surname;
+  }
+
   signContract(contract) {
     this.contracts.push(contract);
   }
