@@ -23,11 +23,11 @@ business.singContract(person3, 'EC', {
 business.singContract(person4, 'BL', {
   title: 'Marketing',
   jobs: [
-    { title: 'Google ads', pay: 400 },
-    { title: 'FB ads', pay: 100 },
-    { title: 'Twiter Bots', pay: 200 },
-    { title: 'Instagram Bots', pay: 100 },
-    { title: 'Instagram Videos', pay: 100 },
+    { id: 'job_1', title: 'Google ads', pay: 400, done: false, payed: false },
+    { id: 'job_2', title: 'FB ads', pay: 100, done: false, payed: false },
+    { id: 'job_3', title: 'Twiter Bots', pay: 200, done: false, payed: false },
+    { id: 'job_4', title: 'Instagram Bots', pay: 100, done: false, payed: false },
+    { id: 'job_5', title: 'Instagram Videos', pay: 100, done: false, payed: false },
   ]
 });
 

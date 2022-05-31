@@ -6,7 +6,7 @@ class Employee extends Person {
   daysOff;
 
   constructor(identityCode, name, surname, salary, startDate) {
-    super(identityCode, name, surname)
+    super(identityCode, name, surname);
     this.salary = salary;
     this.startDate = startDate;
     this.daysOff = [];

@@ -1,6 +1,9 @@
 import BusinessLicenseContract from './BusinessLicenseContract.js';
 import IndividualActivityContract from './IndividualActivityContract.js';
 import EmploymentContract from './EmploymentContract.js';
+import Employee from './Employee.js';
+import EmployeeIA from './EmployeeIA.js';
+import EmployeeBL from './EmployeeBL.js';
 
 class Buisiness {
   static count = 0;
@@ -18,27 +21,38 @@ class Buisiness {
     this.title = title;
     this.money = money;
     this.contracts = [];
-    this.employees = []
+    this.employees = [];
   }
 
   singContract(person, contractType, props) {
     // Sukurti kontraktą pagal contractType
     let contract;
+    let employee;
+
     switch (contractType) {
       case 'BL':
         // Perduoti kuriamam kontraktui reikiamas savybes
         contract = new BusinessLicenseContract(person, this, props.title, props.jobs);
+        employee = new EmployeeBL(person.identityCode, person.name, person.surname, props.jobs);
         break;
       case 'IA':
         contract = new IndividualActivityContract(person, this, props.position, props.hourPay);
+        employee = new EmployeeIA(person.identityCode, person.name, person.surname, props.hourPay);
         break;
       case 'EC':
         contract = new EmploymentContract(person, this, props.position, props.salary, props.startDate);
+        employee = new Employee(
+          person.identityCode,
+          person.name,
+          person.surname,
+          props.salary,
+          props.startDate
+        );
         break;
     }
     // Sukūrus kontraktą išsaugoti jį įmonės klasėje
     this.contracts.push(contract);
-    this.employees.push(person);
+    this.employees.push(employee);
     // Sukurtą kontraktą priskirti žmogui
     person.signContract(contract);
   }
