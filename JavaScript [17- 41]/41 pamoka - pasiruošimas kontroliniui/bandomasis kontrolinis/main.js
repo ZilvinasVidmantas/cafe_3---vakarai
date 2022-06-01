@@ -29,11 +29,11 @@ const EUR_USD = 1.06;
 
 // 2.
 const cars = [
-  new Car({ brand: 'Opel', model: 'Astra', year: 2001, color: 'red', fuelTypes: ['dysel'], price: 10000 }),
+  new Car({ brand: 'Opel', model: 'Astra', year: 2001, color: 'red', fuelTypes: ['diesel'], price: 10000 }),
   new Car({ brand: 'Opel', model: 'Astra', year: 2018, color: 'black', fuelTypes: ['petrol'], price: 9000 }),
   new Car({ brand: 'Audi', model: 'A6', year: 2013, color: 'blue', fuelTypes: ['electric'], price: 3000 }),
   new Car({ brand: 'audi', model: 'A5', year: 2015, color: 'black', fuelTypes: ['petrol', 'electric'], price: 1000 }),
-  new Car({ brand: 'BMW', model: 'X1', year: 2001, color: 'red', fuelTypes: ['dysel'], price: 2000 }),
+  new Car({ brand: 'BMW', model: 'X1', year: 2001, color: 'red', fuelTypes: ['diesel'], price: 2000 }),
   new Car({ brand: 'BMW', model: 'X2', year: 2017, color: 'black', fuelTypes: ['electric'], price: 4000 }),
   new Car({ brand: 'BMW', model: 'X3', year: 2015, color: 'blue', fuelTypes: ['petrol'], price: 4000 }),
   new Car({ brand: 'BMW', model: 'X4', year: 2020, color: 'red', fuelTypes: ['gas', 'petrol'], price: 7000 }),
@@ -93,7 +93,7 @@ console.group('7. Atrinkite audi tipo automobilius nuo 2012 iki 2016, kurie nėr
     car.brand.toLowerCase() === 'audi' &&
     car.year > 2012 &&
     car.year < 2016 &&
-    !car.fuelTypes.includes('dysel')
+    !car.fuelTypes.includes('diesel')
   );
   console.table(greenishAudiCars);
 }
