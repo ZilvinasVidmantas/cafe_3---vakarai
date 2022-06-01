@@ -3,7 +3,7 @@
 // ------------------------------------------------------------------------------------------------------
 
 // --------------------------------------------- FUNKCIJOS ----------------------------------------------
-const calcPersonBMI = ({ height, weight }) => weight / (height / 100) ** 2;
+const calcPersonBMI = (person) => person.weight / (person.height / 100) ** 2;
 
 // ---------------------------------------------- DUOMENYS ----------------------------------------------
 const people = [
@@ -53,21 +53,21 @@ console.group('1 dalis');
   {
     console.group('kurių vardas ilgesnis nei 6 simboliai');
     {
-      const peopleWithLongNames = people.filter(({ name }) => name.length > 6);
+      const peopleWithLongNames = people.filter(p => p.name.length > 6);
       console.table(peopleWithLongNames);
     }
     console.groupEnd();
 
     console.group('kurių svoris didesnis nei 80kg');
     {
-      const positivePeople = people.filter(({ weight }) => weight > 80);
+      const positivePeople = people.filter(p => p.weight > 80);
       console.table(positivePeople);
     }
     console.groupEnd();
 
     console.group('kurie aukštesni nei 185cm');
     {
-      const bigPeople = people.filter(({ height }) => height > 185);
+      const bigPeople = people.filter(p => p.height > 185);
       console.table(bigPeople);
     }
     console.groupEnd();
@@ -78,28 +78,28 @@ console.group('1 dalis');
   {
     console.group('ūgius');
     {
-      const peopleHeights = people.map(({ height }) => height);
+      const peopleHeights = people.map(p => p.height);
       console.log(peopleHeights);
     }
     console.groupEnd();
 
     console.group('svorius');
     {
-      const peopleWeights = people.map(({ weight }) => weight);
+      const peopleWeights = people.map(p => p.weight);
       console.log(peopleWeights);
     }
     console.groupEnd();
 
     console.group('ūgius, svorius ir amžius : [{height, weight, age}, ...]');
     {
-      const peopleDimensions = people.map(({ height, weight, age }) => ({ height, weight, age }));
+      const peopleDimensions = people.map(p => ({ height: p.height, weight: p.weight, age: p.age }));
       console.table(peopleDimensions);
     }
     console.groupEnd();
 
     console.group('KMI indeksus');
     {
-      const peopleBMI = people.map(calcPersonBMI);
+      const peopleBMI = people.map(p => calcPersonBMI(p));
       console.log(peopleBMI);
     }
     console.groupEnd();
@@ -117,14 +117,14 @@ console.group('1 dalis');
   {
     console.group('svorių vidurkį');
     {
-      const weightAvg = people.reduce((avg, { weight }, _, { length }) => avg + weight / length, 0);
+      const weightAvg = people.reduce((avg, p, i, arr) => avg + p.weight / arr.length, 0);
       console.log(weightAvg);
     }
     console.groupEnd();
 
     console.group('ūgio vidurkį');
     {
-      const heightAvg = people.reduce((sum, { height }) => sum + height, 0) / people.length;
+      const heightAvg = people.reduce((sum, p) => sum + p.height, 0) / people.length;
       console.log(heightAvg);
     }
     console.groupEnd();
@@ -146,7 +146,7 @@ class Person {
   weight;
   sex;
 
-  constructor({ name, surname, age, height, weight, sex }) {
+  constructor(name, surname, age, height, weight, sex) {
     this.name = name;
     this.surname = surname;
     this.age = age;
@@ -154,23 +154,6 @@ class Person {
     this.weight = weight;
     this.sex = sex;
   }
-
-  get bmi() {
-    return this.weight / (this.height / 100) ** 2;
-  }
-
-  get string() {
-    const { name, surname, ...props } = this;
-    // props -> {age, height, weight, sex};
-    const fullname = `${name} ${surname}`;
-    const propsKeyValuePairs = Object.entries(props);
-    // propsKeyValuePairs -> [['name', val], ['height', val], ['weight', val], ['sex', val]]
-    const rows = propsKeyValuePairs.map(([key, value]) => `\t${key}: ${value}`);
-    const propsString = rows.join('\n');
-
-    return `${fullname}:\n${propsString}\n`;
-  }
-
 
   getBMI() {
     return this.weight / (this.height / 100) ** 2;
@@ -190,7 +173,7 @@ class Person {
 }
 
 // ---------------------------------------------- DUOMENYS ----------------------------------------------
-const peopleInstances = people.map(p => new Person(p));
+const peopleInstances = people.map(p => new Person(p.name, p.surname, p.age, p.height, p.weight, p.sex));
 
 
 // -------------------------------------------- SPAUSDINIMAS --------------------------------------------
@@ -202,13 +185,13 @@ console.group('2 dalis');
 
     console.group('sukurti vidinį metodą: getBMI()');
     {
-      peopleInstances.forEach(({ name, surname, bmi }) => console.log(`p.calcBMI of ${name} ${surname}`, bmi));
+      peopleInstances.forEach(p => console.log(`p.calcBMI of ${p.name} ${p.surname}`, p.getBMI()));
     }
     console.groupEnd();
 
     console.group('sukurti vidinį metodą: toString()');
     {
-      peopleInstances.forEach(({ string }) => console.log(string));
+      peopleInstances.forEach(p => console.log(p.toString()));
     }
     console.groupEnd();
   }
@@ -216,39 +199,35 @@ console.group('2 dalis');
 
   console.groupCollapsed('1. Atrinkti moteris, kuriuos jaunesnės nei 20 metų ir svoris didesnis nei 70kg');
   {
-    const youngAndPositiveFemales = peopleInstances.filter(
-      ({ sex, weight, age }) => sex === 'female' && weight > 70 && age < 20
-    );
+    const youngAndPositiveFemales = peopleInstances.filter(p => p.sex === 'female' && p.weight > 70 && p.age < 20);
     console.table(youngAndPositiveFemales);
   }
   console.groupEnd();
 
   console.groupCollapsed('2. Atrinkti vyrus, kurie vyresni nei 25 metai ir KMI mažesnis nei 18,5');
   {
-    const grownMaleSkeletons = peopleInstances.filter(
-      ({ sex, bmi, age }) => sex === 'male' && bmi < 18.5 && age > 25
-    );
+    const grownMaleSkeletons = peopleInstances.filter(p => p.sex === 'male' && p.getBMI() < 18.5 && p.age > 25);
     console.table(grownMaleSkeletons);
   }
   console.groupEnd();
 
   console.groupCollapsed('3. Atrinkti vaikus, su antsvoriu (KMI > 30)');
   {
-    const positiveKids = peopleInstances.filter(({ bmi, age }) => bmi > 30 && age < 18);
+    const positiveKids = peopleInstances.filter(p => p.getBMI() > 30 && p.age < 18);
     console.table(positiveKids);
   }
   console.groupEnd();
 
   console.groupCollapsed('4. Atrinkti pensininkus, su antsvoriu (KMI > 30)');
   {
-    const positiveElders = peopleInstances.filter(({ bmi, age }) => bmi > 30 && age >= 65);
+    const positiveElders = peopleInstances.filter(p => p.getBMI() > 30 && p.age >= 65);
     console.table(positiveElders);
   }
   console.groupEnd();
 
   console.groupCollapsed('5. Atrinkti visus, kieno KMI nepatenka į rėžius [18.5; 25]');
   {
-    const distinctivePeople = peopleInstances.filter(({ bmi }) => bmi < 18.5 || bmi > 25);
+    const distinctivePeople = peopleInstances.filter(p => p.getBMI() < 18.5 || p.getBMI() > 25);
     console.table(distinctivePeople);
   }
   console.groupEnd();
