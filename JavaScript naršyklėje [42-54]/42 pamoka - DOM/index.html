@@ -9,11 +9,12 @@
   <script src="js/main.js" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
 
 </head>
 
 <body>
-  <main class="py-4">
+  <main class="py-4 fade-up">
     <div class="container">
       <h1>Document Object Model</h1>
       <img src="assets/tree-img.jpg" width="500" class="float-end">
@@ -25,13 +26,24 @@
     </div>
   </main>
 
-  <section class="py-4">
+  <section class="py-4 fade-up">
     <div class="container">
       <h2>Elementų paieškos funkcijos</h2>
-      <article>
+      <article class="fade-up">
         <h3>document.querySelector(<em>selektorius</em>)</h3>
         <p>
           Tai funkcija skirta surasti <strong>pirmą</strong> HTML elementą pagal kriterijų. Standartiškai HTML elementų ieškome visame
+          DOM'e, tačiau paieišką galime pradėti nuo bet kurio elemento.
+          <br>
+          <br>
+          <strong>Selektorius</strong> tai specialios sintaksės string'as skirtas apibūdinti elementui. Šio selektoriaus taisyklės yra
+          identiškos kaip ir CSS failuose.
+        </p>
+      </article>
+      <article class="fade-up">
+        <h3>document.querySelectorAll(<em>selektorius</em>)</h3>
+        <p>
+          Tai funkcija skirta surasti <strong>visus</strong> HTML elementus pagal kriterijų. Standartiškai HTML elementų ieškome visame
           DOM'e, tačiau paieišką galime pradėti nuo bet kurio elemento.
           <br>
           <br>

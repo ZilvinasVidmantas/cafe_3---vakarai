@@ -1,0 +1,11 @@
+.fade-up {
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  transition: all 0.6s ease-in;
+}
+
+.fade-up.show {
+  top: 0;
+  opacity: 1;
+}
