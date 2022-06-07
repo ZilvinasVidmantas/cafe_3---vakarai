@@ -6,12 +6,15 @@ const btnIncWidth = document.querySelector('.js-btn-inc-width');
 const btnDecWidth = document.querySelector('.js-btn-dec-width');
 const btnIncHeight = document.querySelector('.js-btn-inc-height');
 const btnDecHeight = document.querySelector('.js-btn-dec-height');
+const colorInput = document.querySelector('.js-color-input');
 
 // color handlers
 {
   const bgClasses = ['bg-blue', 'bg-red', 'bg-green'];
 
-  const removeBgClasses = () => {
+  const removeBgColor = () => {
+    square.style.removeProperty('background-color');
+    colorInput.value = '';
     bgClasses.forEach(cls => {
       if (square.classList.contains(cls)) {
         square.classList.remove(cls);
@@ -20,23 +23,28 @@ const btnDecHeight = document.querySelector('.js-btn-dec-height');
   };
 
   const changeSquareColorToRed = () => {
-    removeBgClasses();
+    removeBgColor();
     square.classList.add('bg-red');
   };
 
   const changeSquareColorToBlue = () => {
-    removeBgClasses();
+    removeBgColor();
     square.classList.add('bg-blue');
   };
 
   const changeSquareColorToGreen = () => {
-    removeBgClasses();
+    removeBgColor();
     square.classList.add('bg-green');
+  };
+
+  const changeSquareColor = (event) => {
+    square.style.backgroundColor = event.target.value;
   };
 
   btnChangeToRed.addEventListener('click', changeSquareColorToRed);
   btnChangeToBlue.addEventListener('click', changeSquareColorToBlue);
   btnChangeToGreen.addEventListener('click', changeSquareColorToGreen);
+  colorInput.addEventListener('change', changeSquareColor)
 }
 
 // size handlers

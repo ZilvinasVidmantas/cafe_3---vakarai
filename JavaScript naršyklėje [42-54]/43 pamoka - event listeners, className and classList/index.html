@@ -93,16 +93,26 @@
         </p>
         <article class="ps-4">
           <h3 class="pb-3">Keičiamas kvadratas</h3>
-          <button class="js-btn-change-to-red btn btn-primary">Keisti foną į raudoną</button>
-          <button class="js-btn-change-to-blue btn btn-primary">Keisti foną į mėlyną</button>
-          <button class="js-btn-change-to-green btn btn-primary">Keisti foną į žalią</button>
-          <button class="js-btn-inc-width btn btn-primary">Padidinti plotį</button>
-          <button class="js-btn-dec-width btn btn-primary">Sumažinti plotį</button>
-          <button class="js-btn-inc-height btn btn-primary">Padidinti aukštį</button>
-          <button class="js-btn-dec-height btn btn-primary">Sumažinti aukštį</button>
-
-          <div class="mt-3">
-            <span class="js-square square"></span>
+          <div class="d-flex justify-content-between">
+            <div>
+              <div class="mb-2"><strong>Spalvų valdymas</strong></div>
+              <div class="my-3 d-flex gap-2">
+                <button class="js-btn-change-to-red btn btn-primary">Keisti foną į raudoną</button>
+                <button class="js-btn-change-to-blue btn btn-primary">Keisti foną į mėlyną</button>
+                <button class="js-btn-change-to-green btn btn-primary">Keisti foną į žalią</button>
+                <input class="js-color-input form-control form-control-color d-inline-block" type="color">
+              </div>
+              <div class="mb-2"><strong>Dimensijų valdymas</strong></div>
+              <div class="my-3 d-flex gap-2">
+                <button class="js-btn-inc-width btn btn-primary">Padidinti plotį</button>
+                <button class="js-btn-dec-width btn btn-primary">Sumažinti plotį</button>
+                <button class="js-btn-inc-height btn btn-primary">Padidinti aukštį</button>
+                <button class="js-btn-dec-height btn btn-primary">Sumažinti aukštį</button>
+              </div>
+            </div>
+            <div class="mt-3">
+              <span class="js-square square"></span>
+            </div>
           </div>
         </article>
       </div>
