@@ -18,3 +18,5 @@ const changeSquareColorToBlue = () => {
 
 btnChangeToRed.addEventListener('click', changeSquareColorToRed);
 btnChangeToBlue.addEventListener('click', changeSquareColorToBlue);
+
+// Sukurkite papildomą mygtuką, kuris pakeistų kvadračiuko spalvą į žalią
