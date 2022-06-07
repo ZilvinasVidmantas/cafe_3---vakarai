@@ -47,3 +47,10 @@ const btnIncWidth = document.querySelector('.js-btn-inc-width');
 
   btnIncWidth.addEventListener('click', increaseSquareWidth);
 }
+/*
+  1. Sukurkite mygtuką, mažinti pločiui
+  2. Sukurkite mygtuką, didinti aukščiui
+  3. Sukurkite mygtuką, mažinti aukščiui
+  4. Papildykite funkcijas, kad maksimalus kvadračiuko dydis būtų 300px
+  5. Papildykite funkcijas, kad minimalus dydis būtų 50px 
+*/
