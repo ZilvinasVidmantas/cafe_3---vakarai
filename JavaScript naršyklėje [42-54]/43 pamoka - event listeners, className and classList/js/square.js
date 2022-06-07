@@ -1,20 +1,20 @@
 const square = document.querySelector('.js-square');
 const btnChangeToRed = document.querySelector('.js-btn-change-to-red');
+const btnChangeToBlue = document.querySelector('.js-btn-change-to-blue');
 
 const changeSquareColorToRed = () => {
+  if (square.classList.contains('bg-blue')) {
+    square.classList.remove('bg-blue');
+  }
   square.classList.add('bg-red');
 };
 
-btnChangeToRed.addEventListener('click', changeSquareColorToRed);
+const changeSquareColorToBlue = () => {
+  if (square.classList.contains('bg-red')) {
+    square.classList.remove('bg-red');
+  }
+  square.classList.add('bg-blue');
+};
 
-/*
-  Sukurkite logiką, kad paspaudus mygtuką:
-    <button class="btn btn-primary">Keisti foną į mėlyną</button>
-  Kvadratėlio spalva taptų mėlyna:
-    * Mygtukui uždėti klasę, kurią naudosime mygtuko suradimui, ji turi prasidėti 'js-*'
-    * square.js faile surasti šį mygtuką, pasitikrinti konsolėje
-    * Sukurti funkciją kuri pakeis kvadratėlio spalvą į mėlyną, kuri tik spausintų tektą į konsolę
-    * Uždėti ant mėlyno mygtuko kintamojo EventListener'į, ant paspaudimo ('click')
-    * Implementuoji funkcijos logiką, kuri keičia kvadratėlio spalvą
-    * Pa'like'int chat'e 'atlikau' žinutę
-*/
+btnChangeToRed.addEventListener('click', changeSquareColorToRed);
+btnChangeToBlue.addEventListener('click', changeSquareColorToBlue);
