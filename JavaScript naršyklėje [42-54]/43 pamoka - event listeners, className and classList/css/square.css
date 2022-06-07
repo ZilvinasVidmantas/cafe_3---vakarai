@@ -3,6 +3,7 @@
   height: 100px;
   width: 100px;
   background-color: grey;
+  transition: width 0.3s linear;
 }
 
 .bg-blue {
