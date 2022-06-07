@@ -3,6 +3,9 @@ const btnChangeToRed = document.querySelector('.js-btn-change-to-red');
 const btnChangeToBlue = document.querySelector('.js-btn-change-to-blue');
 const btnChangeToGreen = document.querySelector('.js-btn-change-to-green');
 const btnIncWidth = document.querySelector('.js-btn-inc-width');
+const btnDecWidth = document.querySelector('.js-btn-dec-width');
+const btnIncHeight = document.querySelector('.js-btn-inc-height');
+const btnDecHeight = document.querySelector('.js-btn-dec-height');
 
 // color handlers
 {
@@ -38,19 +41,42 @@ const btnIncWidth = document.querySelector('.js-btn-inc-width');
 
 // size handlers
 {
-  let { width } = square.getBoundingClientRect();
+  let { width, height } = square.getBoundingClientRect();
+  const MAX_WIDTH = 300;
+  const MIN_WIDTH = 50;
+  const MAX_HEIGHT = 300;
+  const MIN_HEIGHT = 50;
 
   const increaseSquareWidth = () => {
-    width += 50;
-    square.style.width = width + 'px';
+    if (width + 50 <= MAX_WIDTH) {
+      width += 50;
+      square.style.width = width + 'px';
+    }
+  }
+
+  const decreaseSquareWidth = () => {
+    if (width - 50 >= MIN_WIDTH) {
+      width -= 50;
+      square.style.width = width + 'px';
+    }
+  }
+
+  const increaseSquareHeight = () => {
+    if (height + 50 <= MAX_HEIGHT) {
+      height += 50;
+      square.style.height = height + 'px';
+    }
+  }
+
+  const decreaseSquareHeight = () => {
+    if (height - 50 >= MIN_HEIGHT) {
+      height -= 50;
+      square.style.height = height + 'px';
+    }
   }
 
   btnIncWidth.addEventListener('click', increaseSquareWidth);
+  btnDecWidth.addEventListener('click', decreaseSquareWidth);
+  btnIncHeight.addEventListener('click', increaseSquareHeight);
+  btnDecHeight.addEventListener('click', decreaseSquareHeight);
 }
-/*
-  1. Sukurkite mygtuką, mažinti pločiui
-  2. Sukurkite mygtuką, didinti aukščiui
-  3. Sukurkite mygtuką, mažinti aukščiui
-  4. Papildykite funkcijas, kad maksimalus kvadračiuko dydis būtų 300px
-  5. Papildykite funkcijas, kad minimalus dydis būtų 50px 
-*/
