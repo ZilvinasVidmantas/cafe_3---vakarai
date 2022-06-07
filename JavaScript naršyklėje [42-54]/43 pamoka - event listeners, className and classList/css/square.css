@@ -1,0 +1,10 @@
+.square {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+}
+
+.bg-red {
+  background-color: red;
+}
