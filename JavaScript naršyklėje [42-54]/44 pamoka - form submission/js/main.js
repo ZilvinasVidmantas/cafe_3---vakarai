@@ -1,23 +1,34 @@
 'use strict';
 const exampleForm = document.querySelector('.js-example-form');
 const exampleFormResultContainer = document.querySelector('.js-example-form-result');
+const registrationForm = document.querySelector('.js-registration-form');
 
 const getFormValues = (form) => {
   const formData = new FormData(form);
-  const values = {};
-  formData.forEach((value, key) => values[key] = value);
+  const formValues = {};
 
-  return values;
-}
+  for (const key of formData.keys()) {
+    const values = formData.getAll(key);
+    formValues[key] = values.length > 1 ? values : values[0];
+  }
 
-const handleRegisterFormSubmit = (event) => {
+  return formValues;
+};
+
+const handleExampleFormSubmit = (event) => {
   event.preventDefault();
   const values = getFormValues(event.target);
   exampleFormResultContainer.innerHTML = JSON.stringify(values, null, 4);
-}
+};
 
-exampleForm.addEventListener('submit', handleRegisterFormSubmit);
+const handleRegister = (event) => {
+  event.preventDefault();
+  const values = getFormValues(event.target);
+  console.log(JSON.stringify(values, null, 4));
+};
 
+exampleForm.addEventListener('submit', handleExampleFormSubmit);
+registrationForm.addEventListener('submit', handleRegister);
 
 /*
     Sukurkite formos vaizdą
@@ -40,5 +51,4 @@ exampleForm.addEventListener('submit', handleRegisterFormSubmit);
 
     Sudarę formos vaizdą, suraskite ją main.js faile, ir įgalinkite šios formos duomenų atspausdinimą
     konsolėje, kuome ši forma yra submit'inama
-
 */
