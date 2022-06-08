@@ -102,7 +102,7 @@
             Apdorojant formas su JavaScript turime atsisakyti standartinės HTML form'ų elgsenos.
             Tam naudojamas tvirtinimo įvykio metodas - <strong>preventDefault</strong>
           </p>
-          <div class="d-flex justify-content-center my-3">
+          <div class="d-flex flex-column justify-content-center flex-md-row my-3">
             <img src="assets/form-submission.jpg">
           </div>
           <p>
@@ -136,10 +136,122 @@
             </div>
           </article>
         </article>
-
       </div>
     </div>
   </main>
+  <hr>
+
+  <section id="register-form-section" class="navbar-fix">
+    <div class="py-4">
+      <div class="container">
+        <div class="row g-3 rounded-0 shadow-lg p-3 py-4 mx-3">
+          <div class="col-12">
+            <h2 class="text-center mb-4">Registracija</h2>
+          </div>
+          <div class="col-12 col-md-6 order-1 col-xl-4">
+            <label for="email" class="form-label">El. paštas</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+
+          <div class="col-12 col-md-6 order-3 col-xl-4">
+            <label for="password" class="form-label">Slaptažodis</label>
+            <input type="password" class="form-control" id="password" name="password">
+          </div>
+
+          <div class="col-12 col-md-6 order-3 col-xl-4">
+            <label for="password-confirmation" class="form-label">Slaptažodžio pakartojimas</label>
+            <input type="password" class="form-control" id="password-confirmation"
+              name="passwordConfirmation">
+          </div>
+
+          <div class="col-12 col-md-6 order-3 col-xl-4">
+            <label for="name" class="form-label">Vardas</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+
+          <div class="col-12 col-md-6 order-3 col-xl-4">
+            <label for="surname" class="form-label">Pavardė</label>
+            <input type="text" class="form-control" id="surname" name="surname">
+          </div>
+
+          <div class="col-12 col-md-6 order-3 order-md-2 col-xl-4 order-xl-3">
+            <label for="city" class="form-label">Miestas</label>
+            <select class="form-select" id="city" name="city">
+              <option value="-1" disabled selected>Pasirinkite miestą...</option>
+              <option value="vln">Vilnius</option>
+              <option value="kns">Kaunas</option>
+              <option value="klp">Klaipėda</option>
+              <option value="sia">Šiauliai</option>
+              <option value="pnv">Panevėžys</option>
+            </select>
+          </div>
+
+          <div class="col-12 col-md-6 order-3 col-xl-4">
+            <label class="form-label">Lytis</label>
+            <div class="d-flex gap-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="sex-male" name="sex" value="male">
+                <label class="form-check-label" for="sex-male">Vyras</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="sex-female" name="sex"
+                  value="female">
+                <label class="form-check-label" for="sex-female">Moteris</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="sex-other" name="sex"
+                  value="other">
+                <label class="form-check-label" for="sex-other">Kita</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 order-3 col-xl-4">
+            <label class="form-label">Jūsų turimi įgūdžiai</label>
+            <div
+              class="d-flex flex-column gap-1 flex-sm-row gap-sm-3 flex-md-column gap-md-1 flex-lg-row gap-lg-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="skills-html" name="skills"
+                  value="male">
+                <label class="form-check-label" for="skills-html">HTML</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="skills-css" name="skills"
+                  value="male">
+                <label class="form-check-label" for="skills-css">CSS</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="skills-js" name="skills"
+                  value="male">
+                <label class="form-check-label" for="skills-js">JavaScript</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="skills-react" name="skills"
+                  value="male">
+                <label class="form-check-label" for="skills-react">React</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="skills-node" name="skills"
+                  value="male">
+                <label class="form-check-label" for="skills-node">Node.js</label>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 order-3 col-lg-8 offset-lg-2 text-lg-center pt-lg-3 col-xl-6 offset-xl-3">
+            <label for="message" class="form-label">Jūsų žinutė</label>
+            <textarea class="form-control" id="message" rows="3" resize="false"></textarea>
+          </div>
+
+          <div class="col-12 order-3 text-center py-3">
+            <button class="btn btn-primary btn-lg rounded-0" type="submit">Registruotis</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
   <footer class="mt-5 p-4 bg-dark">
     <div class="container text-center text-white">
