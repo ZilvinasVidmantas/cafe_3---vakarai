@@ -1,18 +1,25 @@
+'use strict';
+
 const registerForm = document.querySelector('.js-register-form');
+
+const getFormValues = (form) => {
+  const formData = new FormData(form);
+  const values = {};
+  formData.forEach((value, key) => values[key] = value);
+
+  return values;
+}
 
 const handleRegisterFormSubmit = (event) => {
   event.preventDefault();
-  const fieldsArr = Array.from(event.target.querySelectorAll('[name]'));
-  const values = fieldsArr.reduce((prevValues, { name, value }) => {
-    // 5 min  įsigilinimas
-    // 10 min pertrauka
-    // 19:10 - Klausimai
-    return {
-      ...prevValues,
-      [name]: value
-    }
-  }, {});
+  const values = getFormValues(event.target);
   console.log(values);
 }
 
 registerForm.addEventListener('submit', handleRegisterFormSubmit);
+
+
+// 5min
+// 10min
+
+// 20:10
