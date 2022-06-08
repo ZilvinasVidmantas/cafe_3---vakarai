@@ -1,6 +1,6 @@
 'use strict';
-
-const registerForm = document.querySelector('.js-register-form');
+const exampleForm = document.querySelector('.js-example-form');
+const exampleFormResultContainer = document.querySelector('.js-example-form-result');
 
 const getFormValues = (form) => {
   const formData = new FormData(form);
@@ -13,14 +13,10 @@ const getFormValues = (form) => {
 const handleRegisterFormSubmit = (event) => {
   event.preventDefault();
   const values = getFormValues(event.target);
-  console.log(values);
+  exampleFormResultContainer.innerHTML = JSON.stringify(values, null, 4);
 }
 
-registerForm.addEventListener('submit', handleRegisterFormSubmit);
-
-
-const formData = new FormData(registerForm);
-formData.delete('name');
+exampleForm.addEventListener('submit', handleRegisterFormSubmit);
 
 
 /*

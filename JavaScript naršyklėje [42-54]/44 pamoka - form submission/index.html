@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>44 pamoka - Form submission</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous" defer></script>
   <script src="js/main.js" defer type="module"></script>
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -17,7 +20,8 @@
 <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -33,17 +37,106 @@
   <main id="main" class="navbar-fix">
     <div class="py-4">
       <div class="container">
-        <h1>Form Submission</h1>
-        <form class="js-register-form">
-          <input type="text" name="name" value="Serbentautas">
-          <input type="text" name="surname" value="Bordiūras">
-          <select name="city">
-            <option value="vln">Vilnius</option>
-            <option value="kns">Kaunas</option>
-            <option value="klp">Klaipėda</option>
-          </select>
-          <button class="btn btn-primary" type="submit">Button</button>
-        </form>
+        <h1 class="mb-3">Form'os veikimo principai ir apdorojamas su JavaScript</h1>
+        <article class="p-4">
+          <h2>Standartinis HTML form'os veikimas</h2>
+          <p>
+            Forma, tai specialus HTML elementas, skirtas siųsti vartotojo įvestus/pasirinktus
+            duomenis į serverį. Tam kad form'a atliktų duomenų siuntimą, ji turi būti "patvirtinta"
+            (<em>angl.: submit</em>).
+            <br>
+            Patvirtinimas atliekamas vienu iš 3 būdu:
+          </p>
+          <ol>
+            <li>Paspaudžiamas &lt;button&gt;, kuris turi tipą <strong>submit</strong></li>
+            <li>Paspaudžiamas &lt;input&gt;, kuris turi tipą <strong>submit</strong></li>
+            <li>Bet kuriame iš formos viduje esančių įvesties laukų paspaudžiame mygtuką
+              <strong>enter</strong>
+            </li>
+          </ol>
+
+          <p>Atlikus form'os tvirtinimą, &lt;form&gt; komponento viduje ieškomi įvesties elementai,
+            kurie turi atributą <strong>name</strong>. Tuomet jie formatuojami ir siunčiami į
+            serverį.
+            <br>
+            Formai galima nustatyti 2 pagrindinius nustatymus naudojant atributus
+          </p>
+
+          <ul>
+            <li>
+              <strong class="pe-2">action</strong>
+              <span>- serverio adresas. Jei atributo nenurodome, duomenys siunčiami esamo puslapio
+                adresu</span>
+            </li>
+            <li>
+              <strong class="pe-2">method</strong>
+              <span>- siunčiamos užklausos tipas, GET arba POST. Jei atributo nenurodome, siunčiama
+                GET tipo užklausa</span>
+            </li>
+          </ul>
+        </article>
+        <hr>
+
+        <article class="p-4">
+          <h2>Formos apdorojimas naudojant JavaScript</h2>
+          <p>
+            Vystantis žiniatinklio technologijoms ir tobulėjant JavaScript kalbai atsirado galimybės
+            daryti užklausas neperkraunant puslapio.
+            <br>
+            Užklausos siuntimas neperkraunant puslapio turi didelę naudą, nes:
+          </p>
+          <ul>
+            <li>galima išlaikyti naršyklės aplikacijos atmintyje esančius duomenis</li>
+            <li>tikrinti įvesties laukų korektiškumą programuotojo sugalvotu būdu</li>
+            <li>įgalinti gražesnį užklausos atsakymo sulaukimo dizainą, geresnis UX/UI</li>
+            <li>taupyti kliento ir serverio aplikacijų resursus</li>
+            <li>gauti atsakymus greičiau, nes serveris grąžina tik reikalingus užklausos atsakymo
+              duomenis</li>
+          </ul>
+          <p>
+            Nors ir atsirado našesnis būdas siųsti vartotojo įvestus duomenis į serverį naudojant
+            JavaScript, daugelis senų aplikacijų vis dar naudoja senus formos duomenų siuntimo
+            būdus. Naršyklės technologijų vystytojai pasirinko nekeisti standartinių formos veikimo
+            principų, ir formos toliau sėkmingai siunčia užklausas, kuomet jas tvirtiname.
+            <br><br>
+            Apdorojant formas su JavaScript turime atsisakyti standartinės HTML form'ų elgsenos.
+            Tam naudojamas tvirtinimo įvykio metodas - <strong>preventDefault</strong>
+          </p>
+          <div class="d-flex justify-content-center my-3">
+            <img src="assets/form-submission.jpg">
+          </div>
+          <p>
+            Apdorojant form'os duomenis su JavaScript, reikia juos suformuoti patiems. Tam
+            praktiškiausia naudoti form'os duomenims skirtą prototipą <strong>FormData</strong>.
+            Kuriant FormData prototipo objektą, reikia perduoti HTML form'os objektą pirmu
+            parametru. Tuomet, pagal formos viduje esančius įvesties laukus, turinčius atributą
+            <strong>name</strong>, bus suformuojami duomenys.
+            <br><br>
+            Programavimo praktikoje pravartu saugoti duomenis paprastu objektu, todėl dažnu
+            atveju programuotojai FormData duomenis performuoja į paprastą objektą.
+          </p>
+          <article class="p-4">
+            <div class="d-flex justify-content-between gap-3 flex-column flex-xl-row">
+              <form class="js-example-form d-flex flex-column gap-1 flex-grow-1">
+                <h3>Formos apdorojimo pavyzdys</h3>
+                <input type="text" class="form-control" name="name" value="Serbentautas">
+                <input type="text" class="form-control" name="surname" value="Bordiūras">
+                <select class="form-select" name="city">
+                  <option value="vln">Vilnius</option>
+                  <option value="kns">Kaunas</option>
+                  <option value="klp">Klaipėda</option>
+                </select>
+                <button class="btn btn-primary" type="submit">Button</button>
+                <div class="lead mt-2 bg-dark text-white p-3">
+                  <div class="text-center mb-2"><strong>Rezultatai</strong></div>
+                  <pre class="js-example-form-result"></pre>
+                </div>
+              </form>
+              <img src="assets/form-data-formatting.jpg" alt="">
+            </div>
+          </article>
+        </article>
+
       </div>
     </div>
   </main>
