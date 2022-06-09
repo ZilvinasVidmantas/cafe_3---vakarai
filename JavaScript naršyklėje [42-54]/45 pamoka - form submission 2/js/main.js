@@ -4,6 +4,10 @@ const exampleFormResultContainer = document.querySelector('.js-example-form-resu
 const registrationForm = document.querySelector('.js-registration-form');
 
 const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const UPPER_CASE_LETTER_REGEX = /[A-ZĄČĘĖĮŠŲŪŽ]/;
+const LOWER_CASE_LETTER_REGEX = /[a-ząčęėįšųūž]/;
+const ONLY_LETTERS_REGEX = /^[A-ZĄČĘĖĮŠŲŪŽa-ząčęėįšųūž]*$/
+const NUMBER_REGEX = /\d/;
 
 const getFormValues = (form) => {
   const formData = new FormData(form);
@@ -42,13 +46,19 @@ const formatRegistionErrors = (values) => {
   // password
   /*
     // privaloma
-    bent 8 simboliai
-    bent 1 didžioji raidė
+    // bent 8 simboliai
+    // bent 1 didžioji raidė
     bent 1 mažoji raidė
     bent 1 skaičius
   */
   if (values.password === undefined || values.password === '') {
     errors.password.push('privaloma');
+  }
+  if (values.password.length < 8) {
+    errors.password.push('bent 8 simboliai');
+  }
+  if (!UPPER_CASE_LETTER_REGEX.test(values.password)) {
+    errors.password.push('bent 1 didžioji raidė');
   }
 
   // passwordConfirmation
@@ -71,17 +81,17 @@ const formatRegistionErrors = (values) => {
     yra neleistinų simbolių (negali būti skaičių ir specialių simbolių - !?>, naudokite Regex)
   */
 
-  // city
-  /*
-    privaloma
-  */
-
   // surname
   /*
     privaloma
     bent 2 raidės
     daugiausiai 32 raidės
     yra neleistinų simbolių (negali būti skaičių ir specialių simbolių - !?>, naudokite Regex)
+  */
+
+  // city
+  /*
+    privaloma
   */
 
   // sex
