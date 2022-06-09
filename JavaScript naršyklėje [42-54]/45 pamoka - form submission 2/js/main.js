@@ -9,6 +9,7 @@ const getFormValues = (form) => {
 
   for (const key of formData.keys()) {
     const values = formData.getAll(key);
+    if (key in formValues) break;
     formValues[key] = values.length > 1 ? values : values[0];
   }
 
