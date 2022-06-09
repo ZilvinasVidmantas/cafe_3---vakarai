@@ -28,7 +28,16 @@ const handleExampleFormSubmit = (event) => {
   exampleFormResultContainer.innerHTML = JSON.stringify(values, null, 4);
 };
 
-const formatRegistionErrors = (values) => {
+const formatRegistionErrors = ({
+  email,
+  password,
+  passwordConfirmation,
+  name,
+  surname,
+  sex,
+  city,
+  message
+}) => {
   const errors = {
     email: [],
     password: [],
@@ -41,90 +50,90 @@ const formatRegistionErrors = (values) => {
   };
 
   // email
-  if (values.email === undefined || values.email === '') {
+  if (email === undefined || email === '') {
     errors.email.push('privaloma');
   }
-  if (!EMAIL_REGEX.test(values.email)) {
+  if (!EMAIL_REGEX.test(email)) {
     errors.email.push('neteisingas el. pašto formatas');
   }
 
   // password
-  if (values.password === undefined || values.password === '') {
+  if (password === undefined || password === '') {
     errors.password.push('privaloma');
   }
-  if (values.password.length < 8) {
+  if (password.length < 8) {
     errors.password.push('bent 8 simboliai');
   }
-  if (!UPPER_CASE_LETTER_REGEX.test(values.password)) {
+  if (!UPPER_CASE_LETTER_REGEX.test(password)) {
     errors.password.push('bent 1 didžioji raidė');
   }
-  if (!LOWER_CASE_LETTER_REGEX.test(values.password)) {
+  if (!LOWER_CASE_LETTER_REGEX.test(password)) {
     errors.password.push('bent 1 mažoji raidė');
   }
-  if (!NUMBER_REGEX.test(values.password)) {
+  if (!NUMBER_REGEX.test(password)) {
     errors.password.push('bent 1 skaičius');
   }
 
   // passwordConfirmation
-  if (values.passwordConfirmation === undefined || values.passwordConfirmation === '') {
+  if (passwordConfirmation === undefined || passwordConfirmation === '') {
     errors.passwordConfirmation.push('privaloma');
   }
-  if (values.passwordConfirmation.length < 8) {
+  if (passwordConfirmation.length < 8) {
     errors.passwordConfirmation.push('bent 8 simboliai');
   }
-  if (!UPPER_CASE_LETTER_REGEX.test(values.passwordConfirmation)) {
+  if (!UPPER_CASE_LETTER_REGEX.test(passwordConfirmation)) {
     errors.passwordConfirmation.push('bent 1 didžioji raidė');
   }
-  if (!LOWER_CASE_LETTER_REGEX.test(values.passwordConfirmation)) {
+  if (!LOWER_CASE_LETTER_REGEX.test(passwordConfirmation)) {
     errors.passwordConfirmation.push('bent 1 mažoji raidė');
   }
-  if (!NUMBER_REGEX.test(values.passwordConfirmation)) {
+  if (!NUMBER_REGEX.test(passwordConfirmation)) {
     errors.passwordConfirmation.push('bent 1 skaičius');
   }
-  if (values.password !== values.passwordConfirmation) {
+  if (password !== passwordConfirmation) {
     errors.passwordConfirmation.push('slaptažodžiai nesutampa');
   }
 
   // name
-  if (values.name === undefined || values.name === '') {
+  if (name === undefined || name === '') {
     errors.name.push('privaloma');
   }
-  if (values.name.length < 2) {
+  if (name.length < 2) {
     errors.name.push('bent 2 raidės');
   }
-  if (values.name.length > 32) {
+  if (name.length > 32) {
     errors.name.push('daugiausiai 32 raidės');
   }
-  if (!ONLY_LETTERS_REGEX.test(values.name)) {
+  if (!ONLY_LETTERS_REGEX.test(name)) {
     errors.name.push('yra neleistinų simbolių');
   }
 
   // surname
-  if (values.surname === undefined || values.surname === '') {
+  if (surname === undefined || surname === '') {
     errors.surname.push('privaloma');
   }
-  if (values.surname.length < 2) {
+  if (surname.length < 2) {
     errors.surname.push('bent 2 raidės');
   }
-  if (values.surname.length > 32) {
+  if (surname.length > 32) {
     errors.surname.push('daugiausiai 32 raidės');
   }
-  if (!ONLY_LETTERS_REGEX.test(values.surname)) {
+  if (!ONLY_LETTERS_REGEX.test(surname)) {
     errors.surname.push('yra neleistinų simbolių');
   }
 
   // city
-  if (values.city === undefined || values.city === '') {
+  if (city === undefined || city === '') {
     errors.city.push('privaloma');
   }
 
   // sex
-  if (values.sex === undefined || values.sex === '') {
+  if (sex === undefined || sex === '') {
     errors.sex.push('privaloma');
   }
 
   // message
-  if (values.message && values.message.length > 400) {
+  if (message && message.length > 400) {
     errors.message.push(' max 400 simbolių');
   }
 
