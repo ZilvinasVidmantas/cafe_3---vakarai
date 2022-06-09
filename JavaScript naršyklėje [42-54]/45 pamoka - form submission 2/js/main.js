@@ -24,30 +24,78 @@ const handleExampleFormSubmit = (event) => {
   exampleFormResultContainer.innerHTML = JSON.stringify(values, null, 4);
 };
 
-const formatRegisterErrors = (values) => {
+const formatRegistionErrors = (values) => {
   const errors = {
     email: [],
     password: [],
     passwordConfirmation: []
   };
 
-  // email
+  // email - baigta, niekuom papildyti nereikia
   if (values.email === undefined || values.email === '') {
-    errors.email.push('laukas negali būti tuščias');
+    errors.email.push('privaloma');
   }
   if (!EMAIL_REGEX.test(values.email)) {
     errors.email.push('neteisingas el. pašto formatas');
   }
 
   // password
+  /*
+    // privaloma
+    bent 8 simboliai
+    bent 1 didžioji raidė
+    bent 1 mažoji raidė
+    bent 1 skaičius
+  */
   if (values.password === undefined || values.password === '') {
-    errors.password.push('laukas negali būti tuščias');
+    errors.password.push('privaloma');
   }
 
   // passwordConfirmation
+  /*
+    // privaloma
+    bent 8 simboliai
+    bent 1 didžioji raidė
+    bent 1 mažoji raidė
+    bent 1 skaičius
+    slaptažodžiai nesutampa
+  */
   if (values.passwordConfirmation === undefined || values.passwordConfirmation === '') {
-    errors.passwordConfirmation.push('laukas negali būti tuščias');
+    errors.passwordConfirmation.push('privaloma');
   }
+  // name
+  /*
+    privaloma
+    bent 2 raidės
+    daugiausiai 32 raidės
+    yra neleistinų simbolių (negali būti skaičių ir specialių simbolių - !?>, naudokite Regex)
+  */
+
+  // city
+  /*
+    privaloma
+  */
+
+  // surname
+  /*
+    privaloma
+    bent 2 raidės
+    daugiausiai 32 raidės
+    yra neleistinų simbolių (negali būti skaičių ir specialių simbolių - !?>, naudokite Regex)
+  */
+
+  // sex
+  /*
+    privaloma
+  */
+
+  // skills - validacijos nereikia, nereik nieko rašyti
+
+  // message
+  /*
+    max 400 simbolių
+  */
+
 
   return errors;
 }
@@ -65,7 +113,7 @@ const validateRegisterErrors = (errors) => {
 const handleRegister = (event) => {
   event.preventDefault();
   const values = getFormValues(event.target);
-  const errors = formatRegisterErrors(values);
+  const errors = formatRegistionErrors(values);
   const isValid = validateRegisterErrors(errors);
 
   if (isValid) {
