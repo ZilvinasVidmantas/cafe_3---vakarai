@@ -32,10 +32,15 @@ const formatRegistionErrors = (values) => {
   const errors = {
     email: [],
     password: [],
-    passwordConfirmation: []
+    passwordConfirmation: [],
+    name: [],
+    surname: [],
+    sex: [],
+    city: [],
+    message: []
   };
 
-  // email - baigta, niekuom papildyti nereikia
+  // email
   if (values.email === undefined || values.email === '') {
     errors.email.push('privaloma');
   }
@@ -44,13 +49,6 @@ const formatRegistionErrors = (values) => {
   }
 
   // password
-  /*
-    // privaloma
-    // bent 8 simboliai
-    // bent 1 didžioji raidė
-    bent 1 mažoji raidė
-    bent 1 skaičius
-  */
   if (values.password === undefined || values.password === '') {
     errors.password.push('privaloma');
   }
@@ -60,52 +58,75 @@ const formatRegistionErrors = (values) => {
   if (!UPPER_CASE_LETTER_REGEX.test(values.password)) {
     errors.password.push('bent 1 didžioji raidė');
   }
+  if (!LOWER_CASE_LETTER_REGEX.test(values.password)) {
+    errors.password.push('bent 1 mažoji raidė');
+  }
+  if (!NUMBER_REGEX.test(values.password)) {
+    errors.password.push('bent 1 skaičius');
+  }
 
   // passwordConfirmation
-  /*
-    // privaloma
-    bent 8 simboliai
-    bent 1 didžioji raidė
-    bent 1 mažoji raidė
-    bent 1 skaičius
-    slaptažodžiai nesutampa
-  */
   if (values.passwordConfirmation === undefined || values.passwordConfirmation === '') {
     errors.passwordConfirmation.push('privaloma');
   }
+  if (values.passwordConfirmation.length < 8) {
+    errors.passwordConfirmation.push('bent 8 simboliai');
+  }
+  if (!UPPER_CASE_LETTER_REGEX.test(values.passwordConfirmation)) {
+    errors.passwordConfirmation.push('bent 1 didžioji raidė');
+  }
+  if (!LOWER_CASE_LETTER_REGEX.test(values.passwordConfirmation)) {
+    errors.passwordConfirmation.push('bent 1 mažoji raidė');
+  }
+  if (!NUMBER_REGEX.test(values.passwordConfirmation)) {
+    errors.passwordConfirmation.push('bent 1 skaičius');
+  }
+  if (values.password !== values.passwordConfirmation) {
+    errors.passwordConfirmation.push('slaptažodžiai nesutampa');
+  }
+
   // name
-  /*
-    privaloma
-    bent 2 raidės
-    daugiausiai 32 raidės
-    yra neleistinų simbolių (negali būti skaičių ir specialių simbolių - !?>, naudokite Regex)
-  */
+  if (values.name === undefined || values.name === '') {
+    errors.name.push('privaloma');
+  }
+  if (values.name.length < 2) {
+    errors.name.push('bent 2 raidės');
+  }
+  if (values.name.length > 32) {
+    errors.name.push('daugiausiai 32 raidės');
+  }
+  if (!ONLY_LETTERS_REGEX.test(values.name)) {
+    errors.name.push('yra neleistinų simbolių');
+  }
 
   // surname
-  /*
-    privaloma
-    bent 2 raidės
-    daugiausiai 32 raidės
-    yra neleistinų simbolių (negali būti skaičių ir specialių simbolių - !?>, naudokite Regex)
-  */
+  if (values.surname === undefined || values.surname === '') {
+    errors.surname.push('privaloma');
+  }
+  if (values.surname.length < 2) {
+    errors.surname.push('bent 2 raidės');
+  }
+  if (values.surname.length > 32) {
+    errors.surname.push('daugiausiai 32 raidės');
+  }
+  if (!ONLY_LETTERS_REGEX.test(values.surname)) {
+    errors.surname.push('yra neleistinų simbolių');
+  }
 
   // city
-  /*
-    privaloma
-  */
+  if (values.city === undefined || values.city === '') {
+    errors.city.push('privaloma');
+  }
 
   // sex
-  /*
-    privaloma
-  */
-
-  // skills - validacijos nereikia, nereik nieko rašyti
+  if (values.sex === undefined || values.sex === '') {
+    errors.sex.push('privaloma');
+  }
 
   // message
-  /*
-    max 400 simbolių
-  */
-
+  if (values.message && values.message.length > 400) {
+    errors.message.push(' max 400 simbolių');
+  }
 
   return errors;
 }
