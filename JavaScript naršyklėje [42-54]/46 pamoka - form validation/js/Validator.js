@@ -21,7 +21,11 @@ class Validator {
   }
 
   get errors() {
-    return this.#errors.length === 1 ? this.#errors[0] : [...this.#errors];
+    return [...this.#errors];
+  }
+
+  get HTMLError() {
+    return this.#errors.join('<br>');
   }
 
   required(errMessage) {
