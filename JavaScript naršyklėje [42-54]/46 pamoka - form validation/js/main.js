@@ -54,7 +54,8 @@ const formatRegistionErrors = ({
     .min(8, 'bent 8 simboliai')
     .hasUpperCase('bent 1 didžioji raidė')
     .hasLowerCase('bent 1 mažoji raidė')
-    .hasNumber('bent 1 skaičius');
+    .hasNumber('bent 1 skaičius')
+    .equal(password, 'Slapažodžiai nesutampa');
   if (passwordConfirmationValidator.hasErrors) errors.passwordConfirmation = passwordConfirmationValidator.errors;
 
   const nameValidator = new Validator(name)
@@ -113,3 +114,8 @@ const handleRegister = (event) => {
 
 exampleForm.addEventListener('submit', handleExampleFormSubmit);
 registrationForm.addEventListener('submit', handleRegister);
+
+
+// 20:00
+// 20:05
+// Klausimai ir Validacijos Schema

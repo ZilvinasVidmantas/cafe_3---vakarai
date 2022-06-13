@@ -21,7 +21,7 @@ class Validator {
   }
 
   get errors() {
-    return [...this.#errors];
+    return this.#errors.length === 1 ? this.#errors[0] : [...this.#errors];
   }
 
   required(errMessage) {
