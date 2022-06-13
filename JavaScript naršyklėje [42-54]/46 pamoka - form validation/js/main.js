@@ -1,12 +1,14 @@
 'use strict';
+
+import Validator from "./Validator.js";
+
 const exampleForm = document.querySelector('.js-example-form');
 const exampleFormResultContainer = document.querySelector('.js-example-form-result');
 const registrationForm = document.querySelector('.js-registration-form');
 
-const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const UPPER_CASE_LETTER_REGEX = /[A-ZĄČĘĖĮŠŲŪŽ]/;
 const LOWER_CASE_LETTER_REGEX = /[a-ząčęėįšųūž]/;
-const ONLY_LETTERS_REGEX = /^[A-ZĄČĘĖĮŠŲŪŽa-ząčęėįšųūž]*$/
+const ONLY_LETTERS_REGEX = /^[A-ZĄČĘĖĮŠŲŪŽa-ząčęėįšųūž]*$/;
 const NUMBER_REGEX = /\d/;
 
 const getFormValues = (form) => {
@@ -39,7 +41,6 @@ const formatRegistionErrors = ({
   message
 }) => {
   const errors = {
-    email: [],
     password: [],
     passwordConfirmation: [],
     name: [],
@@ -49,13 +50,10 @@ const formatRegistionErrors = ({
     message: []
   };
 
-  // email
-  if (email === undefined || email === '') {
-    errors.email.push('privaloma');
-  }
-  if (!EMAIL_REGEX.test(email)) {
-    errors.email.push('neteisingas el. pašto formatas');
-  }
+  const emailValidator = new Validator(email)
+    .required('privaloma')
+    .email('neteisingas el. pašto formatas');
+  if (emailValidator.hasErrors) errors.email = emailValidator.errors;
 
   // password
   if (password === undefined || password === '') {
@@ -167,3 +165,10 @@ const handleRegister = (event) => {
 
 exampleForm.addEventListener('submit', handleExampleFormSubmit);
 registrationForm.addEventListener('submit', handleRegister);
+
+/*
+  funkcijoje 'formatRegistionErrors' įvesties laukų validaciją naudojant salyginius sakinius pakeiskite
+  Validator klasės objektais. Tam Validator klasėje reikės sukurti paildomų validacijos metodų.
+  Validacijos metodai privalo grąžinti 'this', tam kad būtų galima taikyti 'chaining' metodologiją
+*/
+
