@@ -151,11 +151,13 @@
           <div class="col-12 col-md-6 order-1 col-xl-4">
             <label for="email" class="form-label">El. paštas *</label>
             <input type="email" class="form-control" id="email" name="email">
+            <div class="invalid-feedback" field-error="email"></div>
           </div>
 
           <div class="col-12 col-md-6 order-3 col-xl-4">
             <label for="password" class="form-label">Slaptažodis *</label>
             <input type="password" class="form-control" id="password" name="password">
+            <div class="invalid-feedback" field-error="password"></div>
           </div>
 
           <div class="col-12 col-md-6 order-3 col-xl-4">
@@ -163,16 +165,19 @@
               *</label>
             <input type="password" class="form-control" id="password-confirmation"
               name="passwordConfirmation">
+            <div class="invalid-feedback" field-error="passwordConfirmation"></div>
           </div>
 
           <div class="col-12 col-md-6 order-3 col-xl-4">
             <label for="name" class="form-label">Vardas *</label>
             <input type="text" class="form-control" id="name" name="name">
+            <div class="invalid-feedback" field-error="name"></div>
           </div>
 
           <div class="col-12 col-md-6 order-3 col-xl-4">
             <label for="surname" class="form-label">Pavardė *</label>
             <input type="text" class="form-control" id="surname" name="surname">
+            <div class="invalid-feedback" field-error="surname"></div>
           </div>
 
           <div class="col-12 col-md-6 order-3 order-md-2 col-xl-4 order-xl-3">
@@ -185,6 +190,7 @@
               <option value="sia">Šiauliai</option>
               <option value="pnv">Panevėžys</option>
             </select>
+            <div class="invalid-feedback" field-error="city"></div>
           </div>
 
           <div class="col-12 col-md-6 order-3 col-xl-4">
@@ -205,6 +211,7 @@
                 <label class="form-check-label" for="sex-other">Kita</label>
               </div>
             </div>
+            <div class="invalid-feedback d-block" field-error="sex"></div>
           </div>
 
           <div class="col-12 col-md-6 order-3 col-xl-4">
@@ -244,6 +251,7 @@
             <label for="message" class="form-label">Jūsų žinutė</label>
             <textarea class="form-control" id="message" rows="3" resize="false"
               name="message"></textarea>
+            <div class="invalid-feedback" field-error="message"></div>
           </div>
 
           <div class="col-12 order-3 text-center py-3">

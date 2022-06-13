@@ -4,7 +4,12 @@ const exampleForm = document.querySelector('.js-example-form');
 const exampleFormResultContainer = document.querySelector('.js-example-form-result');
 const registrationForm = document.querySelector('.js-registration-form');
 
-let errorElements = [];
+const errorElements = Array.from(registrationForm.querySelectorAll('[field-error]'))
+  .reduce((prevErrorElements, errorElement) => ({
+    ...prevErrorElements,
+    [errorElement.getAttribute('field-error')]: errorElement,
+  }), {});
+
 let fields = [];
 
 const getFormValues = (form) => {
@@ -97,30 +102,18 @@ const displayErrors = (form, errors) => {
     const fieldElements = form.querySelectorAll(`[name=${name}]`);
     fields.push(...fieldElements);
     fieldElements.forEach(field => field.classList.add('is-invalid'));
-    const [firstField] = fieldElements;
-
-    const errorElement = document.createElement('div');
-    errorElement.className = 'invalid-feedback';
-    errorElements.push(errorElement);
 
     if (fieldErrors instanceof Array) {
-      errorElement.innerHTML = fieldErrors.join('<br>');
+      errorElements[name].innerHTML = fieldErrors.join('<br>');
     } else {
-      errorElement.innerText = fieldErrors;
-    }
-    if (firstField.type === 'check' || firstField.type === 'radio') {
-      firstField.parentElement.parentElement.insertAdjacentElement('afterend', errorElement);
-      errorElement.classList.add('d-block');
-    } else {
-      firstField.insertAdjacentElement('afterend', errorElement);
+      errorElements[name].innerText = fieldErrors;
     }
   })
 }
 
 const deletePrevErrors = () => {
-  errorElements.forEach(element => element.remove());
-  errorElements = [];
   fields.forEach(field => field.classList.remove('is-invalid'));
+  Object.values(errorElements).forEach(errorElement => errorElement.innerHTML = '');
 }
 
 const handleRegister = (event) => {
