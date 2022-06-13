@@ -4,7 +4,6 @@ const exampleForm = document.querySelector('.js-example-form');
 const exampleFormResultContainer = document.querySelector('.js-example-form-result');
 const registrationForm = document.querySelector('.js-registration-form');
 
-
 const getFormValues = (form) => {
   const formData = new FormData(form);
   const formValues = {};
@@ -88,21 +87,13 @@ const formatRegistionErrors = ({
   return errors;
 }
 
-const validateRegisterErrors = (errors) => {
-  const errorValues = Object.values(errors);
-
-  for (let i = 0; i < errorValues.length; i++) {
-    if (errorValues[i].length > 0) return false;
-  }
-
-  return true;
-}
+const hasErrors = (errorsObj) => Object.keys(errorsObj).length > 0;
 
 const handleRegister = (event) => {
   event.preventDefault();
   const values = getFormValues(event.target);
   const errors = formatRegistionErrors(values);
-  const isValid = validateRegisterErrors(errors);
+  const isValid = !hasErrors(errors);
 
   if (isValid) {
     console.log('Formos duomenys teisingi!');
@@ -114,8 +105,3 @@ const handleRegister = (event) => {
 
 exampleForm.addEventListener('submit', handleExampleFormSubmit);
 registrationForm.addEventListener('submit', handleRegister);
-
-
-// 20:00
-// 20:05
-// Klausimai ir Validacijos Schema

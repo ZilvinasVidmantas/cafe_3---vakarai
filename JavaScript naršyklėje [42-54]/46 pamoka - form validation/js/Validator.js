@@ -38,9 +38,7 @@ class Validator {
   }
 
   email(errMessage) {
-    const isEmail = EMAIL_REGEX.test(this.#value);
-
-    if (!isEmail) {
+    if (!EMAIL_REGEX.test(this.#value)) {
       this.#errors.push(errMessage);
     }
 
