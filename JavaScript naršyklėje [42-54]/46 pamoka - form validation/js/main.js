@@ -4,6 +4,9 @@ const exampleForm = document.querySelector('.js-example-form');
 const exampleFormResultContainer = document.querySelector('.js-example-form-result');
 const registrationForm = document.querySelector('.js-registration-form');
 
+let errorElements = [];
+let fields = [];
+
 const getFormValues = (form) => {
   const formData = new FormData(form);
   const formValues = {};
@@ -91,12 +94,14 @@ const hasErrors = (errors) => Object.keys(errors).length > 0;
 
 const displayErrors = (form, errors) => {
   Object.entries(errors).forEach(([name, fieldErrors]) => {
-    const fields = form.querySelectorAll(`[name=${name}]`);
-    fields.forEach(field => field.classList.add('is-invalid'));
-    const [firstField] = fields;
+    const fieldElements = form.querySelectorAll(`[name=${name}]`);
+    fields.push(...fieldElements);
+    fieldElements.forEach(field => field.classList.add('is-invalid'));
+    const [firstField] = fieldElements;
 
     const errorElement = document.createElement('div');
     errorElement.className = 'invalid-feedback';
+    errorElements.push(errorElement);
 
     if (fieldErrors instanceof Array) {
       errorElement.innerHTML = fieldErrors.join('<br>');
@@ -112,8 +117,16 @@ const displayErrors = (form, errors) => {
   })
 }
 
+const deletePrevErrors = () => {
+  errorElements.forEach(element => element.remove());
+  errorElements = [];
+  fields.forEach(field => field.classList.remove('is-invalid'));
+}
+
 const handleRegister = (event) => {
   event.preventDefault();
+  deletePrevErrors();
+
   const values = getFormValues(event.target);
   const errors = formatRegistionErrors(values);
   const isValid = !hasErrors(errors);
@@ -127,3 +140,7 @@ const handleRegister = (event) => {
 
 exampleForm.addEventListener('submit', handleExampleFormSubmit);
 registrationForm.addEventListener('submit', handleRegister);
+
+// 20:55
+// 21:00
+// Klausimai
