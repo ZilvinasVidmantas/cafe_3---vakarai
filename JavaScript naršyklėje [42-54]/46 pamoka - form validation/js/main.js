@@ -1,15 +1,9 @@
-'use strict';
-
 import Validator from "./Validator.js";
 
 const exampleForm = document.querySelector('.js-example-form');
 const exampleFormResultContainer = document.querySelector('.js-example-form-result');
 const registrationForm = document.querySelector('.js-registration-form');
 
-const UPPER_CASE_LETTER_REGEX = /[A-ZĄČĘĖĮŠŲŪŽ]/;
-const LOWER_CASE_LETTER_REGEX = /[a-ząčęėįšųūž]/;
-const ONLY_LETTERS_REGEX = /^[A-ZĄČĘĖĮŠŲŪŽa-ząčęėįšųūž]*$/;
-const NUMBER_REGEX = /\d/;
 
 const getFormValues = (form) => {
   const formData = new FormData(form);
@@ -40,100 +34,55 @@ const formatRegistionErrors = ({
   city,
   message
 }) => {
-  const errors = {
-    password: [],
-    passwordConfirmation: [],
-    name: [],
-    surname: [],
-    sex: [],
-    city: [],
-    message: []
-  };
+  const errors = {};
 
   const emailValidator = new Validator(email)
     .required('privaloma')
     .email('neteisingas el. pašto formatas');
   if (emailValidator.hasErrors) errors.email = emailValidator.errors;
 
-  // password
-  if (password === undefined || password === '') {
-    errors.password.push('privaloma');
-  }
-  if (password.length < 8) {
-    errors.password.push('bent 8 simboliai');
-  }
-  if (!UPPER_CASE_LETTER_REGEX.test(password)) {
-    errors.password.push('bent 1 didžioji raidė');
-  }
-  if (!LOWER_CASE_LETTER_REGEX.test(password)) {
-    errors.password.push('bent 1 mažoji raidė');
-  }
-  if (!NUMBER_REGEX.test(password)) {
-    errors.password.push('bent 1 skaičius');
-  }
+  const passwordValidator = new Validator(password)
+    .required('privaloma')
+    .min(8, 'bent 8 simboliai')
+    .hasUpperCase('bent 1 didžioji raidė')
+    .hasLowerCase('bent 1 mažoji raidė')
+    .hasNumber('bent 1 skaičius');
+  if (passwordValidator.hasErrors) errors.password = passwordValidator.errors;
 
-  // passwordConfirmation
-  if (passwordConfirmation === undefined || passwordConfirmation === '') {
-    errors.passwordConfirmation.push('privaloma');
-  }
-  if (passwordConfirmation.length < 8) {
-    errors.passwordConfirmation.push('bent 8 simboliai');
-  }
-  if (!UPPER_CASE_LETTER_REGEX.test(passwordConfirmation)) {
-    errors.passwordConfirmation.push('bent 1 didžioji raidė');
-  }
-  if (!LOWER_CASE_LETTER_REGEX.test(passwordConfirmation)) {
-    errors.passwordConfirmation.push('bent 1 mažoji raidė');
-  }
-  if (!NUMBER_REGEX.test(passwordConfirmation)) {
-    errors.passwordConfirmation.push('bent 1 skaičius');
-  }
-  if (password !== passwordConfirmation) {
-    errors.passwordConfirmation.push('slaptažodžiai nesutampa');
-  }
+  const passwordConfirmationValidator = new Validator(passwordConfirmation)
+    .required('privaloma')
+    .min(8, 'bent 8 simboliai')
+    .hasUpperCase('bent 1 didžioji raidė')
+    .hasLowerCase('bent 1 mažoji raidė')
+    .hasNumber('bent 1 skaičius');
+  if (passwordConfirmationValidator.hasErrors) errors.passwordConfirmation = passwordConfirmationValidator.errors;
 
-  // name
-  if (name === undefined || name === '') {
-    errors.name.push('privaloma');
-  }
-  if (name.length < 2) {
-    errors.name.push('bent 2 raidės');
-  }
-  if (name.length > 32) {
-    errors.name.push('daugiausiai 32 raidės');
-  }
-  if (!ONLY_LETTERS_REGEX.test(name)) {
-    errors.name.push('yra neleistinų simbolių');
-  }
+  const nameValidator = new Validator(name)
+    .required('privaloma')
+    .alpha('yra neleistinų simbolių')
+    .min(2, 'bent 2 raidės')
+    .max(32, 'daugiausiai 32 raidės');
+  if (nameValidator.hasErrors) errors.name = nameValidator.errors;
 
-  // surname
-  if (surname === undefined || surname === '') {
-    errors.surname.push('privaloma');
-  }
-  if (surname.length < 2) {
-    errors.surname.push('bent 2 raidės');
-  }
-  if (surname.length > 32) {
-    errors.surname.push('daugiausiai 32 raidės');
-  }
-  if (!ONLY_LETTERS_REGEX.test(surname)) {
-    errors.surname.push('yra neleistinų simbolių');
-  }
+  const surnameValidator = new Validator(surname)
+    .required('privaloma')
+    .alpha('yra neleistinų simbolių')
+    .min(2, 'bent 2 raidės')
+    .max(32, 'daugiausiai 32 raidės');
+  if (surnameValidator.hasErrors) errors.surname = surnameValidator.errors;
 
-  // city
-  if (city === undefined || city === '') {
-    errors.city.push('privaloma');
-  }
+  const cityValidator = new Validator(city)
+    .required('privaloma');
+  if (cityValidator.hasErrors) errors.city = cityValidator.errors;
 
-  // sex
-  if (sex === undefined || sex === '') {
-    errors.sex.push('privaloma');
-  }
+  const sexValidator = new Validator(sex)
+    .required('privaloma');
+  if (sexValidator.hasErrors) errors.sex = sexValidator.errors;
 
-  // message
-  if (message && message.length > 400) {
-    errors.message.push(' max 400 simbolių');
-  }
+
+  const messageValidator = new Validator(message)
+    .max(400, 'daugiausiai 400 simbolių');
+  if (messageValidator.hasErrors) errors.message = messageValidator.errors;
 
   return errors;
 }
@@ -160,15 +109,7 @@ const handleRegister = (event) => {
     console.log('Formoje yra klaidų');
     console.log(JSON.stringify(errors, null, 4))
   }
-
 };
 
 exampleForm.addEventListener('submit', handleExampleFormSubmit);
 registrationForm.addEventListener('submit', handleRegister);
-
-/*
-  funkcijoje 'formatRegistionErrors' įvesties laukų validaciją naudojant salyginius sakinius pakeiskite
-  Validator klasės objektais. Tam Validator klasėje reikės sukurti paildomų validacijos metodų.
-  Validacijos metodai privalo grąžinti 'this', tam kad būtų galima taikyti 'chaining' metodologiją
-*/
-
