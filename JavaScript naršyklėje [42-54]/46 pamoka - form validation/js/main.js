@@ -87,7 +87,30 @@ const formatRegistionErrors = ({
   return errors;
 }
 
-const hasErrors = (errorsObj) => Object.keys(errorsObj).length > 0;
+const hasErrors = (errors) => Object.keys(errors).length > 0;
+
+const displayErrors = (form, errors) => {
+  Object.entries(errors).forEach(([name, fieldErrors]) => {
+    const fields = form.querySelectorAll(`[name=${name}]`);
+    fields.forEach(field => field.classList.add('is-invalid'));
+    const [firstField] = fields;
+
+    const errorElement = document.createElement('div');
+    errorElement.className = 'invalid-feedback';
+
+    if (fieldErrors instanceof Array) {
+      errorElement.innerHTML = fieldErrors.join('<br>');
+    } else {
+      errorElement.innerText = fieldErrors;
+    }
+    if (firstField.type === 'check' || firstField.type === 'radio') {
+      firstField.parentElement.parentElement.insertAdjacentElement('afterend', errorElement);
+      errorElement.classList.add('d-block');
+    } else {
+      firstField.insertAdjacentElement('afterend', errorElement);
+    }
+  })
+}
 
 const handleRegister = (event) => {
   event.preventDefault();
@@ -98,8 +121,7 @@ const handleRegister = (event) => {
   if (isValid) {
     console.log('Formos duomenys teisingi!');
   } else {
-    console.log('Formoje yra klaidų');
-    console.log(JSON.stringify(errors, null, 4))
+    displayErrors(event.target, errors);
   }
 };
 
