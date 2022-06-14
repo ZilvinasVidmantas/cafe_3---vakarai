@@ -262,6 +262,69 @@
     </div>
   </section>
 
+  <section id="register-form-section" class="navbar-fix">
+    <div class="py-4">
+      <div class="container-md">
+        <form
+          class="js-product-create-form product-create-form row g-3 rounded-0 shadow-lg p-3 py-4">
+          <div class="col-12">
+            <h2 class="text-center mb-4">Pridėti produktą</h2>
+          </div>
+          <div class="col-12">
+            <label for="title" class="form-label">Pavadinimas *</label>
+            <input type="text" class="form-control" id="title" name="title">
+            <div class="invalid-feedback" field-error="title"></div>
+          </div>
+
+          <div class="col-12">
+            <label for="category" class="form-label">Kategorija *</label>
+            <select class="form-select" id="category" name="category">
+              <option disabled selected>Pasirinkite kategoriją...</option>
+              <option value="food">Maistas</option>
+              <option value="clothes">Drabužiai</option>
+              <option value="other">Kita</option>
+            </select>
+            <div class="invalid-feedback" field-error="category"></div>
+          </div>
+
+          <div class="col-12">
+            <label for="price" class="form-label">Kaina *</label>
+            <input type="number" class="form-control" id="price" name="price">
+            <div class="invalid-feedback" field-error="price"></div>
+          </div>
+
+          <div class="col-12">
+            <label for="amount" class="form-label">Kiekis *</label>
+            <input type="number" class="form-control" id="amount" name="amount">
+            <div class="invalid-feedback" field-error="amount"></div>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Būklė *</label>
+            <div class="d-flex gap-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="condition-new" name="condition"
+                  value="new">
+                <label class="form-check-label" for="condition-new">Nauja</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="condition-used" name="condition"
+                  value="used">
+                <label class="form-check-label" for="condition-used">Panaudota</label>
+              </div>
+            </div>
+            <div class="invalid-feedback d-block" field-error="condition"></div>
+          </div>
+
+
+          <div class="col-12 text-center py-3">
+            <button class="btn btn-primary btn-lg rounded-0" type="submit">Pridėti</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <footer class="mt-5 p-4 bg-dark">
     <div class="container text-center text-white">
       CodeAcademy, 2022 Ⓒ
