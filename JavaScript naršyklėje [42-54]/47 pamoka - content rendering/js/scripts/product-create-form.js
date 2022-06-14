@@ -27,9 +27,11 @@
       * price:
         * privaloma
         * turi būti aprašyta ne daugiau kaip 2 skaičiai po kablelio
+        * negali būt neigiamas skaičius
       * amount:
         * privaloma
         * turi būti sveikas skaičius
+        * negali būt neigiamas skaičius
       * condition:
         * privaloma        
 */
