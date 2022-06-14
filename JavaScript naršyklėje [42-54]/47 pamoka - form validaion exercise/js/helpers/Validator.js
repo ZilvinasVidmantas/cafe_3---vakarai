@@ -104,6 +104,22 @@ class Validator {
 
     return this;
   }
+
+  decimalPlaces(numbersAfterComma, errMessage) {
+    const numbers = this.#value.split('.')[1];
+    if (numbers && numbers.length > numbersAfterComma) {
+      this.#errors.push(errMessage);
+    }
+    return this;
+  }
+
+  positive(errMessage) {
+    if (this.#value[0] === '-') {
+      this.#errors.push(errMessage);
+    }
+
+    return this;
+  }
 }
 
 export default Validator;
