@@ -1,30 +1,13 @@
 import Validator from "../helpers/Validator.js";
-import getFormValues from "../helpers/get-form-values.js";
+import {
+  getFormFields,
+  getFormErrorElements,
+  handleFormSubmit
+} from "../helpers/form-helpers.js";
 
 const createProductForm = document.querySelector('.js-product-create-form');
-
-const fields = Array.from(createProductForm.querySelectorAll('[name]'))
-  .reduce((prevFields, field) => {
-    if (field.name in prevFields) {
-      if (prevFields[field.name] instanceof Array) {
-        prevFields[field.name].push(field);
-      } else {
-        prevFields[field.name] = [prevFields[field.name], field];
-      }
-    } else {
-      prevFields[field.name] = field;
-    }
-
-    return {
-      ...prevFields
-    };
-  }, {});
-
-const errorElements = Array.from(createProductForm.querySelectorAll('[field-error]'))
-  .reduce((prevErrorElements, errorElement) => ({
-    ...prevErrorElements,
-    [errorElement.getAttribute('field-error')]: errorElement,
-  }), {});
+const fields = getFormFields(createProductForm);
+const errorElements = getFormErrorElements(createProductForm);
 
 const formatCreateProductErrors = ({
   title,
@@ -64,47 +47,19 @@ const formatCreateProductErrors = ({
   return errors;
 };
 
-const hasErrors = (errors) => Object.keys(errors).length > 0;
-
-const displayErrors = (errors) => {
-  Object.entries(errors).forEach(([key, error]) => {
-    const field = fields[key];
-    const errorElement = errorElements[key];
-
-    if (field instanceof Array) {
-      field.forEach(option => option.classList.add('is-invalid'));
-    } else {
-      field.classList.add('is-invalid');
-    }
-
-    errorElement.innerHTML = error;
-  });
+const addProduct = (values) => {
+  console.log('addProduct');
+  console.log(values);
 };
 
-const deletePrevErrors = () => {
-  Object.values(fields).forEach(field => {
-    if (field instanceof Array) {
-      field.forEach(option => option.classList.remove('is-invalid'));
-    } else {
-      field.classList.remove('is-invalid');
-    }
-  });
-  Object.values(errorElements).forEach(errorElement => errorElement.innerHTML = '');
-};
-
-const handleCreateProduct = (event) => {
-  event.preventDefault();
-  deletePrevErrors();
-
-  const values = getFormValues(event.target);
-  const errors = formatCreateProductErrors(values);
-  const isValid = !hasErrors(errors);
-
-  if (isValid) {
-    console.log('Formos duomenys teisingi!');
-  } else {
-    displayErrors(errors);
-  }
-};
-
-createProductForm.addEventListener('submit', handleCreateProduct);
+createProductForm.addEventListener('submit',
+  (event) => handleFormSubmit(
+    {
+      event,
+      fields,
+      errorElements,
+      formatErrors: formatCreateProductErrors,
+    },
+    addProduct
+  )
+);

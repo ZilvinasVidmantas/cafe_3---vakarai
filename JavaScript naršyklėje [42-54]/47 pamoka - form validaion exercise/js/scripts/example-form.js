@@ -1,4 +1,4 @@
-import getFormValues from "../helpers/get-form-values.js";
+import { getFormValues } from "../helpers/form-helpers.js";
 
 const exampleForm = document.querySelector('.js-example-form');
 const exampleFormResultContainer = document.querySelector('.js-example-form-result');

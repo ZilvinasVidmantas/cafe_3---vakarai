@@ -1,30 +1,13 @@
 import Validator from "../helpers/Validator.js";
-import getFormValues from "../helpers/get-form-values.js";
+import {
+  getFormFields,
+  getFormErrorElements,
+  handleFormSubmit,
+} from "../helpers/form-helpers.js";
 
 const registrationForm = document.querySelector('.js-registration-form');
-
-const fields = Array.from(registrationForm.querySelectorAll('[name]'))
-  .reduce((prevFields, field) => {
-    if (field.name in prevFields) {
-      if (prevFields[field.name] instanceof Array) {
-        prevFields[field.name].push(field);
-      } else {
-        prevFields[field.name] = [prevFields[field.name], field];
-      }
-    } else {
-      prevFields[field.name] = field;
-    }
-
-    return {
-      ...prevFields
-    };
-  }, {});
-
-const errorElements = Array.from(registrationForm.querySelectorAll('[field-error]'))
-  .reduce((prevErrorElements, errorElement) => ({
-    ...prevErrorElements,
-    [errorElement.getAttribute('field-error')]: errorElement,
-  }), {});
+const fields = getFormFields(registrationForm);
+const errorElements = getFormErrorElements(registrationForm);
 
 const formatRegistionErrors = ({
   email,
@@ -89,47 +72,19 @@ const formatRegistionErrors = ({
   return errors;
 };
 
-const hasErrors = (errors) => Object.keys(errors).length > 0;
-
-const displayErrors = (errors) => {
-  Object.entries(errors).forEach(([key, error]) => {
-    const field = fields[key];
-    const errorElement = errorElements[key];
-
-    if (field instanceof Array) {
-      field.forEach(option => option.classList.add('is-invalid'));
-    } else {
-      field.classList.add('is-invalid');
-    }
-
-    errorElement.innerHTML = error;
-  });
+const registerUser = (values) => {
+  console.log('registerUser');
+  console.log(values);
 };
 
-const deletePrevErrors = () => {
-  Object.values(fields).forEach(field => {
-    if (field instanceof Array) {
-      field.forEach(option => option.classList.remove('is-invalid'));
-    } else {
-      field.classList.remove('is-invalid');
-    }
-  });
-  Object.values(errorElements).forEach(errorElement => errorElement.innerHTML = '');
-};
-
-const handleRegister = (event) => {
-  event.preventDefault();
-  deletePrevErrors();
-
-  const values = getFormValues(event.target);
-  const errors = formatRegistionErrors(values);
-  const isValid = !hasErrors(errors);
-
-  if (isValid) {
-    console.log('Formos duomenys teisingi!');
-  } else {
-    displayErrors(errors);
-  }
-};
-
-registrationForm.addEventListener('submit', handleRegister);
+registrationForm.addEventListener('submit',
+  (event) => handleFormSubmit(
+    {
+      event,
+      fields,
+      errorElements,
+      formatErrors: formatRegistionErrors,
+    },
+    registerUser
+  )
+);
