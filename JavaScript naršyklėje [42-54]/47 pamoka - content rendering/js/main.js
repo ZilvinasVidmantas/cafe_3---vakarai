@@ -1,2 +1,2 @@
-import './example-form.js';
-import './register-form.js';
+import './scripts/example-form.js';
+import './scripts/register-form.js';

@@ -1,5 +1,5 @@
-import Validator from "./helpers/Validator.js";
-import getFormValues from "./helpers/get-form-values.js";
+import Validator from "../helpers/Validator.js";
+import getFormValues from "../helpers/get-form-values.js";
 
 const registrationForm = document.querySelector('.js-registration-form');
 
