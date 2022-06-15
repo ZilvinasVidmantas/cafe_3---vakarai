@@ -1,0 +1,10 @@
+.product-create-form {
+  margin: 0 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .product-create-form {
+    width: 540px;
+    margin: auto;
+  }
+}
