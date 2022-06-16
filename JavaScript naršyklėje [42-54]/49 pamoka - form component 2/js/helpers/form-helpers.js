@@ -1,32 +1,3 @@
-export const getFormValues = (form) => {
-  const formData = new FormData(form);
-  const formValues = {};
-
-  for (const key of formData.keys()) {
-    const values = formData.getAll(key);
-    if (key in formValues) continue;
-    formValues[key] = values.length > 1 ? values : values[0];
-  }
-
-  return formValues;
-};
-
-export const getFormFields = (form) => Array.from(form.querySelectorAll('[name]'))
-  .reduce((prevFields, field) => {
-    if (field.name in prevFields) {
-      if (prevFields[field.name] instanceof Array) {
-        prevFields[field.name].push(field);
-      } else {
-        prevFields[field.name] = [prevFields[field.name], field];
-      }
-    } else {
-      prevFields[field.name] = field;
-    }
-
-    return {
-      ...prevFields
-    };
-  }, {});
 
 export const getFormErrorElements = (form) => Array.from(form.querySelectorAll('[field-error]'))
   .reduce((prevErrorElements, errorElement) => ({

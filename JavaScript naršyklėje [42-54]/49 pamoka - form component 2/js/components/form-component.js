@@ -23,19 +23,12 @@ class FormComponent {
     }
 
     this.#htmlElement = htmlElement;
+    this.#fields = this.getFormFields();
+    this.#errorHtmlElements = this.getFormErrorElements();
     this.#values = this.getFormValues();
-
-
-    /*
-      2. Sukurkite kuriamo instance'o savybes(properties):
-        // * #htmlElement;        HTMLFormElement
-        // * #values;             {} - užpildytų įvesties laukų reikšmės pagal 'name' atributus
-        * #errors;             {} - klaidų objektas pagal 'name' atributus
-        * #fields;             {} - įvesties laukų HTML elementų objektas pagal 'name' atributus
-        * #errorHtmlElements;  {} - klaidų HTML elementų objektas pagal 'name' atributus
-        * #formatErrors;       Function - funkcija kuri priima #values ir grąžina #errors tipo obejktą 
-        * #onSuccess;          Function - funkcija kuri kviečiama pasubmit'inus formą su teisingais duomenimis
-    */
+    this.#errors = formatErrors(this.#values);
+    this.#formatErrors = formatErrors;
+    this.#onSuccess = onSuccess;
   }
 
   getFormValues() {
@@ -50,6 +43,35 @@ class FormComponent {
 
     return formValues;
   }
+
+  getFormFields() {
+    return Array.from(this.#htmlElement.querySelectorAll('[name]'))
+      .reduce((prevFields, field) => {
+        if (field.name in prevFields) {
+          if (prevFields[field.name] instanceof Array) {
+            prevFields[field.name].push(field);
+          } else {
+            prevFields[field.name] = [prevFields[field.name], field];
+          }
+        } else {
+          prevFields[field.name] = field;
+        }
+
+        return {
+          ...prevFields
+        };
+      }, {});
+  }
+
+  getFormErrorElements() {
+    return Array.from(this.#htmlElement.querySelectorAll('[field-error]'))
+      .reduce((prevErrorElements, errorElement) => ({
+        ...prevErrorElements,
+        [errorElement.getAttribute('field-error')]: errorElement,
+      }), {});
+  }
+
+
 }
 
 export default FormComponent;
