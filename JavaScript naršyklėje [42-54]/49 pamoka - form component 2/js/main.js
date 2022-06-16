@@ -13,3 +13,4 @@ const registerFormComponent = new FormComponent(
 );
 
 console.log('VO! 👍');
+console.log(registerFormComponent);
