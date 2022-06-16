@@ -26,9 +26,10 @@ class FormComponent {
 
     this.initFields();
     this.initErrorHtmlElements();
+    this.initEventListeners();
   }
 
-  get #values() {
+  get values() {
     const formData = new FormData(this.#htmlElement);
     const formValues = {};
 
@@ -41,8 +42,12 @@ class FormComponent {
     return formValues;
   }
 
-  get #errors() {
-    return this.#formatErrors(this.#values);
+  get errors() {
+    return this.#formatErrors(this.values);
+  }
+
+  get isValid() {
+    return Object.keys(this.errors).length === 0;
   }
 
   initFields() {
@@ -71,6 +76,45 @@ class FormComponent {
         [errorElement.getAttribute('field-error')]: errorElement,
       }), {});
   }
+
+  initEventListeners() {
+    this.#htmlElement.addEventListener('submit', (event) => {
+      event.preventDefault();
+      this.clearFieldsErrors();
+
+      if (this.isValid) {
+        this.#onSuccess(this.values);
+      } else {
+        this.displayFormErrors();
+      }
+    });
+  }
+
+  clearFieldsErrors() {
+    Object.values(this.#fields).forEach(field => {
+      if (field instanceof Array) {
+        field.forEach(option => option.classList.remove('is-invalid'));
+      } else {
+        field.classList.remove('is-invalid');
+      }
+    });
+    Object.values(this.#errorHtmlElements).forEach(element => element.innerHTML = '');
+  };
+
+  displayFormErrors() {
+    Object.entries(this.errors).forEach(([key, error]) => {
+      const field = this.#fields[key];
+      const errorHtmlElement = this.#errorHtmlElements[key];
+
+      if (field instanceof Array) {
+        field.forEach(option => option.classList.add('is-invalid'));
+      } else {
+        field.classList.add('is-invalid');
+      }
+
+      errorHtmlElement.innerHTML = error;
+    });
+  };
 }
 
 export default FormComponent;
