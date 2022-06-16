@@ -26,7 +26,7 @@ class FormComponent {
 
     this.initFields();
     this.initErrorHtmlElements();
-    this.initEventListeners();
+    this.initEventListener();
   }
 
   get values() {
@@ -77,7 +77,7 @@ class FormComponent {
       }), {});
   }
 
-  initEventListeners() {
+  initEventListener() {
     this.#htmlElement.addEventListener('submit', (event) => {
       event.preventDefault();
       this.clearFieldsErrors();
