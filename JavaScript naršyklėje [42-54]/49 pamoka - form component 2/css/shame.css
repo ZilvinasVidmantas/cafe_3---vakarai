@@ -1,0 +1,8 @@
+body {
+  padding-top: 56px;
+}
+
+.navbar-fix {
+  padding-top: 56px;
+  margin-top: -56px;
+}
