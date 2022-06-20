@@ -39,10 +39,27 @@
   box-shadow: 0 4px 8px 4px #0005
 }
 
+.add-todo-form {
+  display: inline-flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.add-todo-form>input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.add-todo-form>input:focus {
+  border-bottom: 1px solid #f8b8db;
+  outline: none;
+}
+
 .todo-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .todo-list__item {
@@ -56,11 +73,12 @@
   flex-grow: 1;
   text-align: left;
   font-size: 1rem;
+  line-height: 22px;
 }
 
 .checkbox {
-  height: 24.73px;
-  width: 24.73px;
+  height: 22px;
+  width: 22px;
   border: 1px solid black;
   cursor: pointer;
 }
@@ -78,4 +96,11 @@
   border-top: none;
   border-left: none;
   transform: rotate(45deg);
+}
+
+.button {
+  display: inline-grid;
+  place-items: center;
+  background-color: #f8b8db;
+  padding: 0 4px;
 }
