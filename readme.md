@@ -111,7 +111,6 @@
   * Teorinis egzaminas (30%) [2022]
   * Praktinis darbas (50%) [2022]
 
-
 30sav.
 
 5 šventinės
