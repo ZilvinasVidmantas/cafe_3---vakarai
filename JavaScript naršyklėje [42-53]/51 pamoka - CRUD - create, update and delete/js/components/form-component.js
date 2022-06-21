@@ -106,13 +106,17 @@ class FormComponent {
       const field = this.#fields[key];
       const errorHtmlElement = this.#errorHtmlElements[key];
 
-      if (field instanceof Array) {
-        field.forEach(option => option.classList.add('is-invalid'));
-      } else {
-        field.classList.add('is-invalid');
+      if (field) {
+        if (field instanceof Array) {
+          field.forEach(option => option.classList.add('is-invalid'));
+        } else {
+          field.classList.add('is-invalid');
+        }
       }
 
-      errorHtmlElement.innerHTML = error;
+      if (errorHtmlElement) {
+        errorHtmlElement.innerHTML = error;
+      }
     });
   };
 }

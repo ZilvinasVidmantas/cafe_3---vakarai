@@ -40,11 +40,12 @@
         <i class="bi bi-music-note-beamed"></i>
       </div>
       <form class="js-add-todo-form add-todo-form">
-        <input type="text" class="new-todo" placeholder="To do?">
+        <input type="text" class="add-todo-form__input" placeholder="To do?" name="title">
         <button class="button d-flex gap-1" type="submit">
           <span>Add Todo</span>
           <i class="bi bi-music-note-beamed"></i>
         </button>
+        <small class="add-todo-form__error text-danger" field-error="title"></small>
       </form>
       <div class="js-todo-list todo-list">
       </div>

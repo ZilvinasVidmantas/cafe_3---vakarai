@@ -42,9 +42,22 @@
 }
 
 .add-todo-form {
-  display: inline-flex;
-  gap: 12px;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 350px;
+  margin: 0 auto 15px;
+  column-gap: 12px;
+  row-gap: 6px;
+}
+
+.add-todo-form__input {
+  flex-grow: 1;
+}
+
+.add-todo-form__error {
+  text-align: left;
+  width: 100%;
 }
 
 .add-todo-form>input {

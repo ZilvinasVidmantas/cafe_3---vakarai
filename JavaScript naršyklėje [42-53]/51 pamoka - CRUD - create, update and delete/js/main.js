@@ -1,7 +1,12 @@
-const todoList = document.querySelector('.js-todo-list');
-const formAddTodo = document.querySelector('.js-add-todo-form');
+import FormComponent from "./components/form-component.js";
+import todoValidator from "./helpers/validators/todo-validator.js";
 
-const addTodoItem = ({ completed, title }) => {
+const todoList = document.querySelector('.js-todo-list');
+
+const addTodoItem = ({
+  completed = false,
+  title
+}) => {
   const todoItem = document.createElement('div');
   todoItem.className = 'todo-list__item';
 
@@ -25,17 +30,18 @@ const addTodoItem = ({ completed, title }) => {
     btnDelete
   );
 
-  todoList.appendChild(todoItem);
+  todoList.insertAdjacentElement('afterBegin', todoItem);
 }
 
-formAddTodo.addEventListener('submit', (event) => {
-  event.preventDefault();
+// Pertrauka
+// Kodo Peržiūra
+// Klausimai ir atsakymai 21:45
 
-  addTodoItem({
-    title: formAddTodo[0].value,
-    completed: false,
-  })
-});
+const formAddTodo = new FormComponent(
+  '.js-add-todo-form', /* selector */
+  todoValidator, /* formatErrors */
+  addTodoItem, /* onSuccess */
+);
 
 const displayItems = (items) => items.forEach(addTodoItem);
 
@@ -43,22 +49,3 @@ fetch('https://jsonplaceholder.typicode.com/todos?userId=7')
   .then(response => response.json())
   .then(displayItems);
 
-
-/*
-  Kodo peržiūra [10]
-    1. Suformuoti klausimus, jei kas nors neaišku
-    2. Pasiūlyti variantų, kaip būtų galima patobulinti šį kodą
-
-  Pertrauka [10]
-
-  Tęsiame 19:15
-*/
-
-/*
-  C - create
-  // R - read
-  U - update
-  D - delete
-
-  20:05 - Klausimai ir atsakymai
-*/
