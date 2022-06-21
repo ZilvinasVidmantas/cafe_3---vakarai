@@ -29,6 +29,7 @@
 }
 
 .todo-list-container {
+  position: relative;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #fff;
   min-height: 80vh;
@@ -36,7 +37,8 @@
   margin: 40px auto;
   padding: 30px;
   text-align: center;
-  box-shadow: 0 4px 8px 4px #0005
+  box-shadow: 0 4px 8px 4px #0005;
+  z-index: 9000;
 }
 
 .add-todo-form {

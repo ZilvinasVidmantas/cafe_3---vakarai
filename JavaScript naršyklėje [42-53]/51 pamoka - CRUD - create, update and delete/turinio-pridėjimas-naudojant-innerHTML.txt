@@ -1,0 +1,27 @@
+Turinio pridėjimas naudojant:
+
+→ → →  target.innerHTML += `... HTML string ...` ← ← ←
+
+Ši metodologija turi tokių pliusų:
+  + Trumpai užsirašo, lyginant su kitais turinio kūrimo būdais
+  + Aiškiai suprantama kuriama HMTL struktūra
+  + Lengvai iterpiami duomenys į matomą HTML struktūrą
+
+Visgi yra minusėlių...
+
+komanda parašyta 3 eilutėje veikia tokius principu:
+  Paimamas visas <target> elemento turinys ir paverčiamas į paprastą string'ą.
+  Tuomet prie to stringo, yra prideda dalis aprašyta už += operatoriaus. Visas apjungtas
+  String'as yra konvertuojamas į HTML struktūrą pagal tą apjungtą string'ą.
+
+  Kadangi turinio apjungimui, buvo konvertuojama į string'ą - įvyksta tas pats kaip kopijuojant
+  objektus naudojant JSON.parse(JSON.stringify(...objektas...)) metdologiją - prarandamos nuorodos
+  į puslapyje egzistuojančius elementus. Visi elementai perkuriami vis iš naujo.
+
+  Jeigu kuriamas turinys, nėra naudojamas funkcionalumui, kitaip tariant - naudojams tik atvaizdavimui,
+  tuomet ši metodologija ( target.innerHTML += ... ) yra pati tinkamiausia ir paprasčiausia.
+
+  BET, jeigu kuriamo turinio elementai turi įvykių klausiklius, arba bus keičiami aplikacijos 
+  gyvavimo metu, ši metodologija yra netinkama. NES prarandamos visos nuorodos į elementus kurie
+  egsitavo <target> elemente prieš pridėjimą, ko pasekoje nustoja veikti visi įvykių klausikliai.
+

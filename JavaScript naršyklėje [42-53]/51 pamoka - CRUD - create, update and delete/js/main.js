@@ -1,26 +1,43 @@
 const todoList = document.querySelector('.js-todo-list');
 const formAddTodo = document.querySelector('.js-add-todo-form');
 
-formAddTodo.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const todoListValue = formAddTodo[0].value;
+const addTodoItem = ({ completed, title }) => {
+  const todoItem = document.createElement('div');
+  todoItem.className = 'todo-list__item';
 
-  todoList.innerHTML += `
-  <div class="todo-list__item">
-    <div class="checkbox"></div>
-    <div class="todo-list__item__text">${todoListValue}</div> 
-    <button class="button">✖</button>
-  </div>`;
+  const checkbox = document.createElement('div');
+  checkbox.className = 'checkbox';
+  if (completed) checkbox.classList.add('checked');
+  checkbox.addEventListener('click', () => console.log('Paspausta check'));
+
+  const todoItemText = document.createElement('div');
+  todoItemText.className = 'todo-list__item__text';
+  todoItemText.innerText = title;
+
+  const btnDelete = document.createElement('button');
+  btnDelete.className = 'button';
+  btnDelete.innerText = '✖';
+  btnDelete.addEventListener('click', () => console.log('Paspausta delete'));
+
+  todoItem.append(
+    checkbox,
+    todoItemText,
+    btnDelete
+  );
+
+  todoList.appendChild(todoItem);
+}
+
+formAddTodo.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  addTodoItem({
+    title: formAddTodo[0].value,
+    completed: false,
+  })
 });
 
-const displayItems = (items) => items.forEach(({ completed, title }) => {
-  todoList.innerHTML += `
-  <div class="todo-list__item">
-    <div class="checkbox${completed ? ' checked' : ''}"></div>
-    <div class="todo-list__item__text">${title}</div>
-    <button class="button">✖</button>
-  </div>`;
-});
+const displayItems = (items) => items.forEach(addTodoItem);
 
 fetch('https://jsonplaceholder.typicode.com/todos?userId=7')
   .then(response => response.json())
@@ -35,12 +52,7 @@ fetch('https://jsonplaceholder.typicode.com/todos?userId=7')
   Pertrauka [10]
 
   Tęsiame 19:15
-
-
 */
-
-
-
 
 /*
   C - create
