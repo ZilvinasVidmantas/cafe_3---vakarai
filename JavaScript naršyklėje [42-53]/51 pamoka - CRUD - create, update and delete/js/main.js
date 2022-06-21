@@ -34,10 +34,10 @@ const addTodoItem = ({
   );                // </div>
 
   /*
-   <div class="js-todo-list todo-list"><
+   <div class="js-todo-list todo-list">
       {todoItem}  <- afterBegin
       ...
-   /div>
+   </div>
   */
   todoList.insertAdjacentElement('afterBegin', todoItem);
 }
