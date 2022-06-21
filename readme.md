@@ -106,7 +106,7 @@
   * HTML ir CSS (2%) [2022-04-04]
   * JavaScript pagrindai (4%) [2022-06-06]
   * JavaScript panaudojimas naršyklėje (3%) [2022-06-27]
-  * React (8%) [2022-09-]
+  * React (8%) [2022-09-05]
   * Expres + Mongo (3%) [2022-10-]
   * Teorinis egzaminas (30%) [2022]
   * Praktinis darbas (50%) [2022]
