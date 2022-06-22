@@ -50,7 +50,7 @@ const formAddTodo = new FormComponent(
 );
 
 // Siunčiame užklausą į nuotolinį serverį
-fetch('https://jsonplaceholder.typicode.com/todos?userId=7')
+fetch('http://localhost:1337/todos')
   // Užklausos atsakymo JSON duomenis verčiame JavaScript masyvu
   .then((response) => response.json())
   // Su kiekvienu parsiųsto masyvo elementu, kuriame naują TodoItem'ą kviečiant funkciją addTodoItem

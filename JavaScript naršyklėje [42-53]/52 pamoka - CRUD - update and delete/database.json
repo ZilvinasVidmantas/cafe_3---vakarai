@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Palaižyt sau alkūnę",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Sustabdyt laiką",
+      "completed": true
+    },
+    {
+      "id": "3",
+      "title": "Nusipirkt teliką",
+      "completed": false
+    }
+  ]
+}
