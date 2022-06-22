@@ -1,5 +1,6 @@
 import FormComponent from "./components/form-component.js";
 import todoValidator from "./helpers/validators/todo-validator.js";
+import ApiService from "./helpers/api-service.js";
 
 // Surandame elementę, į kurį dėsime TodoItem'us
 const todoList = document.querySelector('.js-todo-list'); // <div class="js-todo-list todo-list"></div>
@@ -49,10 +50,8 @@ const formAddTodo = new FormComponent(
   addTodoItem, /* onSuccess */
 );
 
-// Siunčiame užklausą į nuotolinį serverį
-fetch('http://localhost:1337/todos')
-  // Užklausos atsakymo JSON duomenis verčiame JavaScript masyvu
-  .then((response) => response.json())
-  // Su kiekvienu parsiųsto masyvo elementu, kuriame naują TodoItem'ą kviečiant funkciją addTodoItem
-  .then((items) => items.forEach(addTodoItem));
-
+// IFFE
+(async () => {
+  const todos = await ApiService.fetchTodos();
+  todos.forEach(addTodoItem);
+})();
