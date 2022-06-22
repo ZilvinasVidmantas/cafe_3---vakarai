@@ -7,7 +7,7 @@ const todoList = document.querySelector('.js-todo-list'); // <div class="js-todo
 
 // Funkcija, kuri priimą objektą, ir pagal priimtą objektą, sukurią naują TodoItem'ą į įdeda jį
 // į "todoList" kintamajį
-const addTodoItem = ({
+const displayTodoItem = ({
   completed = false,
   title
 }) => {
@@ -47,11 +47,13 @@ const addTodoItem = ({
 const formAddTodo = new FormComponent(
   '.js-add-todo-form', /* selector */
   todoValidator, /* formatErrors */
-  addTodoItem, /* onSuccess */
+  // OnSuccess handler
+  async ({ title }) => {
+    const createdTodo = await ApiService.createTodo({ title });
+    displayTodoItem(createdTodo);
+  }
 );
 
-// IFFE
-(async () => {
-  const todos = await ApiService.fetchTodos();
-  todos.forEach(addTodoItem);
-})();
+// Pradinių duomenų parsiuntimas
+const todos = await ApiService.fetchTodos();
+todos.forEach(displayTodoItem);

@@ -9,17 +9,21 @@ const fetchTodos = async () => {
 }
 
 const createTodo = async ({ title }) => {
-  const response = await fetch('http://localhost:1337/todos', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      title,
-      completed: false
-    })
-  });
+  const response = await fetch(
+    'http://localhost:1337/todos',
+    // ↓↓↓ Užklausos savybės ↓↓↓
+    {
+      method: 'POST', // Užklausos siuntimo tipas
+      headers: { // Nustatymai
+        'Accept': 'application/json', // Tikėsis gauti tokį formatą
+        'Content-Type': 'application/json' // Siųs duomenis tokiu formatu
+      },
+      body: JSON.stringify({ // Užklauso siunčiami duomenys
+        title,
+        completed: false
+      })
+    }
+  );
 
   const reponseData = await response.json();
 
@@ -28,7 +32,7 @@ const createTodo = async ({ title }) => {
 
 const ApiService = {
   fetchTodos,
-  createTodo
-}
+  createTodo,
+};
 
 export default ApiService;
