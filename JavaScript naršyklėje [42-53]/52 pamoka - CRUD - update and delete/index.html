@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>52 pamoka - CRUD - trynimas ir atnaujinimas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous" defer></script>
+  <script src="js/main.js" defer type="module"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="layout">
+    <main class="todo-list-container">
+      <h1>Things to Do</h1>
+      <div class="my-3">
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+        <i class="bi bi-music-note-beamed"></i>
+      </div>
+      <form class="js-add-todo-form add-todo-form">
+        <input type="text" class="add-todo-form__input" placeholder="To do?" name="title">
+        <button class="button d-flex gap-1" type="submit">
+          <span>Add Todo</span>
+          <i class="bi bi-music-note-beamed"></i>
+        </button>
+        <small class="add-todo-form__error text-danger" field-error="title"></small>
+      </form>
+      <div class="js-todo-list todo-list"></div>
+    </main>
+    <img src="assets/pink-panther.png" class="layout__img-1">
+    <img src="assets/pink-panther.png" class="layout__img-2">
+
+  </div>
+
+</body>
+
+</html>
