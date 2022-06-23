@@ -2,7 +2,7 @@
   "todos": [
     {
       "id": "1",
-      "title": "Palaižyt sau alkūnę",
+      "title": "Palaižyt sau alkūnęsssssssssssssssssssss",
       "completed": true
     },
     {
@@ -13,7 +13,7 @@
     {
       "id": "3",
       "title": "Nusipirkt teliką",
-      "completed": false
+      "completed": true
     },
     {
       "title": "Įlipt į palmę",
@@ -21,8 +21,8 @@
       "id": "47XRb19"
     },
     {
-      "title": "Old Thing",
-      "completed": false,
+      "title": "Old Things",
+      "completed": true,
       "id": "vE7zCO_"
     }
   ]

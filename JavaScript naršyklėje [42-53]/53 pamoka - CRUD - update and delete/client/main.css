@@ -38,7 +38,7 @@
   padding: 30px;
   text-align: center;
   box-shadow: 0 4px 8px 4px #0005;
-  z-index: 9000;
+  z-index: 500;
 }
 
 .add-todo-form {
