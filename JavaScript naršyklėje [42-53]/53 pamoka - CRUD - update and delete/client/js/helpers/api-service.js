@@ -18,7 +18,7 @@ const createTodo = async ({ title }) => {
         'Accept': 'application/json', // Tikėsis gauti tokį formatą
         'Content-Type': 'application/json' // Siųs duomenis tokiu formatu
       },
-      body: JSON.stringify({ // Užklauso siunčiami duomenys
+      body: JSON.stringify({ // Užklausos siunčiami duomenys
         title,
         completed: false
       })
