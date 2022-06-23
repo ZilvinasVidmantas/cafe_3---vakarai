@@ -6,7 +6,7 @@ const fetchTodos = async () => {
   const todos = await response.json();
 
   return todos;
-}
+};
 
 const createTodo = async ({ title }) => {
   const response = await fetch(
@@ -30,15 +30,33 @@ const createTodo = async ({ title }) => {
   return reponseData;
 };
 
-const deleteDoto = async (id) => {
-  await fetch(`http://localhost:1337/todos/${id}`, { method: 'DELETE' });
+const updateTodo = async ({ id, ...props }) => {
+  const response = await fetch(
+    `http://localhost:1337/todos/${id}`,
+    {
+      method: 'PATCH', // Užklausos siuntimo tipas
+      headers: { // Nustatymai
+        'Accept': 'application/json', // Tikėsis gauti tokį formatą
+        'Content-Type': 'application/json' // Siųs duomenis tokiu formatu
+      },
+      body: JSON.stringify(props)
+    }
+  );
+
+  const reponseData = await response.json();
+
+  return reponseData;
 }
 
+const deleteTodo = async (id) => {
+  await fetch(`http://localhost:1337/todos/${id}`, { method: 'DELETE' });
+};
 
 const ApiService = {
   fetchTodos,
   createTodo,
-  deleteDoto,
+  updateTodo,
+  deleteTodo,
 };
 
 export default ApiService;

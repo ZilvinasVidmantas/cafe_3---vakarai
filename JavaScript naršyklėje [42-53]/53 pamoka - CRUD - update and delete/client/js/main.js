@@ -18,7 +18,15 @@ const displayTodoItem = ({
   const checkbox = document.createElement('div');  // <div></div>
   checkbox.className = 'checkbox';  // <div class="checkbox"></div>
   if (completed) checkbox.classList.add('checked'); // <div class="checkbox checked"></div>
-  checkbox.addEventListener('click', () => console.log('Paspausta check'));
+  checkbox.addEventListener('click', async () => {
+    console.log({ title, completed });
+    await ApiService.updateTodo({
+      id,
+      completed: !checkbox.classList.contains('checked')
+    });
+
+    checkbox.classList.toggle('checked');
+  });
 
   const todoItemText = document.createElement('div'); // <div></div>
   todoItemText.className = 'todo-list__item__text'; // <div class="todo-list__item__text"></div>
@@ -28,7 +36,7 @@ const displayTodoItem = ({
   btnDelete.className = 'button'; // <button class="button"</button>
   btnDelete.innerText = '✖'; // <button class="button">✖</button>
   btnDelete.addEventListener('click', async () => {
-    await ApiService.deleteDoto(id);
+    await ApiService.deleteTodo(id);
     todoItem.remove();
   });
 

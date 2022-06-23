@@ -3,7 +3,7 @@
     {
       "id": "1",
       "title": "Palaižyt sau alkūnę",
-      "completed": false
+      "completed": true
     },
     {
       "id": "2",
@@ -17,7 +17,7 @@
     },
     {
       "title": "Įlipt į palmę",
-      "completed": false,
+      "completed": true,
       "id": "47XRb19"
     },
     {
