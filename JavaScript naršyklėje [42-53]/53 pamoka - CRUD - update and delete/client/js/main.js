@@ -8,8 +8,9 @@ const todoList = document.querySelector('.js-todo-list'); // <div class="js-todo
 // Funkcija, kuri priimą objektą, ir pagal priimtą objektą, sukurią naują TodoItem'ą į įdeda jį
 // į "todoList" kintamajį
 const displayTodoItem = ({
-  completed = false,
-  title
+  completed,
+  title,
+  id,
 }) => {
   const todoItem = document.createElement('div'); // <div></div>
   todoItem.className = 'todo-list__item'; // <div class="todo-list__item"></div>
@@ -26,7 +27,10 @@ const displayTodoItem = ({
   const btnDelete = document.createElement('button'); // <button></button>
   btnDelete.className = 'button'; // <button class="button"</button>
   btnDelete.innerText = '✖'; // <button class="button">✖</button>
-  btnDelete.addEventListener('click', () => console.log('Paspausta delete'));
+  btnDelete.addEventListener('click', async () => {
+    await ApiService.deleteDoto(id);
+    todoItem.remove();
+  });
 
   todoItem.append(  // <div class="todo-list__item">
     checkbox,       //   <div class="checkbox checked"></div>
