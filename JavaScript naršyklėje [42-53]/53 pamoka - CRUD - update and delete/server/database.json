@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Palaižyt sau alkūnę",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Sustabdyt laiką",
+      "completed": true
+    },
+    {
+      "id": "3",
+      "title": "Nusipirkt teliką",
+      "completed": false
+    },
+    {
+      "title": "Įlipt į palmę",
+      "completed": false,
+      "id": "47XRb19"
+    },
+    {
+      "title": "Naujas reikalas",
+      "completed": false,
+      "id": "RjDPKtn"
+    },
+    {
+      "title": "New Thing",
+      "completed": false,
+      "id": "vE7zCO_"
+    },
+    {
+      "title": "Nothing good",
+      "completed": false,
+      "id": "w4bqaIW"
+    },
+    {
+      "title": "Nothing good  2",
+      "completed": false,
+      "id": "b8LgaA9"
+    }
+  ]
+}
