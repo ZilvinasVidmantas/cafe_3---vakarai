@@ -13,6 +13,29 @@
   }
 }
 
+/*
+       1000px
++----------------------+
+|                      |
+|                      | 600px
+|                      |
++----------------------+
+const min = Min(1000px, 600px); => 600px
+vmin = 1/100(min) = 6px;
+font-size: calc(10px + 2vmin); => 22px
+
+  400px
++-------+
+|       |
+|       | 600px
+|       |
++-------+
+const min = Min(400px, 600px); => 400px
+vmin = 1/100(min) = 4px;
+font-size: calc(10px + 2vmin); => 18px
+
+*/
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -32,6 +55,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
