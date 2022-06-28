@@ -1,0 +1,13 @@
+@import "src/styles/colors.scss";
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  background-color: $primary;
+  color: #fafafa;
+  &:hover {
+    background-color: $primary-darken;
+    cursor: pointer;
+  }
+}

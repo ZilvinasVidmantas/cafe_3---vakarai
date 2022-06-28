@@ -7,5 +7,5 @@
 * Komponenetui perduodami atributai (naudojimo metu) yra formuojami objektu, ir perduodami komponentui pirmu parametru. Jie vadinami PROPS: https://reactjs.org/docs/components-and-props.html
   <Komponenetas a="7" b="Ne tavo reikalas"> =>> Komponentas({ a: 7, b: 'ne tavo reikalas'})
 
-* Turinys tarp komponento atsidarymo ir komponento užsidarymo yra automatiškai perduodamas komponentui į savybę (prop) "children". <Komp>children</Kompo>
+* Turinys tarp komponento atsidarymo ir komponento užsidarymo yra automatiškai perduodamas komponentui į savybę (prop) "children". <Komp>children</Komp>
 
