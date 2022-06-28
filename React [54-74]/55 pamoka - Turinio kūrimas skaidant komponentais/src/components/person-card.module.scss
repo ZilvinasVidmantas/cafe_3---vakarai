@@ -1,0 +1,18 @@
+$card-width: 300px;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: $card-width;
+}
+
+.title {
+  text-align: center;
+}
+
+.img {
+  height: $card-width;
+  width: $card-width;
+  object-fit: cover;
+  object-position: top;
+}
