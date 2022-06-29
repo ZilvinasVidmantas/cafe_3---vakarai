@@ -32,20 +32,6 @@ $description-line-height: 1.5em;
   margin-top: $spacer * 1;
   margin-bottom: $spacer * 3;
   padding-left: $spacer;
-  & > li {
-    display: flex;
-    justify-content: space-between;
-    & > span:first-of-type {
-      color: $primary;
-      font-style: italic;
-      &::after {
-        content: ":";
-      }
-    }
-    & > span:nth-of-type(2) {
-      font-weight: 600;
-    }
-  }
 }
 
 .btnContainer {

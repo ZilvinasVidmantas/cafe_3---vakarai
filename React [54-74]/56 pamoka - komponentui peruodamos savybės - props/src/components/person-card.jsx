@@ -1,7 +1,10 @@
 import React from 'react';
+
 import Card from './card';
 import Button from './button';
 import Img from './img';
+import PersonCardDetailItem from './person-card-detail-item';
+
 import classes from './person-card.module.scss';
 
 const PersonCard = ({
@@ -25,14 +28,8 @@ const PersonCard = ({
         />
         <p className={classes.description}>{description}</p>
         <ul className={classes.details}>
-          <li>
-            <span>Paštas</span>
-            <span>{email}</span>
-          </li>
-          <li>
-            <span>Mob. telefonas</span>
-            <span>{number}</span>
-          </li>
+          <PersonCardDetailItem name="El. paštas" value={email} />
+          <PersonCardDetailItem name="Mob. telefonas" value={number} />
         </ul>
         <div className={classes.btnContainer}>
           <Button>Paskambink man</Button>
