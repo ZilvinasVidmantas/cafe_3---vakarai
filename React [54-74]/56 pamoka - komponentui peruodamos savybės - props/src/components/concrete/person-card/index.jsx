@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Card from '../abstracts/card';
-import Button from '../abstracts/button';
-import Img from '../abstracts/img';
+import Card from '../../abstracts/card';
+import Button from '../../abstracts/button';
+import Img from '../../abstracts/img';
 import PersonCardDetailItem from './person-card-detail-item';
 
-import classes from './person-card.module.scss';
+import classes from './index.module.scss';
 
 const PersonCard = ({
   fullname,
