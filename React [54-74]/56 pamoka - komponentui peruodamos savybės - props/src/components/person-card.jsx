@@ -44,12 +44,3 @@ const PersonCard = ({
 }
 
 export default PersonCard;
-
-/*
-  Panaudoti:
-    * description
-    * email
-    * number
-
-  Iškelti į atskirą komponentą nuotrauką - <Img />
-*/

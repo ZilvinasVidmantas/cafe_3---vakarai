@@ -13,3 +13,10 @@
     cursor: pointer;
   }
 }
+
+.secondary {
+  background-color: $secondary;
+  &:hover {
+    background-color: $secondary-darken;
+  }
+}
