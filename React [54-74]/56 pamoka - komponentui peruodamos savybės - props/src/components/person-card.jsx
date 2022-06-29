@@ -28,7 +28,7 @@ const PersonCard = ({
         />
         <p className={classes.description}>{description}</p>
         <ul className={classes.details}>
-          <PersonCardDetailItem name="El. paštas" value={email} />
+          <PersonCardDetailItem name="Paštas" value={email} />
           <PersonCardDetailItem name="Mob. telefonas" value={number} />
         </ul>
         <div className={classes.btnContainer}>
