@@ -1,6 +1,6 @@
 import React from 'react'
-import PersonCard from "./person-card";
-import classes from './person-section.module.scss';
+import PersonCard from "../person-card";
+import classes from './index.module.scss';
 
 const PersonSection = () => {
   return (

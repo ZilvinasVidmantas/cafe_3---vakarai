@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './img.module.scss';
+import classes from './index.module.scss';
 
 const Img = ({ src, alt, style }) => {
   return (

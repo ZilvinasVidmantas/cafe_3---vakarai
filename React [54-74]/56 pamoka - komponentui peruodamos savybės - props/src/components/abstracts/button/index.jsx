@@ -1,4 +1,4 @@
-import classes from './button.module.scss';
+import classes from './index.module.scss';
 
 function Button({ children, color }) {
 
