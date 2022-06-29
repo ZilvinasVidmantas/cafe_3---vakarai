@@ -36,7 +36,7 @@ const PersonCard = ({
         </ul>
         <div className={classes.btnContainer}>
           <Button>Paskambink man</Button>
-          <Button>Kai bus liūdna</Button>
+          <Button color="secondary">Kai bus liūdna</Button>
         </div>
       </div>
     </Card>

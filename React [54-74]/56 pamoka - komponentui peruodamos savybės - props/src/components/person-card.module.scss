@@ -22,9 +22,8 @@ $description-line-height: 1.5em;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: $description-line-count; /* number of lines to show */
-  line-clamp: $description-line-count;
   -webkit-box-orient: vertical;
-  line-height: 1.5em;
+  line-height: $description-line-height;
   height: $description-line-height * $description-line-count;
   margin: $spacer;
 }
