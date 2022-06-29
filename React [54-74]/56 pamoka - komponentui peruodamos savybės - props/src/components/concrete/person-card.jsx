@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Card from './card';
-import Button from './button';
-import Img from './img';
+import Card from '../abstracts/card';
+import Button from '../abstracts/button';
+import Img from '../abstracts/img';
 import PersonCardDetailItem from './person-card-detail-item';
 
 import classes from './person-card.module.scss';

@@ -1,5 +1,5 @@
 import React from 'react';
-import PersonSection from './components/person-section';
+import PersonSection from './components/concrete/person-section';
 
 function App() {
 
