@@ -9,3 +9,5 @@
 
 * Turinys tarp komponento atsidarymo ir komponento užsidarymo yra automatiškai perduodamas komponentui į savybę (prop) "children". <Komp>children</Komp>
 
+* Kuriant komponentus pagal masyve esančius duomenis, komponentams turite perduoti prop'są key, kuris skirtas identifikuoti komponentą persikrovimo metu, ir neperkurti jo pakartotinai. Tap yra daroma dėl resursų taupymo
+
