@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './person-card-detail-item.module.scss';
+import classes from './index.module.scss';
 
 const PersonCardDetailItem = ({ name, value }) => {
   return (

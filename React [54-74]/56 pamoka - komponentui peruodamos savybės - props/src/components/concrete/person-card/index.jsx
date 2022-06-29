@@ -3,7 +3,7 @@ import React from 'react';
 import Card from '../../abstracts/card';
 import Button from '../../abstracts/button';
 import Img from '../../abstracts/img';
-import PersonCardDetailItem from './person-card-detail-item';
+import PersonCardDetailItem from './person-car-detail-item';
 
 import classes from './index.module.scss';
 
