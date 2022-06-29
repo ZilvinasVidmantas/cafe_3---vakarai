@@ -1,0 +1,11 @@
+* Funkcinis komponenetas, tai funkcija kuri grąžina JSX
+
+* Norint panaudoti komponentą jį reikia exportuoti iš failo, kuriame jis yra aprašytas ir įtraukti tame faile, kuriame norite jį panaudoti.
+
+* Bet koks React komponenetas privalo grąžinti VIENĄ elementą.
+
+* Komponenetui perduodami atributai (naudojimo metu) yra formuojami objektu, ir perduodami komponentui pirmu parametru. Jie vadinami PROPS: https://reactjs.org/docs/components-and-props.html
+  <Komponenetas a="7" b="Ne tavo reikalas"> =>> Komponentas({ a: 7, b: 'ne tavo reikalas'})
+
+* Turinys tarp komponento atsidarymo ir komponento užsidarymo yra automatiškai perduodamas komponentui į savybę (prop) "children". <Komp>children</Komp>
+

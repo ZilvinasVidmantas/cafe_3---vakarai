@@ -1,0 +1,8 @@
+@import "src/styles/variables/shadows";
+@import "src/styles/variables/spacing";
+
+.card {
+  display: inline-block;
+  padding: $spacer * 3;
+  box-shadow: $shadow;
+}
