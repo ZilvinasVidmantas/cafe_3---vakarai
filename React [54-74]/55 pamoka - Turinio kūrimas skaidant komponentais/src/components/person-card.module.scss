@@ -1,18 +1,56 @@
-$card-width: 300px;
+@import "src/styles/variables/spacing";
+@import "src/styles/variables/colors";
+
+$description-line-count: 6;
+$description-line-height: 1.5em;
 
 .card {
   display: flex;
   flex-direction: column;
-  width: $card-width;
+  width: 300px;
 }
 
 .title {
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: $spacer;
   text-align: center;
 }
 
-.img {
-  height: $card-width;
-  width: $card-width;
-  object-fit: cover;
-  object-position: top;
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $description-line-count; /* number of lines to show */
+  line-clamp: $description-line-count;
+  -webkit-box-orient: vertical;
+  line-height: 1.5em;
+  height: $description-line-height * $description-line-count;
+  margin: $spacer;
+}
+
+.details {
+  margin-top: $spacer * 1;
+  margin-bottom: $spacer * 3;
+  padding-left: $spacer;
+  & > li {
+    display: flex;
+    justify-content: space-between;
+    & > span:first-of-type {
+      color: $primary;
+      font-style: italic;
+      &::after {
+        content: ":";
+      }
+    }
+    & > span:nth-of-type(2) {
+      font-weight: 600;
+    }
+  }
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  gap: $spacer * 2;
 }

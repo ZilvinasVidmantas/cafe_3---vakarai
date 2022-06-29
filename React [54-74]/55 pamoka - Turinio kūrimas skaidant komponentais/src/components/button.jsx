@@ -1,9 +1,9 @@
 import classes from './button.module.scss';
 
-function Button({ children, style = {} }) {
+function Button({ children }) {
 
   return (
-    <button className={classes.btn} style={style}>{children}</button>
+    <button className={classes.btn}>{children}</button>
   );
 }
 
