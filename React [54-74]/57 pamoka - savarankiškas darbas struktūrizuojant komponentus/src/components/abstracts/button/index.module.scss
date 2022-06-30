@@ -1,0 +1,22 @@
+@import "src/styles/variables/colors";
+@import "src/styles/variables/spacing";
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 0.7em 1.25em;
+  background-color: $primary;
+  color: #fafafa;
+  letter-spacing: 0.07em;
+  &:hover {
+    background-color: $primary-darken;
+    cursor: pointer;
+  }
+}
+
+.secondary {
+  background-color: $secondary;
+  &:hover {
+    background-color: $secondary-darken;
+  }
+}

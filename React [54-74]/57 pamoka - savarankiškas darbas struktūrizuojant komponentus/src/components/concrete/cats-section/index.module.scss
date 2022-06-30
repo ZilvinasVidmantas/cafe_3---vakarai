@@ -1,0 +1,8 @@
+@import "src/styles/variables/colors";
+@import "src/styles/variables/spacing";
+
+.container {
+  margin-top: $spacer * 10;
+  min-height: 600px;
+  background-color: lightgreen;
+}

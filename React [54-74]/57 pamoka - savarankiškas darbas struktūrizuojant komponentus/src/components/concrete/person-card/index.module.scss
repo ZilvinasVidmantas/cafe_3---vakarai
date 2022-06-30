@@ -1,0 +1,41 @@
+@import "src/styles/variables/spacing";
+@import "src/styles/variables/colors";
+
+$description-line-count: 6;
+$description-line-height: 1.5em;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.title {
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: $spacer;
+  text-align: center;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $description-line-count; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  line-height: $description-line-height;
+  height: $description-line-height * $description-line-count;
+  margin: $spacer;
+}
+
+.details {
+  margin-top: $spacer * 1;
+  margin-bottom: $spacer * 3;
+  padding-left: $spacer;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  gap: $spacer * 2;
+}
