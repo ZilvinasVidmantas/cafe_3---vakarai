@@ -35,15 +35,3 @@ const CatsSection = () => {
 }
 
 export default CatsSection
-
-/*
-  Duoti kačių duomenys, sukurkite kačių grid'ą kuriame būtų atvaizduotos kačių nuotraukos, su tag'ais.
-
-  Grid'ą pritaikykite visiems ekrano dydžiams
-    xs  | 0-576px | 1 katė eilutėje
-    sm  | 576px+  | 1 katė eilutėje
-    md  | 768px+  | 2 katės eilutėje
-    lg  | 992px+  | 3 katės eilutėje
-    xl  | 1200+   | 4 katės eilutėje
-    xxl | 1440+   | 6 katės eilutėje
-*/
