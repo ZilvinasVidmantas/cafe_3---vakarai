@@ -1,0 +1,11 @@
+Sukurti sekciją, kurioje būtų atvaizduoti įrašai pagal išronio serverio duomenis.
+
+reikalavimai:
+  * Įrašuose turi būti nuotrauka
+  * turi būti atvaizduotos bent 4 savybės
+  * Turinys pritaikytas visiems ekrano dydžiams
+
+Galima duomenų serveriai:
+  https://github.com/public-apis/public-apis
+
+Jei darbo nespėjate atlikti per pamoką, pabaigti iki primadienio paskaitos

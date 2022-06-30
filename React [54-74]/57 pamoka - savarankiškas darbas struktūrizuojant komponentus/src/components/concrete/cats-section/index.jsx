@@ -34,4 +34,4 @@ const CatsSection = () => {
   )
 }
 
-export default CatsSection
+export default CatsSection;
