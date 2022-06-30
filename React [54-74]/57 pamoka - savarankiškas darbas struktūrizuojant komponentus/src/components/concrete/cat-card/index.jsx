@@ -9,4 +9,7 @@ const CatCard = ({ tags, imgSrc }) => {
   )
 }
 
-export default CatCard
+export default CatCard;
+
+
+// 18:50

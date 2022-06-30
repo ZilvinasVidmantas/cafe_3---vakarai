@@ -9,5 +9,8 @@
 
 * Turinys tarp komponento atsidarymo ir komponento užsidarymo yra automatiškai perduodamas komponentui į savybę (prop) "children". <Komp>children</Komp>
 
-* Kuriant komponentus pagal masyve esančius duomenis, komponentams turite perduoti prop'są key, kuris skirtas identifikuoti komponentą persikrovimo metu, ir neperkurti jo pakartotinai. Tap yra daroma dėl resursų taupymo
+* Kuriant komponentus pagal masyve esančius duomenis, komponentams turite perduoti prop'są key, kuris skirtas identifikuoti komponentą persikrovimo metu, ir neperkurti jo pakartotinai. Taip yra daroma dėl resursų taupymo
 
+* useState - tai speciali funkcija naudojama viduje funkcinių komponenetų. Ši funkcija "useState", grąžina masyvą: pirmas grąžinto masyvo elementas - reikšmė skirta naudojimui, antras masyvo elementas tai funkcija skirta pakeisti pirmajį masyvo elementą. Šių reikšmių keisti tiesiogiai negalima. Tam, kad tas reikšmes patogiai naudoti, beveik visada naudojame masyvo destrūkturizacijos sintaksę. Kiekvieną kartą kai naudojame state kintamojo nustatymo funkciją (dispatch) persikrauna komponenetas. 
+
+* useEffect - tai speciali funkciją naudojama React funkciniuose komponenetuose. Ji skirta reaguoti į kintamųjų pakitimą ir vykdyti papildomus veiksmus. useEffect(kaDaryti, masyvasStebimųReikšmių). Jeigu stebimų reikšmių masyvo nėra, tuomet "kaDaryti" funkcija vykdosi kiekvieno komponeneto-persikrovimo metu. Jeigu masyvas "masyvasStebimųReikšmių" yra tuščias, funkcija "kaDaryti" vykdoma tik vieną-pirmajį kartą.
