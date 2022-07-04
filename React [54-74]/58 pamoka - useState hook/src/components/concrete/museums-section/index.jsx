@@ -51,3 +51,7 @@ const MuseumsSection = () => {
 }
 
 export default MuseumsSection;
+
+// 20:40
+// 20:50
+// Klausimai
