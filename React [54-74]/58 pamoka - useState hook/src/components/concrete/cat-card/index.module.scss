@@ -1,0 +1,24 @@
+@import "src/styles/variables/colors";
+@import "src/styles/variables/spacing";
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.tagContainer {
+  margin-top: $spacer;
+  display: flex;
+  gap: $spacer;
+}
+
+.chip {
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 1em;
+  background-color: $primary;
+  color: #fff;
+  border-radius: 1em;
+  padding: 0.4em 0.7em;
+}

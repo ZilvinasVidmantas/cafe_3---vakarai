@@ -1,0 +1,8 @@
+@import "src/styles/variables/spacing";
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: $spacer * 3;
+  margin-top: $spacer * 2;
+}

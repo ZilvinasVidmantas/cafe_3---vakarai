@@ -1,0 +1,24 @@
+@import "src/styles/variables/colors";
+@import "src/styles/variables/spacing";
+
+$gap: $spacer * 2;
+$grid-settings: 768px 2, 992px 3, 1200px 4, 1440px 6;
+
+@function calc-template-cols($col-count) {
+  @return repeat($col-count, calc((100% - $gap * ($col-count - 1)) / $col-count));
+}
+
+.container {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: 100%;
+  padding: $gap;
+}
+
+@each $min-width, $col-count in $grid-settings {
+  @media screen and (min-width: $min-width) {
+    .container {
+      grid-template-columns: calc-template-cols($col-count);
+    }
+  }
+}
