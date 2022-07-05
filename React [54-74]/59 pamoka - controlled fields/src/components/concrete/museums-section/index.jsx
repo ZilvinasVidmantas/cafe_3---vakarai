@@ -16,15 +16,8 @@ const fetchMuseums = (callback) => {
 }
 
 const MuseumsSection = () => {
-  const [museums, setMuseums] = useState([]); // museums -> [] PIRMO KOMPONENTO VYKDYMO METU
-  const [loading, setLoading] = useState(false);  // false -> [] PIRMO KOMPONENTO VYKDYMO METU
-
-  console.group('Persikrove MuseumsSection komponenetas');
-  console.log({
-    museums,
-    loading,
-  });
-  console.groupEnd();
+  const [museums, setMuseums] = useState([]); // museums -> [] KOMPONENTO PIRMO VYKDYMO METU
+  const [loading, setLoading] = useState(false);  // loading -> false KOMPONENTO PIRMO VYKDYMO METU
 
   useEffect(() => {
     // Šis siuntimas nebūtinai bus daromas, todėl <loading> reikšmė į true nustatoma tik prieš pat siuntimo pradėjimą.
@@ -51,7 +44,3 @@ const MuseumsSection = () => {
 }
 
 export default MuseumsSection;
-
-// 20:40
-// 20:50
-// Klausimai

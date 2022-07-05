@@ -13,6 +13,8 @@ root.render(
     ieškant nekorektiškų ir prie kladų vedančių atvejų. Suradęs tokius atvejus, praneša apie
     klaidas konsolėje, arba grubių klaidų atveju - nutraukią jūsų aplikaciją.
    */
-  <App />
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
 
