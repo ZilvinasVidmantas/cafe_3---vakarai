@@ -1,6 +1,6 @@
 import classes from './index.module.scss';
 
-function Button({ children, color }) {
+function Button({ children, color, ...props }) {
 
   let className = classes.btn;
   if (color === 'secondary') {
@@ -8,7 +8,7 @@ function Button({ children, color }) {
   }
 
   return (
-    <button className={className}>{children}</button>
+    <button className={className} {...props}>{children}</button>
   );
 }
 

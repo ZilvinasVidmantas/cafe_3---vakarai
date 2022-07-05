@@ -4,6 +4,7 @@ import LoginForm from './components/concrete/login-form';
 import MuseumsSection from './components/concrete/museums-section';
 import PersonSection from './components/concrete/person-section';
 import RegisterForm from './components/concrete/register-form';
+import SquareSection from './components/concrete/square-section';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <CatsSection /> */}
       {/* <MuseumsSection /> */}
       {/* <LoginForm /> */}
-      <RegisterForm />
+      {/* <RegisterForm /> */}
+      <SquareSection />
     </>
   );
 }
