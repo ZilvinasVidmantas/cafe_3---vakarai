@@ -43,3 +43,11 @@ const LoginForm = () => {
 }
 
 export default LoginForm
+
+/*
+  1. įgalinti controlled input naudojant two-way binding metodologiją
+  2. Atspausdinti duomenis formos submitinimo metu
+  3. pertrauka
+
+  tęsiame: 20:00
+*/
