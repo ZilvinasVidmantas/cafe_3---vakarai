@@ -20,3 +20,5 @@
   * Kai vykdoma useState hook'so dispatch funkcija:
                ↙↙↙ - dispatch funkcija      
     const [x, setX] = useState([]);
+
+* Controlled component - tai toks komponentas kuris per parametrą/us gauna reikšmę/reikšmes ir funkciją/funkcijas toms reikšmėms keisti. Controlled komponentų tikslas, tik atvaizduoti komponento vaizdą, ir leisti duomenis valdyti tėviniam komponentui. Tokiu būsu komponentai pasiskirto vaidmenimis - duomenis kontroliaujantis komponentas, duomenis atvaizduojantis komponentas. Dar ši metodologija yra žinoma kaip smart-dumb components;
