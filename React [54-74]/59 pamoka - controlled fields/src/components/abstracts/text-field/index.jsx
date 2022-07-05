@@ -3,15 +3,14 @@ import React from 'react'
 // Controlled component - Presentational/dumb
 const TextField = ({
   label,
-  value,
-  onChange,
-  type = 'text'
+  type = 'text',
+  ...props
 }) => {
   return (
     <div>
       <label>{label}</label>
       <br />
-      <input type={type} value={value} onChange={onChange} />
+      <input type={type} {...props} />
     </div>
   )
 }

@@ -4,56 +4,33 @@ import classes from './index.module.scss';
 import Button from '../../abstracts/button';
 import TextField from '../../abstracts/text-field';
 
+const initValues = {
+  email: '',
+  password: '',
+  passwordConfirmation: '',
+  name: '',
+  surname: '',
+  mobile: '',
+}
+
 // Controller component - Container/smart
 const RegisterForm = () => {
-  const [email, setEmail] = useState('gregas@banys.lt');
-  const [password, setPassword] = useState('labas123');
-  const [passwordConfirmation, setPasswordConfirmation] = useState('labas123');
-  const [name, setName] = useState('Gerg');
-  const [surname, setSurname] = useState('Maguire');
-  const [mobile, setMobile] = useState('555 555 55 555');
+  const [values, setValues] = useState(initValues);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({
-      email,
-      password,
-      passwordConfirmation,
-      name,
-      surname,
-      mobile,
-    });
-
-    setEmail('');
-    setPassword('');
-    setPasswordConfirmation('');
-    setName('');
-    setSurname('');
-    setMobile('');
+    console.log(values);
+    setValues(initValues);
   }
 
-  const changeEmail = (e) => {
-    setEmail(e.target.value);
-  }
+  const changeFieldValue = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
 
-  const changePassword = (e) => {
-    setPassword(e.target.value);
-  }
-
-  const changePasswordConfirmation = (e) => {
-    setPasswordConfirmation(e.target.value);
-  }
-
-  const changeName = (e) => {
-    setName(e.target.value);
-  }
-
-  const changeSurname = (e) => {
-    setSurname(e.target.value);
-  }
-
-  const changeMobile = (e) => {
-    setMobile(e.target.value);
+    setValues({
+      ...values,
+      [name]: value
+    })
   }
 
   return (
@@ -61,12 +38,39 @@ const RegisterForm = () => {
       <Card>
         <form className={classes.form} onSubmit={handleSubmit}>
           <h2>Registracija</h2>
-          <TextField type="email" onChange={changeEmail} label="El paštas" />
-          <TextField type="password" onChange={changePassword} label="Slaptažodis" />
-          <TextField type="password" value={passwordConfirmation} onChange={changePasswordConfirmation} label="Pakartokie slaptažodį" />
-          <TextField value={name} onChange={changeName} label="Vardas" />
-          <TextField value={surname} onChange={changeSurname} label="Pavardė" />
-          <TextField value={mobile} onChange={changeMobile} label="Mob. telefonas" />
+          <TextField
+            name="email"
+            type="email"
+            value={values.email}
+            onChange={changeFieldValue}
+            label="El paštas" />
+          <TextField
+            name="password"
+            type="password"
+            value={values.password}
+            onChange={changeFieldValue}
+            label="Slaptažodis" />
+          <TextField
+            name="passwordConfirmation"
+            type="password"
+            value={values.passwordConfirmation}
+            onChange={changeFieldValue}
+            label="Pakartokie slaptažodį" />
+          <TextField
+            name="name"
+            value={values.name}
+            onChange={changeFieldValue}
+            label="Vardas" />
+          <TextField
+            name="surname"
+            value={values.surname}
+            onChange={changeFieldValue}
+            label="Pavardė" />
+          <TextField
+            name="mobile"
+            value={values.mobile}
+            onChange={changeFieldValue}
+            label="Mob. telefonas" />
           <Button type="submit">Registruotis</Button>
         </form>
       </Card>

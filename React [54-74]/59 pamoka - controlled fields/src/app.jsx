@@ -13,8 +13,8 @@ function App() {
       {/* <CatsSection /> */}
       {/* <MuseumsSection /> */}
       {/* <LoginForm /> */}
-      {/* <RegisterForm /> */}
-      <SquareSection />
+      <RegisterForm />
+      {/* <SquareSection /> */}
     </>
   );
 }
