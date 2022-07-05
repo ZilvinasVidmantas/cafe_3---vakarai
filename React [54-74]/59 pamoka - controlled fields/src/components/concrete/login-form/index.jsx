@@ -29,7 +29,7 @@ const LoginForm = () => {
           <h2>Prisijungimas</h2>
           <TextField type="email" value={email} onChange={changeEmail} label="El paštas" />
           <TextField type="password" value={password} onChange={changePassword} label="Slaptažodis" />
-          <Button type="submit">Reistruotis</Button>
+          <Button type="submit">Prisijungti</Button>
         </form>
       </Card>
     </div>
@@ -37,17 +37,3 @@ const LoginForm = () => {
 }
 
 export default LoginForm
-
-/*
-  1. Sukurti TextField, kaip reprezentacinį komponeneta
-  2. Panaudoti TextField Login formoje nepakeičiant funkcionalumo
-  3. Perskaityti temą: https://reactjs.org/docs/forms.html#controlled-components
-
-  Pažymėti - Atlikau užduotis MS Teams chate'e
-
-  Kol laukiate, galite perskaityti:
-    * https://medium.com/@thejasonfile/dumb-components-and-smart-components-e7b33a698d43
-    * https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
-
-
-*/
