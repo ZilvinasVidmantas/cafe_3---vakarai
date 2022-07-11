@@ -1,24 +1,33 @@
+import React from 'react'; 
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import AllOutIcon from '@mui/icons-material/AllOut';
+import PersonIcon from '@mui/icons-material/Person';
+import Navbar from './components/navbar';
+
 
 const App = () => {
   return (
-    <Stack spacing={2} direction="row">
-      <Button variant="text">Text</Button>
-      <Button variant="contained" color="secondary">Contained</Button>
-      <Button variant="contained" color="primary">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-    </Stack>
+    <>
+      <Navbar />
+      <Stack spacing={2} direction="row">
+        <Button variant="text">
+          Tekstas
+          <AllOutIcon />
+        </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          startIcon={<AllOutIcon />}
+        >Contained</Button>
+        <Button
+          variant="contained"
+          color="primary"
+          endIcon={<PersonIcon />}
+        >Contained</Button>
+      </Stack>
+    </>
   );
 }
 
 export default App;
-
-/*
-  10min
-  Pasileidau aplikaciją, kurioje yra 3 MUI mygtukai
-
-  10min pertauka
-
-  tęsiame: 19:05
-*/

@@ -1,0 +1,5 @@
+4 puslapiai
+  * pagrindinis, gražios nuotraukos, galerija, nuorodos, laimingi žmonių veidai;
+  * produkto gaminimo video
+  * produktų sąrašas
+  * krepšelis
