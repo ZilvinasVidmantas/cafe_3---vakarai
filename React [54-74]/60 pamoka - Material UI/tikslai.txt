@@ -1,5 +1,5 @@
 4 puslapiai
-  * pagrindinis, gražios nuotraukos, galerija, nuorodos, laimingi žmonių veidai;
-  * produkto gaminimo video
-  * produktų sąrašas
-  * krepšelis
+  * Pagrindinis - pagrindinis, gražios nuotraukos, galerija, nuorodos, laimingi žmonių veidai;
+  * Gamybos eiga - produkto gaminimo video
+  * Mano Lentyna - produktų sąrašas
+  * Krepšelis
