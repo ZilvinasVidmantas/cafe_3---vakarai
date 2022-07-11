@@ -19,7 +19,6 @@ export default function ButtonAppBar() {
             edge="start"
             color="inherit"
             sx={{
-              mr: 2,
               display: { sm: 'none' }
             }}
           >
@@ -47,4 +46,3 @@ export default function ButtonAppBar() {
     </Box>
   );
 }
-
