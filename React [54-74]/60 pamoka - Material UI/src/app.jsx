@@ -13,3 +13,12 @@ const App = () => {
 }
 
 export default App;
+
+/*
+  10min
+  Pasileidau aplikaciją, kurioje yra 3 MUI mygtukai
+
+  10min pertauka
+
+  tęsiame: 19:05
+*/
