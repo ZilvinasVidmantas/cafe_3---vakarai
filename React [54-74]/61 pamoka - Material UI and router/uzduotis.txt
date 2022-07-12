@@ -1,0 +1,28 @@
+/*
+  Sukurti koretelių grid'ą panaudojant MUI komponenetus:
+    * grid ui atvaizduoti naudokite: https://mui.com/material-ui/react-grid/
+    * Kiti naudingi komponenetai:
+      * Typography
+      * Box
+      * Card
+      * ir t.t.
+    * Turite naudoti tik MUI kompoenentus (išskyrus <img />)
+    * Stilizavimas tik naudojant sx savybę
+    * koretelių kielis eilutėje:
+      * xs: 1
+      * sm: 2
+      * md: 3
+      * lg: 4
+      * xl: 6
+    * Koretelių skaičius: 12
+
+
+    patartina eiga:
+      * sukurti 1 kortelę
+      * pakopijavus kortelę 12 kartų sukurti grid'ą
+      * parsiųsti ir paruošti duomenis koretelėms
+      * panaudoti duomenis, kad atvaizduoti koretleių grid'ą
+
+    Jeigu užduotį atlikote:
+      * https://www.youtube.com/watch?v=ZyQlpX7lCRE&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO&index=46
+*/
