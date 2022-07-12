@@ -14,8 +14,9 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/cup-shelf" element={<CupShelfPage />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="/cup-shelf" element={<CupShelfPage />} />
+
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
