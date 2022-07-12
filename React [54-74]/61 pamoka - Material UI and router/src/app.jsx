@@ -1,31 +1,27 @@
-import React from 'react'; 
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import AllOutIcon from '@mui/icons-material/AllOut';
-import PersonIcon from '@mui/icons-material/Person';
+import React from 'react';
 import Navbar from './components/navbar';
+import MugCard from './components/card';
+import { Grid } from '@mui/material';
 
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Stack spacing={2} direction="row">
-        <Button variant="text">
-          Tekstas
-          <AllOutIcon />
-        </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          startIcon={<AllOutIcon />}
-        >Contained</Button>
-        <Button
-          variant="contained"
-          color="primary"
-          endIcon={<PersonIcon />}
-        >Contained</Button>
-      </Stack>
+      <Grid container spacing={2} sx={{ py: 3, px: 2 }}>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}><MugCard /></Grid>
+      </Grid>
     </>
   );
 }

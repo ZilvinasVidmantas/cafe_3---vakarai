@@ -16,7 +16,6 @@
       * xl: 6
     * Koretelių skaičius: 12
 
-
     patartina eiga:
       * sukurti 1 kortelę
       * pakopijavus kortelę 12 kartų sukurti grid'ą

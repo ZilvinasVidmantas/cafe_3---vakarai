@@ -9,7 +9,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 const pages = ['Pagrindinis', 'Gamybos eiga', 'Mano lentyna'];
 
-export default function ButtonAppBar() {
+const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -46,3 +46,6 @@ export default function ButtonAppBar() {
     </Box>
   );
 }
+
+export default Navbar;
+
