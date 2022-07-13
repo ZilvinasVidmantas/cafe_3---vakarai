@@ -39,7 +39,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <IconButton
           size="large"
