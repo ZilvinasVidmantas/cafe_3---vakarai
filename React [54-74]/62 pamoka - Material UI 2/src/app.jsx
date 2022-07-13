@@ -14,6 +14,7 @@ import PotteryPage from './pages/pottery-page';
 const App = () => (
   <BrowserRouter>
     <Navbar />
+
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/cup-shelf" element={<CupShelfPage />} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import MugCard from '../components/card';
+import MugCard from '../components/mug-card';
 
 const CupShelfPage = () => {
   const [mugs, setMugs] = React.useState([]);
