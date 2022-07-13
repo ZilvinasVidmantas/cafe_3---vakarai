@@ -31,7 +31,7 @@ const Link = styled(NavLink)(({ theme }) => ({
 
 const pages = [
   { text: 'Pagrindinis', to: '/' },
-  { text: 'Gamybos eiga', to: '/pottery' },
+  { text: 'Žiedimas', to: '/pottery' },
   { text: 'Puodelių lentyna', to: '/cup-shelf' },
 ];
 
