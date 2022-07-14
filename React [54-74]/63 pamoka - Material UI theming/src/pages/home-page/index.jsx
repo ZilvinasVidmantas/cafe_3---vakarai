@@ -5,6 +5,7 @@ import * as Home from './components';
 const HomePage = () => (
   <Box sx={{ height: '100vh', position: 'relative' }}>
     <Home.Background component="img" src="/home-cover.jpg" />
+
     <Home.ContentContainer>
       <Home.Content component="main">
         <Typography

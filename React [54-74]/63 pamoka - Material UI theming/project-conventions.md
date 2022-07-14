@@ -1,4 +1,4 @@
-# React project conventions
+# Project conventions
 
 ## Project structure
   * src/

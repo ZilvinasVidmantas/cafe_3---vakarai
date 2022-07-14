@@ -7,7 +7,7 @@ export const Background = styled(Box)({
   left: 0,
   height: '100%',
   width: '100%',
-  order: 1,
+  zIndex: 1,
   objectFit: 'cover'
 });
 
@@ -17,7 +17,7 @@ export const ContentContainer = styled(Box)({
   left: 0,
   height: '100%',
   width: '100%',
-  order: 2,
+  zIndex: 2,
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
