@@ -4,6 +4,7 @@
   * src/
     * components/ - components used in more than one page
     * pages/ - website pages
+    * styles/ - files for themes, mixins and CSS
 
 ## File naming
   * kebab-case for all files
@@ -11,9 +12,10 @@
   * Helper filjes must have *.js extensions
 
 ## Styling
+  * use theme variables if possible, consult otherwise.
   * common components are placed in ./src/components folder
   * if component is used only in single page, then it must be saved in that page folder 'components/'
-  * if component uses more than 4 CSS props, it should be segregated into component 
+  * if component uses more than 4 CSS props, it should be segregated into component
 
 ## file importing
   use in al jsx files:
