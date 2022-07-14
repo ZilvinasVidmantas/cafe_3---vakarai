@@ -1,0 +1,73 @@
+import * as React from 'react';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  styled,
+} from '@mui/material';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import MenuIcon from '@mui/icons-material/Menu';
+import { NavLink, useNavigate } from 'react-router-dom';
+
+const Link = styled(NavLink)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: theme.spacing(0, 2),
+  textDecoration: 'none',
+  color: theme.palette.grey[200],
+
+  '&.active': {
+    boxShadow: `inset 0 -4px 0 ${theme.palette.common.white}`,
+  },
+
+  ':hover': {
+    backgroundColor: theme.palette.primary.dark,
+    color: theme.palette.common.white,
+  }
+}));
+
+
+const pages = [
+  { text: 'Pagrindinis', to: '/' },
+  { text: 'Žiedimas', to: '/pottery' },
+  { text: 'Puodelių lentyna', to: '/cup-shelf' },
+];
+
+const Navbar = () => {
+  const navigate = useNavigate();
+
+  return (
+    <AppBar position="fixed">
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          sx={{ display: { sm: 'none' } }}
+        >
+          <MenuIcon />
+        </IconButton>
+
+        <Box sx={{ display: 'flex', alignSelf: 'stretch' }}>
+          {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
+        </Box>
+
+        <IconButton
+          size="large"
+          edge="end"
+          color="inherit"
+          onClick={() => navigate('/cart')}
+        >
+          <ShoppingBasketIcon />
+        </IconButton>
+
+      </Toolbar>
+    </AppBar>
+  )
+};
+
+
+export default Navbar;
+
