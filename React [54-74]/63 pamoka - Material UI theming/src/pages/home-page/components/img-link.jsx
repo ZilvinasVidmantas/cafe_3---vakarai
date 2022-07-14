@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
-import { Image } from '../../../components/image';
+import { Image } from '../../../components';
 
 const ImageLink = ({ to, src, children }) => (
   <Link to={to} style={{ textDecoration: 'none' }}>

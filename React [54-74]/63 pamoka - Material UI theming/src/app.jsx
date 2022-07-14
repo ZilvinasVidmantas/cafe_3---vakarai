@@ -4,7 +4,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Navbar from './components/navbar';
+import { Navbar } from './components';
 import CartPage from './pages/cart-page';
 import CupShelfPage from './pages/cup-shelf-page';
 import ErrorPage from './pages/error-page';
