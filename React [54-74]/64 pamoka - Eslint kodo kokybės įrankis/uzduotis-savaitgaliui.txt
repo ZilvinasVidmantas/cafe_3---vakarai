@@ -1,0 +1,58 @@
+Sukurti savo paprastos idėjos puslapio skeletą:
+  ---------------------- DOKUMENTAVIMAS IR IDĖJA -----------------
+  * Sugalvokite idėją:
+    * Kaip uždirba pinigus IR/ARBA kaip pasaulį padaro geresne vieta?
+    * puslapiai/sekcijos
+      * Kiek?
+      * Kokios kiekvieno puslapio/sekcijos vidinės sekcijos?
+      * Koks (paprastas) funkcionalumas?
+    * puslapio struktūros paviršutiniškas brėžinys, ar kitų puslapių iškarpos/pavyzdžiai, piešinys ranka.
+
+  * Susikurkite savo projekto kodo kokybės taisykles ir išsaugokite faile "project-conventions.md":
+    * Koks maksimalus failo eilučių kiekis? 
+    * Kiek stiliaus savybių viduryje JSX toleruosite?
+    * Kaip rašomi stiliai? Naudosite styled, ar tik "sx" savybę?
+    * Kaip struktūrizuosite komponenetus/stilius?
+    * Kokie temos kintamieji?
+
+  * Projekto darbų įvardinimas:
+    * įvardinkite pagrindinius darbus
+      *  pagrindinį darbą suskaidykite į smulkesnius darbus
+        * ir t.t.
+    ... tol kol ....
+    Vieno darbo ilgis (jūsų nuomone) neturėtų viršyti 2 val.
+  
+  --------------------- PROJEKTO PARUOŠIMAS ----------------------
+
+  * Duomenų serveris:
+    * Susikurkite ir pasiruoškite duomenis JSON formatu
+    * Sukurkite JSON serverį
+    * sukurkite komandą "package.json"
+    * pasitestuokite jį įjungdami
+  
+  * Failų pasiruošimas:
+    * Nuotraukos
+    * Video
+    * Tekstai
+
+  * Sukurkite README.md failą, kuriame:
+    * aprašykite kokios programos reikalingos paleisti projektą
+    * aprašykite reikalingą eigą, kad paleisti veikiantį projektą
+
+  * Sukurkite Repozitoriją, ir paviešinkite projektą pavadinimu: 'cafe-3-react-simple-<VARDAS>-<PAVARDE>'
+
+  ---------------------- PROJEKTO VYSTYMAS --------------------------
+  * Projekto atlikimas, pagal "DOKUMENTAVIMAS IR IDĖJA" skilties darbų suskirstymą:
+    * Po kiekvieno atlikto darbo sukurti GIT commit'ą ir jį pa'push'inti į globalią repozitoriją:
+      * feat - feature - naujas funkcionalumas
+      * fix - bugfix - klaidų taisymas
+      * refactor - kodo struktūros, susaistymo pakeitimas nepakeičiant funkcionalumo
+      * chore - tarpinių komentarų rašymas, sintaksės klaidų taisymas, lygiavimas ir t.t.
+      * docs - dokumentacimas
+
+  * Sukurkite pradinį komponentų medį:
+    * Sukurkite tuščius savo idėjos puslapius
+    * Aprašykite Router'į
+    * Sukurkite Navbar su veikiančiom nuorodomis
+
+  * Išpildykite (HomePage | HomeSection) komponentą
