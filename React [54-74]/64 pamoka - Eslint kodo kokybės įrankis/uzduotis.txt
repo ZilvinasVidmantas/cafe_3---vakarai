@@ -1,3 +1,5 @@
+* įsirašykite: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
 1 dalis
   * Įsirašyti bibliotekas
   * perkrauti VS Code, jei nerodo klaidų
