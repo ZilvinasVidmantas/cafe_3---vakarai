@@ -1,4 +1,5 @@
-import { Box, styled } from "@mui/material";
+import { Box, styled } from '@mui/material';
+
 export { default as ImageLink } from './img-link';
 
 export const Background = styled(Box)({
@@ -8,7 +9,7 @@ export const Background = styled(Box)({
   height: '100%',
   width: '100%',
   zIndex: 1,
-  objectFit: 'cover'
+  objectFit: 'cover',
 });
 
 export const ContentContainer = styled(Box)({
@@ -31,5 +32,5 @@ export const Content = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  gap: theme.spacing(6)
+  gap: theme.spacing(6),
 }));

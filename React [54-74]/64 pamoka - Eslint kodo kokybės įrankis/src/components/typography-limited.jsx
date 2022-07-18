@@ -1,4 +1,4 @@
-import { styled, Typography } from "@mui/material";
+import { styled, Typography } from '@mui/material';
 
 const TypographyLimited = styled(Typography)(({ maxLines }) => ({
   overflow: 'hidden',

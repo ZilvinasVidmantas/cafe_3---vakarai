@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import { Image } from '../../../components';
@@ -13,6 +13,6 @@ const ImageLink = ({ to, src, children }) => (
     </Typography>
     <Image src={src} />
   </Link>
-)
+);
 
-export default ImageLink
+export default ImageLink;

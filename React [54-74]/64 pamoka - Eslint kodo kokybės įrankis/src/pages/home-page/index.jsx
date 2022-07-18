@@ -17,7 +17,11 @@ const HomePage = () => (
         </Typography>
 
         <Typography variant="h6" sx={{ textAlign: 'center' }}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum tempora explicabo nostrum accusantium dolor dolores illo minus suscipit aliquam, inventore voluptate consectetur omnis labore, laboriosam accusamus! Deserunt mollitia doloribus laboriosam enim ut, numquam cumque quisquam tenetur maiores officiis autem necessitatibus magnam voluptate ipsa eveniet sequi neque in porro rem facere!
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum tempora explicabo nostrum
+          accusantium dolor dolores illo minus suscipit aliquam, inventore voluptate consectetur
+          omnis labore, laboriosam accusamus! Deserunt mollitia doloribus laboriosam enim ut,
+          numquam cumque quisquam tenetur maiores officiis autem necessitatibus magnam voluptate
+          ipsa eveniet sequi neque in porro rem facere!
         </Typography>
 
         <Box sx={{ display: 'flex', gap: 3, height: 400 }}>

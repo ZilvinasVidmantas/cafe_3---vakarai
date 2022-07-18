@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const PotteryPage = () => (
   <div>PotteryPage</div>
-)
+);
 
-export default PotteryPage
+export default PotteryPage;

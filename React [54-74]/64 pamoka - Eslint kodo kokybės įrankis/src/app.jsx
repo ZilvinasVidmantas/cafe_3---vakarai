@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
 } from 'react-router-dom';
 import { Navbar } from './components';
 import CartPage from './pages/cart-page';
@@ -25,6 +25,5 @@ const App = () => (
     </Routes>
   </BrowserRouter>
 );
-
 
 export default App;
