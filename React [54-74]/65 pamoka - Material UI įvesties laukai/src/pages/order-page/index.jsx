@@ -1,15 +1,36 @@
 import * as React from 'react';
 import {
-  Box, TextField, Paper, Typography, Button,
+  Box,
+  TextField,
+  Paper,
+  Typography,
+  Button,
+  MenuItem,
 } from '@mui/material';
 
-/*
-  Įgalinkite dvipusį surišką tarp būsenos kintamojo ir paštui skirto TextField lauko
+const currencies = [
+  {
+    value: 'USD',
+    label: '$',
+  },
+  {
+    value: 'EUR',
+    label: '€',
+  },
+  {
+    value: 'BTC',
+    label: '฿',
+  },
+  {
+    value: 'JPY',
+    label: '¥',
+  },
+];
 
-*/
 const OrderPage = () => {
   const [fullname, setFullname] = React.useState('Serbentautas Bordiūras');
   const [email, setEmail] = React.useState('');
+  const [currency, setCurrency] = React.useState(currencies[0].value);
 
   return (
     <Box sx={{ pt: 7 }}>
@@ -51,6 +72,20 @@ const OrderPage = () => {
             value={email}
             fullWidth
           />
+
+          <TextField
+            name="currency"
+            select
+            label="Currency"
+            variant="filled"
+            onChange={(event) => setCurrency(event.target.value)}
+            value={currency}
+            fullWidth
+          >
+            {currencies.map(
+              ({ value, label }) => <MenuItem key={value} value={value}>{label}</MenuItem>,
+            )}
+          </TextField>
           <Button type="submit" variant="contained" size="large">Užsakyti</Button>
         </Box>
 
@@ -60,3 +95,11 @@ const OrderPage = () => {
 };
 
 export default OrderPage;
+
+/*
+  Savo projekto formoje, sukurti  su būsenos kintamuosu surištą TextField-Select reikšmę:
+
+  TextField - select : https://mui.com/material-ui/react-text-field/  ||  https://mui.com/material-ui/react-select/
+  10 min pertrauka,
+  pažymėti komentarą
+*/
