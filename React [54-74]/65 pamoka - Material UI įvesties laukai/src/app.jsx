@@ -5,11 +5,12 @@ import {
   Route,
 } from 'react-router-dom';
 import { Navbar } from './components';
-import CartPage from './pages/cart-page';
-import CupShelfPage from './pages/cup-shelf-page';
-import ErrorPage from './pages/error-page';
 import HomePage from './pages/home-page';
+import CupShelfPage from './pages/cup-shelf-page';
 import PotteryPage from './pages/pottery-page';
+import CartPage from './pages/cart-page';
+import OrderPage from './pages/order-page';
+import ErrorPage from './pages/error-page';
 
 const App = () => (
   <BrowserRouter>
@@ -20,6 +21,7 @@ const App = () => (
       <Route path="/cup-shelf" element={<CupShelfPage />} />
       <Route path="/pottery" element={<PotteryPage />} />
       <Route path="/cart" element={<CartPage />} />
+      <Route path="/order" element={<OrderPage />} />
 
       <Route path="*" element={<ErrorPage />} />
     </Routes>
