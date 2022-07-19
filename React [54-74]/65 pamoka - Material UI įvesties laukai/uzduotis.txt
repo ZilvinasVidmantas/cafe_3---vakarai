@@ -1,0 +1,13 @@
+* įsirašykite: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
+1 dalis
+  * Įsirašyti bibliotekas
+  * perkrauti VS Code, jei nerodo klaidų
+  * Visuose failuose  *.js ir *.jsx ištaisyti visas klaidas, trumpai peržvelgiant ES taisykls internete
+  * Pa'like'int komentarą, "ištaisiau klaidas"
+
+2 dalis
+  * Įsirašykite ESlint suvaržymus/konfiguraciją savo savaitgaliniams projektams.
+  * perkrauti VS Code, jei nerodo klaidų
+  * Visuose failuose  *.js ir *.jsx ištaisyti visas klaidas, trumpai peržvelgiant ES taisykls internete
+  * Pa'like'int komentarą, "ištaisiau savo klaidas"
