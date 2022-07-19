@@ -9,6 +9,7 @@ import {
 */
 const OrderPage = () => {
   const [fullname, setFullname] = React.useState('Serbentautas Bordiūras');
+  const [email, setEmail] = React.useState('');
 
   return (
     <Box sx={{ pt: 7 }}>
@@ -46,6 +47,8 @@ const OrderPage = () => {
             type="email"
             label="Email"
             variant="filled"
+            onChange={(event) => setEmail(event.target.value)}
+            value={email}
             fullWidth
           />
           <Button type="submit" variant="contained" size="large">Užsakyti</Button>
