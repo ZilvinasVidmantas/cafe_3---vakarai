@@ -44,6 +44,4 @@ const theme = createTheme(baseTheme, {
   },
 });
 
-console.log(theme.palette.primary);
-
 export default theme;
