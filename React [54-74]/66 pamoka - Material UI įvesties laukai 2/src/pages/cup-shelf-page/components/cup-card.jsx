@@ -35,9 +35,9 @@ const CupCard = ({
       <TypographyLimited variant="body2" color="text.secondary">{description}</TypographyLimited>
     </CardContent>
 
-    <CardActions sx={{ p: 2, alignSelf: 'center' }}>
+    <CardActions sx={{ p: 1, alignSelf: 'center' }}>
       <Button size="small" variant="contained">Peržiūrėti</Button>
-      <Button size="small" variant="contained">Dėti į krepšelį</Button>
+      <Button size="small" variant="contained">Į krepšelį</Button>
     </CardActions>
   </Card>
 );
