@@ -1,6 +1,14 @@
 import * as React from 'react';
 import {
-  Box, Drawer, Grid, Typography, Divider, Button, useMediaQuery,
+  Box,
+  Typography,
+  Drawer,
+  Grid,
+  Divider,
+  Button,
+  Slider,
+  FormControl,
+  useMediaQuery,
 } from '@mui/material';
 import TuneIcon from '@mui/icons-material/Tune';
 import { CupCard } from './components';
@@ -10,6 +18,7 @@ const drawerWidth = 280;
 const CupShelfPage = () => {
   const [mugs, setMugs] = React.useState([]);
   const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [priceRange, setPriceRange] = React.useState([2, 25]);
   const isExtraLarge = useMediaQuery((theme) => theme.breakpoints.up('xxl'));
 
   React.useEffect(() => {
@@ -49,7 +58,19 @@ const CupShelfPage = () => {
       >
         <Box sx={(theme) => ({ width: drawerWidth, p: 2, ...theme.mixins.toolbarOffset })}>
           <Typography variant="h4">Filtrai</Typography>
-          <Divider />
+          <Divider sx={{ my: 2 }} />
+          <FormControl sx={{ width: '100%' }}>
+            <Typography variant="h6" sx={{}}>Kaina</Typography>
+            <Slider
+              value={priceRange}
+              min={0}
+              max={25}
+              // onChangeCommitted={(_, newPriceRange) => setPriceRange(newPriceRange)}
+              onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
+              valueLabelDisplay="on"
+              sx={{ mt: 4 }}
+            />
+          </FormControl>
         </Box>
       </Drawer>
       <Grid container spacing={2} sx={{ pl: { xxl: `${drawerWidth}px` } }}>
@@ -76,5 +97,3 @@ const CupShelfPage = () => {
 };
 
 export default CupShelfPage;
-
-// 19:10
