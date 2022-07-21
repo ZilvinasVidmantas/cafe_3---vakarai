@@ -10,11 +10,9 @@ import {
   Autocomplete,
   Button,
   TextField,
-  FormLabel,
-  FormControlLabel,
-  Checkbox,
 } from '@mui/material';
 import TuneIcon from '@mui/icons-material/Tune';
+import CheckboxGroup from '../../../components/checkbox-group';
 
 const categories = [
   { id: '1', label: 'Cup' },
@@ -30,20 +28,19 @@ const materialTypes = [
   { id: '3', label: 'Metalinis' },
 ];
 
+const colors = [
+  { id: '1', label: 'red' },
+  { id: '2', label: 'green' },
+  { id: '3', label: 'blue' },
+];
+
 const Filters = ({ drawerWidth }) => {
   const isExtraLarge = useMediaQuery((theme) => theme.breakpoints.up('xxl'));
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const [priceRange, setPriceRange] = React.useState([2, 25]);
   const [category, setCategory] = React.useState(null);
   const [selectedMaterialTypes, setSelectedMaterialTypes] = React.useState([]);
-
-  const handleMaterialChange = (id, checked) => {
-    if (checked) {
-      setSelectedMaterialTypes([...selectedMaterialTypes, materialTypes.find((x) => x.id === id)]);
-    } else {
-      setSelectedMaterialTypes(selectedMaterialTypes.filter((x) => x.id !== id));
-    }
-  };
+  const [selectedColors, setSelectedColors] = React.useState([]);
 
   return (
     <>
@@ -105,31 +102,29 @@ const Filters = ({ drawerWidth }) => {
               id,
             }) => (
               <TextField
+                label="Kategorija"
                 InputLabelProps={InputLabelProps}
                 InputProps={InputProps}
                 fullWidth={fullWidth}
                 id={id}
                 inputProps={inputProps}
-                label="Kategorija"
               />
             )}
           />
           <Divider sx={{ my: 2 }} />
-          <FormControl component="fieldset" variant="standard">
-            <FormLabel component="legend">Medžiaga</FormLabel>
-            {materialTypes.map(({ id, label }) => (
-              <FormControlLabel
-                key={id}
-                label={label}
-                control={(
-                  <Checkbox
-                    name={label}
-                    onChange={(_, checked) => handleMaterialChange(id, checked)}
-                  />
-                )}
-              />
-            ))}
-          </FormControl>
+          <CheckboxGroup
+            label="Medžiaga"
+            options={materialTypes}
+            value={selectedMaterialTypes}
+            onChange={(_, newMaterialTypes) => setSelectedMaterialTypes(newMaterialTypes)}
+          />
+          <Divider sx={{ my: 2 }} />
+          <CheckboxGroup
+            label="Spalva"
+            options={colors}
+            value={selectedColors}
+            onChange={(_, newColors) => setSelectedColors(newColors)}
+          />
         </Box>
       </Drawer>
     </>
