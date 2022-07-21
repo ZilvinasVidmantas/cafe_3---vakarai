@@ -2,12 +2,11 @@
 
   * Įsirašykite ESlint suvaržymus/konfiguraciją savo savaitgaliniams projektams.
   * perkrauti VS Code, jei nerodo klaidų
-  * Visuose failuose  *.js ir *.jsx ištaisyti visas klaidas, trumpai peržvelgiant ES taisykls internete
-  * Pa'like'int komentarą, "ištaisiau savo klaidas"
+  * Visuose failuose  *.js ir *.jsx ištaisyti visas klaidas, trumpai peržvelgiant ES taisykles internete
 
 --------------------------------------
 
-Sukurti šiuos įvesties laukus ir sujungti juos su būsenos kintamaisiais
+Sukurti šiuos įvesties laukus ir sujungti juos su būsenos kintamaisiais savo projekte
   * TextField: https://mui.com/material-ui/react-text-field/
   * TextField - select : https://mui.com/material-ui/react-text-field/  ||  https://mui.com/material-ui/react-select/
   * Range slider: https://mui.com/material-ui/react-slider/
