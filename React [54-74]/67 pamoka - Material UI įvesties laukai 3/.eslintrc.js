@@ -24,6 +24,7 @@ module.exports = {
         "import/prefer-default-export": [0],
         "react/function-component-definition": [1, {
             "namedComponents": "arrow-function"
-        }]
+        }],
+        "react/jsx-no-duplicate-props": [1, { "ignoreCase": false }]
     }
 }
