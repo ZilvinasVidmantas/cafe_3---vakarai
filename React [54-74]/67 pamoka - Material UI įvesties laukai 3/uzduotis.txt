@@ -12,5 +12,5 @@ Sukurti šiuos įvesties laukus ir sujungti juos su būsenos kintamaisiais
   * TextField - select : https://mui.com/material-ui/react-text-field/  ||  https://mui.com/material-ui/react-select/
   * Range slider: https://mui.com/material-ui/react-slider/
   * AutoComplete: https://mui.com/material-ui/react-autocomplete/
-  * CheckboxGroup: https://mui.com/material-ui/react-autocomplete/
   * RadioGroup: https://mui.com/material-ui/react-autocomplete/
+  * CheckboxGroup: https://mui.com/material-ui/react-autocomplete/

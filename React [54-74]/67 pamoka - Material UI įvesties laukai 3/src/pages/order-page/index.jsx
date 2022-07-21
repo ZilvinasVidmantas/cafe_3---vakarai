@@ -3,7 +3,6 @@ import {
   Box,
   TextField,
   Paper,
-  Typography,
   Button,
   MenuItem,
   FormControl,
@@ -11,6 +10,8 @@ import {
   RadioGroup,
   FormControlLabel,
   Radio,
+  Divider,
+  Checkbox,
 } from '@mui/material';
 
 const currencies = [
@@ -43,6 +44,7 @@ const OrderPage = () => {
   const [email, setEmail] = React.useState('');
   const [currency, setCurrency] = React.useState(currencies[0].value);
   const [gender, setGender] = React.useState(null);
+  const [subscribtion, setSubscribe] = React.useState(true);
 
   return (
     <Box sx={{ pt: 7 }}>
@@ -64,9 +66,8 @@ const OrderPage = () => {
             gap: 3,
           }}
         >
-          <Typography component="h1" variant="h4" align="center">
-            Įveskite kontaktinius duomenis
-          </Typography>
+
+          <Divider textAlign="left" sx={{ width: '100%' }}>Kontaktiniai duomenys</Divider>
           <TextField
             name="fullname"
             label="Full name"
@@ -85,6 +86,21 @@ const OrderPage = () => {
             fullWidth
           />
 
+          <FormControl sx={{ width: '100%' }}>
+            <FormLabel>Socialinė lytis</FormLabel>
+            <RadioGroup
+              name="gender"
+              value={gender}
+              onChange={(_, newGender) => setGender(newGender)}
+            >
+              {genders.map(({ value, label }) => (
+                <FormControlLabel key={value} value={value} control={<Radio />} label={label} />
+              ))}
+            </RadioGroup>
+          </FormControl>
+
+          <Divider textAlign="left" sx={{ width: '100%' }}>Pirkimo informacija</Divider>
+
           <TextField
             name="currency"
             select
@@ -99,18 +115,18 @@ const OrderPage = () => {
             )}
           </TextField>
 
-          <FormControl sx={{ width: '100%' }}>
-            <FormLabel>Socialinė lytis</FormLabel>
-            <RadioGroup
-              name="gender"
-              value={gender}
-              onChange={(_, newGender) => setGender(newGender)}
-            >
-              {genders.map(({ value, label }) => (
-                <FormControlLabel value={value} control={<Radio />} label={label} />
-              ))}
-            </RadioGroup>
-          </FormControl>
+          <Box sx={{ alignSelf: 'flex-start' }}>
+            <FormControlLabel
+              control={(
+                <Checkbox
+                  checked={subscribtion}
+                  onChange={(_, newSubsribtion) => setSubscribe(newSubsribtion)}
+                />
+              )}
+              label="Siųsti naujausius pasiūlymus"
+            />
+          </Box>
+
           <Button type="submit" variant="contained" size="large">Užsakyti</Button>
         </Box>
 
