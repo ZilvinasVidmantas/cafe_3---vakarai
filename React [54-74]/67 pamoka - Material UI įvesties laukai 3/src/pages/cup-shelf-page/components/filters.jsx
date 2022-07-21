@@ -59,17 +59,20 @@ const Filters = ({ drawerWidth }) => {
           <Divider sx={{ my: 2 }} />
           <FormControl sx={{ width: '100%' }}>
             <Typography variant="h6" sx={{}}>Kaina</Typography>
-            <Slider
-              value={priceRange}
-              min={0}
-              max={25}
-              // onChangeCommitted={(_, newPriceRange) => setPriceRange(newPriceRange)}
-              onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
-              valueLabelDisplay="on"
-              sx={{ mt: 4 }}
-            />
+            <Box sx={{ mx: 2 }}>
+              <Slider
+                value={priceRange}
+                min={0}
+                max={25}
+                // onChangeCommitted={(_, newPriceRange) => setPriceRange(newPriceRange)}
+                onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
+                valueLabelDisplay="on"
+                sx={{ mt: 4 }}
+              />
+            </Box>
           </FormControl>
           <Divider sx={{ my: 2 }} />
+
           <Autocomplete
             disablePortal
             options={categories}
@@ -79,24 +82,22 @@ const Filters = ({ drawerWidth }) => {
             renderInput={({
               InputLabelProps,
               InputProps,
-              disabled,
+              inputProps,
               fullWidth,
               id,
-              inputProps,
-              size,
             }) => (
               <TextField
                 InputLabelProps={InputLabelProps}
                 InputProps={InputProps}
-                disabled={disabled}
                 fullWidth={fullWidth}
                 id={id}
                 inputProps={inputProps}
-                size={size}
                 label="Kategorija"
               />
             )}
           />
+          <Divider sx={{ my: 2 }} />
+
         </Box>
       </Drawer>
     </>

@@ -6,6 +6,11 @@ import {
   Typography,
   Button,
   MenuItem,
+  FormControl,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
 } from '@mui/material';
 
 const currencies = [
@@ -27,10 +32,17 @@ const currencies = [
   },
 ];
 
+const genders = [
+  { value: 'female', label: 'Moteris' },
+  { value: 'male', label: 'Vyras' },
+  { value: 'other', label: 'Kita' },
+];
+
 const OrderPage = () => {
   const [fullname, setFullname] = React.useState('Serbentautas Bordiūras');
   const [email, setEmail] = React.useState('');
   const [currency, setCurrency] = React.useState(currencies[0].value);
+  const [gender, setGender] = React.useState(null);
 
   return (
     <Box sx={{ pt: 7 }}>
@@ -86,6 +98,19 @@ const OrderPage = () => {
               ({ value, label }) => <MenuItem key={value} value={value}>{label}</MenuItem>,
             )}
           </TextField>
+
+          <FormControl sx={{ width: '100%' }}>
+            <FormLabel>Socialinė lytis</FormLabel>
+            <RadioGroup
+              name="gender"
+              value={gender}
+              onChange={(_, newGender) => setGender(newGender)}
+            >
+              {genders.map(({ value, label }) => (
+                <FormControlLabel value={value} control={<Radio />} label={label} />
+              ))}
+            </RadioGroup>
+          </FormControl>
           <Button type="submit" variant="contained" size="large">Užsakyti</Button>
         </Box>
 
@@ -95,11 +120,3 @@ const OrderPage = () => {
 };
 
 export default OrderPage;
-
-/*
-  Savo projekto formoje, sukurti  su būsenos kintamuosu surištą TextField-Select reikšmę:
-
-  TextField - select : https://mui.com/material-ui/react-text-field/  ||  https://mui.com/material-ui/react-select/
-  10 min pertrauka,
-  pažymėti komentarą
-*/
