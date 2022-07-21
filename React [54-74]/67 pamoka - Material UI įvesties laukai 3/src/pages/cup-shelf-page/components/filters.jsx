@@ -10,6 +10,9 @@ import {
   Autocomplete,
   Button,
   TextField,
+  FormLabel,
+  FormControlLabel,
+  Checkbox,
 } from '@mui/material';
 import TuneIcon from '@mui/icons-material/Tune';
 
@@ -21,11 +24,26 @@ const categories = [
   { id: '5', label: 'Soup' },
 ];
 
+const materialTypes = [
+  { id: '1', label: 'Medinis' },
+  { id: '2', label: 'Molinis' },
+  { id: '3', label: 'Metalinis' },
+];
+
 const Filters = ({ drawerWidth }) => {
   const isExtraLarge = useMediaQuery((theme) => theme.breakpoints.up('xxl'));
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const [priceRange, setPriceRange] = React.useState([2, 25]);
   const [category, setCategory] = React.useState(null);
+  const [selectedMaterialTypes, setSelectedMaterialTypes] = React.useState([]);
+
+  const handleMaterialChange = (id, checked) => {
+    if (checked) {
+      setSelectedMaterialTypes([...selectedMaterialTypes, materialTypes.find((x) => x.id === id)]);
+    } else {
+      setSelectedMaterialTypes(selectedMaterialTypes.filter((x) => x.id !== id));
+    }
+  };
 
   return (
     <>
@@ -97,7 +115,21 @@ const Filters = ({ drawerWidth }) => {
             )}
           />
           <Divider sx={{ my: 2 }} />
-
+          <FormControl component="fieldset" variant="standard">
+            <FormLabel component="legend">Medžiaga</FormLabel>
+            {materialTypes.map(({ id, label }) => (
+              <FormControlLabel
+                key={id}
+                label={label}
+                control={(
+                  <Checkbox
+                    name={label}
+                    onChange={(_, checked) => handleMaterialChange(id, checked)}
+                  />
+                )}
+              />
+            ))}
+          </FormControl>
         </Box>
       </Drawer>
     </>
